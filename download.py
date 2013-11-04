@@ -11,7 +11,8 @@ import datetime
 #===============================================================================
 # Parameters
 #===============================================================================
-outdir='/mnt/datadrive/CILVR/youtube'
+#outdir='/mnt/datadrive/CILVR/youtube'
+outdir='/misc/vlgscratch2/FergusGroup/sercu/youtube/'
 subjects=['Bears', 'Lions', 'Giraffe']
 appendices=['documentary','national geographic', 'wildlife', 'attenborough']
 Nperquery=20 # increase to download more per subject
@@ -83,7 +84,7 @@ pickle.dump(dlist, open(join(outdir,fn), 'wb'))
 for subj in subjects:
     for q in queries[subj]:
         for movie in dlist[subj][q]:
-            out=join(outdir,subj,movie)
+            out=join(outdir,subj,movie+'.mp4')
             cli = 'youtube-dl -o %s --write-description --all-subs --write-info-json http://www.youtube.com/watch?v=%s'%(out,movie)
             print cli
             subprocess.call(cli, shell=True)
