@@ -34,7 +34,8 @@ for subj in subjects:
     if isdir(spath):
         for f in listdir(spath):
             if isfile(join(spath, f)):
-                movielist.add(f[0:-4])
+                if f[-4:]=='.mp4':
+                    movielist.add(f[0:-4])
     elif not os.path.exists(spath):
         print "Make dir %s"%spath
         os.mkdir(spath)
@@ -62,15 +63,12 @@ for subj in subjects:
                 tmp = html[(m.end() - 1):]
                 endidx = tmp.find('"')
                 if endidx > 15:
-                    
                     continue
                 movie = tmp[1:endidx]
-                if (movie not in movielist):
-                    dlist[subj][query].append(movie)
-                    movielist.add(movie)
-                    if (len(dlist[subj][query]) == Nperquery):
-                        enough=True
-                        break
+                dlist[subj][query].append(movie)
+                if (len(dlist[subj][query]) == Nperquery):
+                    enough=True
+                    break
 
 #===============================================================================
 # Dump current download list for future reference (what queries suck)
@@ -84,10 +82,15 @@ pickle.dump(dlist, open(join(outdir,fn), 'wb'))
 for subj in subjects:
     for q in queries[subj]:
         for movie in dlist[subj][q]:
-            out=join(outdir,subj,movie+'.mp4')
-            cli = 'youtube-dl -o %s --write-description --all-subs --write-info-json http://www.youtube.com/watch?v=%s'%(out,movie)
-            print cli
-            subprocess.call(cli, shell=True)
+            if (movie not in movielist):
+                movielist.add(movie)
+                out=join(outdir,subj,movie+'.mp4')
+                cli = 'youtube-dl -o %s --write-description --all-subs --write-info-json http://www.youtube.com/watch?v=%s'%(out,movie)
+                print cli
+                subprocess.call(cli, shell=True)
+            else:
+                print "Movie %s is already downloaded, skip"%movie
+                
                             
 
 
