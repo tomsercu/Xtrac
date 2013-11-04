@@ -1,27 +1,32 @@
-%% Parameters
-global maindir
-maindir = '/mnt/datadrive/CILVR';
-maindata = sprintf('%s/youtube', maindir);
-mainoutput=sprintf('%s/extracted',maindir);
-timestamp=datestr(now,30);
-f_size = 32;
-outdir=sprintf('%s/%s_%d_%d',mainoutput,timestamp,f_size,f_size);
-mkdir(outdir)
+% change properties of download to http://www.youtube.com/results?filters=hd%2C+long%2C+video&search_sort=video_view_count&search_query=national+geographic
+% check if viewed more than 1000
 
-%% Get dir list
-load('processed', 'processed');
+% XXX: Send files to Tom !!!
+% Sample from distant frames.
+% get reference frames
+
+
+% 1. Increase diversity
+% 2. Iterate over i-frames
+% 3. target of 1 mln of iamges
+% 4. hadoop or whatever you prefer to make it fast
+% 5. prevent from camera moving
+
+addpath(genpath('.'));
+global maindir
+maindir = '/mnt/datadrive/CILVR/';
+maindata = sprintf('%s/youtube', maindir);
 dir_list = dir(maindata);
-%% Extract frames
+load('processed', 'processed');
+f_size = 32;
+
 for k = 1:length(dir_list)
     dir_name = dir_list(k).name;
     if (strfind(dir_name, '.'))
         continue;
     end
     mov_list = dir(sprintf('%s/%s', maindata, dir_name));
-    fprintf('Entering directory %s with about %d movies \n', dir_name, length(mov_list))
-    mkdir(sprintf('%s/%s', outdir,dir_name));
-    for j = 1:length(mov_list) 
-        %% Get movie name and open video reader
+    for j = 1:length(mov_list)        
         if ((mov_list(j).isdir) || (mov_list(j).name(1) == '.'))
             continue
         end        
@@ -32,16 +37,13 @@ for k = 1:length(dir_list)
         end
         file_path = sprintf('%s/%s/%s', maindata, dir_name, mov_list(j).name);
         try
-            disp('Opening video reader')
             obj = VideoReader(file_path);
         catch
-            fprintf('ERROR could not read video in %s \n',file_path);
             continue;
         end
-        %% Process frames
         fprintf('Processing %s\n', file_path);
-        s = min(floor(60 * obj.FrameRate), floor(0.05 * obj.NumberOfFrames)); % Start of video
-        e = max((obj.NumberOfFrames - floor(60 * obj.FrameRate)), floor(0.95 * obj.NumberOfFrames)); % End of vid
+        s = min(floor(60 * obj.FrameRate), floor(0.05 * obj.NumberOfFrames));
+        e = max((obj.NumberOfFrames - floor(60 * obj.FrameRate)), floor(0.95 * obj.NumberOfFrames));
         r = floor(obj.FrameRate / 2);
         nr_frames = floor((e - s) / r) + 1;
         f_all = zeros(nr_frames, f_size * f_size * 3);
@@ -81,13 +83,13 @@ for k = 1:length(dir_list)
         dfn = dfn(:, :) ~= 0;
         discontinuos(sum(dfn, 2) > (0.995 * f_size * f_size)) = 1;
         for i = 1:length(continuous)            
-            if ((valid(i) == lend) && (continuous(i) == lend) && (discontinuos(i) == 1))
-                save_image(reshape(f_all(i, :), [f_size, f_size, 3]), sprintf('%s/%s/%s_%d_A', outdir,dir_name, name, idx), f_size);
-                save_image(reshape(f_all(i + lend - 1, :), [f_size, f_size, 3]), sprintf('%s/%s/%s_%d_A', outdir,dir_name, name, idx), f_size);                               
+            if ((valid(i) == lend) && (continuous(i) == lend) && (discontinuos(i) == 1))                
+                save_image(reshape(f_all(i, :), [f_size, f_size, 3]), sprintf('%s/%s_%d_A', dir_name, name, idx), f_size);
+                save_image(reshape(f_all(i + lend - 1, :), [f_size, f_size, 3]), sprintf('%s/%s_%d_B', dir_name, name, idx), f_size);                               
                 idx = idx + 1;
             end
         end
         processed(name) = 1;
-        %save('processed', 'processed');
+        save('processed', 'processed');
     end
 end
