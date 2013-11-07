@@ -8,6 +8,12 @@ function [ mov ] = mp4_to_mat( inpath, outpath, f_size )
         mov=[];
         return;
     end
+    if (exist(strcat(outpath,'.busy'),'file'))
+        fprintf('Transformation already busy for %s/%s',dir_name,name)
+        mov=[];
+        return;
+    end
+    fclose(fopen(strcat(outpath,'.busy'), 'w'));
     try
         disp('Opening video reader')
         obj = VideoReader(inpath);
@@ -33,6 +39,6 @@ function [ mov ] = mp4_to_mat( inpath, outpath, f_size )
     end
     mov = reshape(f_all, [nr_frames, f_size, f_size, 3]);
     save(outpath,'mov');
-    
+    delete(strcat(outpath,'.busy'));
 end
 
