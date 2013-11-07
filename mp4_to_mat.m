@@ -9,7 +9,7 @@ function [ mov ] = mp4_to_mat( inpath, outpath, f_size )
         return;
     end
     if (exist(strcat(outpath,'.busy'),'file'))
-        fprintf('Transformation already busy for %s/%s',dir_name,name)
+        fprintf('Transformation already busy for %s',outpath)
         mov=[];
         return;
     end
@@ -18,7 +18,7 @@ function [ mov ] = mp4_to_mat( inpath, outpath, f_size )
         fprintf('Opening video reader for %s\n',inpath)
         obj = VideoReader(inpath);
     catch ME
-        fprintf('ERROR could not read video in %s \n',file_path);
+        fprintf('ERROR could not read video in %s \n',inpath);
         ME.stack
         return;
     end
