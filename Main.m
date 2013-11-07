@@ -18,7 +18,7 @@ for k = 1:length(dir_list)
         continue;
     end
     mov_list = dir(sprintf('%s/%s', maindata, dir_name));
-    fprintf('Entering directory %s with about %d movies \n', dir_name, length(mov_list))
+    fprintf('Entering directory %s with about %d movies \n', dir_name, length(mov_list)-2)
     mkdir(sprintf('%s/%s', outdir,dir_name));
     for j = 1:length(mov_list) 
         %% Get movie name and open video reader
