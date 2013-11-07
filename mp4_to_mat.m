@@ -4,12 +4,12 @@ function [ mov ] = mp4_to_mat( inpath, outpath, f_size )
 %   Dumps it to out.mat and returns.
     %% Get movie name and open video reader
     if (exist(strcat(outpath,'.mat'),'file'))
-        fprintf('.mat file already exists for %s/%s',dir_name,name)
+        fprintf('.mat file already exists:  %s.mat\n',outpath)
         mov=[];
         return;
     end
     try
-        disp('Opening video reader')
+        fprintf('Opening video reader for %s\n',inpath)
         obj = VideoReader(inpath);
     catch ME
         fprintf('ERROR could not read video in %s \n',file_path);

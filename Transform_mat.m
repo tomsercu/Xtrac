@@ -1,5 +1,6 @@
 global maindir
-maindir = '/mnt/datadrive/CILVR';
+%maindir = '/mnt/datadrive/CILVR';
+maindir = '/misc/vlgscratch2/FergusGroup/sercu';
 maindata = sprintf('%s/youtube', maindir);
 
 f_size=64;
