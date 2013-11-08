@@ -8,7 +8,7 @@ class Extractor:
     def __init__(self,path):
         self.path=path
         tmp=scipy.io.loadmat(path)
-        self.rawdata=tmp['mov']
+        self.d=tmp['mov']
         if 'framerate' in tmp:
             self.framerate=tmp['framerate']
         else:
@@ -16,9 +16,7 @@ class Extractor:
 #         if 'cuts' in tmp:
 #             self.cuts=tmp['cuts']
 #         else:
-        self.cuts=[]
-        self.mask=np.ones((self.rawdata.shape[0],),dtype='bool') # TODO replace with maskblack
-        self.d=self.rawdata[self.mask]
+        self.cuts=None
         self.intensities=None
         self.ds=None
         
@@ -55,9 +53,18 @@ class Extractor:
 #             valid(sum(df_all_full_conv(:, :) == 0, 2) > 0) = 0;
 #         end
 #         valid = conv(valid, ones(lend, 1), 'valid');
-
-#         sps.fftconvolve(in1, in2, mode)
-        pass
+        
+        if self.cuts is not None or self.intensities is not None or self.ds is not None:
+            print "Dont mask after other operations!!!"
+            return
+        f_dx=np.sum( abs(self.d[:,1:]-self.d[:,:-1]) ,axis=3) # shift x, sum over colors
+        sizex = [10, 4, 1, 2, 5]
+        sizey = [1, 4, 10, 5, 2]
+        for x,y in zip(sizex,sizey):
+            filt=np.ones((1,x,y)) 
+            f_conv=sps.fftconvolve(f_dx,filt,'valid')
+            np.where(f_conv==0)
+            
     
     def detectcuts (self):
         # Generate intensities, lowpassed
@@ -102,6 +109,7 @@ class Extractor:
         self.showgrid(grid)
 
 ex=Extractor('/home/tom/youtube/Bears/4msUhLnQtn0.mat')
+
 ex.detectcuts()
 
 frames=ex.showshots()
