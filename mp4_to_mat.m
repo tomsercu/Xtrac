@@ -1,4 +1,4 @@
-function [ mov ] = mp4_to_mat( inpath, outpath, f_size )
+function [ mov ] = mp4_to_mat( inpath, outpath, framerate, f_size )
 % mp4_to_mat Transformsm video to redcued-size center-cut out matrix
 % [t,x,y,rgb]
 %   Dumps it to out.mat and returns.
@@ -9,7 +9,7 @@ function [ mov ] = mp4_to_mat( inpath, outpath, f_size )
         return;
     end
     if (exist(strcat(outpath,'.busy'),'file'))
-        fprintf('Transformation already busy for %s/%s',dir_name,name)
+        fprintf('Transformation already busy for %s\n',outpath)
         mov=[];
         return;
     end
@@ -18,7 +18,7 @@ function [ mov ] = mp4_to_mat( inpath, outpath, f_size )
         fprintf('Opening video reader for %s\n',inpath)
         obj = VideoReader(inpath);
     catch ME
-        fprintf('ERROR could not read video in %s \n',file_path);
+        fprintf('ERROR could not read video in %s \n',inpath);
         ME.stack
         return;
     end
@@ -26,7 +26,7 @@ function [ mov ] = mp4_to_mat( inpath, outpath, f_size )
     fprintf('Processing %s\n', inpath);
     s = min(floor(60 * obj.FrameRate), floor(0.05 * obj.NumberOfFrames)); % Start of video
     e = max((obj.NumberOfFrames - floor(60 * obj.FrameRate)), floor(0.95 * obj.NumberOfFrames)); % End of vid
-    r = floor(obj.FrameRate / 2);
+    r = floor(obj.FrameRate / framerate);
     nr_frames = floor((e - s) / r) + 1;
     f_all = zeros(nr_frames, f_size * f_size * 3);
     for q = 1:nr_frames
@@ -38,7 +38,7 @@ function [ mov ] = mp4_to_mat( inpath, outpath, f_size )
         f_all(q, :) = tmp(:);
     end
     mov = reshape(f_all, [nr_frames, f_size, f_size, 3]);
-    save(outpath,'mov');
+    save(outpath,'mov','framerate','f_size');
     delete(strcat(outpath,'.busy'));
 end
 
