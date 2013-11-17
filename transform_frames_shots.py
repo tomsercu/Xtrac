@@ -38,18 +38,22 @@ for subj in listdir(viddir):
         out=join(spathO,vidid)
         if (isdir(out)):
             if (len(glob.glob(join(out,'frame*.jpeg')))>0):
-                print "Skipping video %s"%vidid
+                print "%s - Skipping video"%vidid
                 continue
         else:
             os.mkdir(out)
-        print "Starting to extract frames for id=%s, dumping to %s"%(vidid,out)
+        print "%s - Subprocess ffmpeg to extract frames for id=%s, writing frames to %s"%(vidid,vidid,out)
         outframes=join(out,fprefix+'%05d.jpeg')
         thiscommand=command%(vidpath,scene_threshold, 1./framerate, outframes,join(out,logfn))
         result=subprocess.call(thiscommand,shell=True)
         if (result==0):
-            print "Finished extracting frames for %s, start making overview."%vidid
+            print "%s - Finished extracting frames, start making overview."%vidid
         else:
-            print "ERROR IN EXTRACTIN FROM %s"%vidid
+            print "%s - ffmpeg returned unsuccesful with code %d."%(vidid,result)
+            with open(join(out,'command.log'),'w') as fh:
+                fh.write(thiscommand+'\n')
+            print "%s - Wrote failing command to %s."%(vidid,join(out,'command.log'))
+            continue
         # START compiling output log to shot info
         try:
             with open(join(out,logfn),'r') as fh:
@@ -74,11 +78,12 @@ for subj in listdir(viddir):
                 assert(os.path.exists(shots[-1][-1][2]))
             picklefile=join(out,picklefn)
             pickle.dump({'headers':headers,'shots':shots}, open(picklefile,'wb'))
+            tb="%s - Extracted %d frames, in %d shots. Time from %.1f to %.1f miliseconds."%(vidid,len(lines),shotid+1,shots[0][0][4],shots[-1][-1][4])
         except:
-            tb=traceback.format_exc()
+            tb="%s - Error occured during parsing of ffmpeg output to scene info \n"%vidid
+            tb+=traceback.format_exc()
         else:
-            tb="Succesfully compiled info and dumped to %s"%picklefile
-            tb+="\nExtracted %d frames, in %d shots. Time from %.1f to %.1f seconds."%(len(lines),shotid+1,shots[0][0][4],shots[-1][-1][4])
+            tb+="\n%s - Succesfully compiled info and dumped to %s"%(vidid,picklefile)
         finally:
             print tb
 
