@@ -1,7 +1,7 @@
 import numpy as np
 import subprocess
 import os
-from os.path import join,isdir
+from os.path import join,isdir,exists
 from os import listdir
 import glob
 #import cv2
@@ -37,11 +37,13 @@ for subj in listdir(viddir):
         #Todo go into framedir, check if frames exist and keyframes exists then continue. Otherwise mkdir and execute command.
         out=join(spathO,vidid)
         if (isdir(out)):
-            if (len(glob.glob(join(out,'frame*.jpeg')))>0):
+            if (len(glob.glob(join(out,'frame*.jpeg')))>0 or exists(join(out,'started'))):
                 print "%s - Skipping video"%vidid
                 continue
         else:
             os.mkdir(out)
+        with open(join(out,'started'), 'wb') as fh:
+            fh.write('really busy')
         print "%s - Subprocess ffmpeg to extract frames for id=%s, writing frames to %s"%(vidid,vidid,out)
         outframes=join(out,fprefix+'%05d.jpeg')
         thiscommand=command%(vidpath,scene_threshold, 1./framerate, outframes,join(out,logfn))
@@ -90,4 +92,5 @@ for subj in listdir(viddir):
             tb+="\n%s - Succesfully parsed ffmpeg log to shot info and pickled to %s"%(vidid,picklefile)
         finally:
             print tb
+
 
