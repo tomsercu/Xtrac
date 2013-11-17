@@ -38,7 +38,7 @@ for subj in listdir(viddir):
         out=join(spathO,vidid)
         if (isdir(out)):
             if (len(glob.glob(join(out,'frame*.jpeg')))>0):
-                continue
+                pass #continue
         else:
             os.mkdir(out)
         print "Starting to extract frames for id=%s, dumping to %s"%(vidid,out)
@@ -55,27 +55,29 @@ for subj in listdir(viddir):
                 lines=fh.readlines()
             assert(len(lines)==len(glob.glob(join(out,'*.jpeg')))) # todo catch this
             headers=['frame_id','shotid','fn','out_id','t','ffmpeg_scene']
-            frames=[]
-            shotid=0
+            shots=[] # contains list of shots
+            shotid=-1
             for i,line in enumerate(lines):
                 rel=line[str.find(line,'n:'):]
-                info=rel.split(' ')
-                for k,v in [kv.split(':') for kv in info[1:]]:
-                    if k=='n': frame_id=int(float(info[0]))
+                info=[s for s in rel.split(' ') if s.count(':')==1]
+                for k,v in [kv.split(':') for kv in info]:
+                    if k=='n': frame_id=int(float(v))
                     if k=='t': t=float(v)
                     if k=='scene':
                         ffmpeg_scene=float(v)
-                        if ffmpeg_scene>=scene_threshold: shotid+=1
+                        if ffmpeg_scene>=scene_threshold: 
+                            shotid+=1
+                            shots.append([])
                 # collected all info from line, add to frames list
-                frames.append([frame_id,shotid,outframes%(i+1),i+1,t,ffmpeg_scene])
-                assert(os.path.exists(frames[-1][2]))
+                shots[shotid].append([frame_id,shotid,outframes%(i+1),i+1,t,ffmpeg_scene])
+                assert(os.path.exists(shots[-1][-1][2]))
             picklefile=join(out,picklefn)
-            pickle.dump({'headers':headers,'frames':frames}, open(picklefile,'wb'))
+            pickle.dump({'headers':headers,'shots':shots}, open(picklefile,'wb'))
         except:
             tb=traceback.format_exc()
         else:
             tb="Succesfully compiled info and dumped to %s"%picklefile
-            tb+="\nExtracted %d frames, in %d shots. Time from %.1f to %.1f seconds."%(len(frames),shotid+1,frames[0][4],frames[-1][4])
+            tb+="\nExtracted %d frames, in %d shots. Time from %.1f to %.1f seconds."%(len(lines),shotid+1,shots[0][0][4],shots[-1][-1][4])
         finally:
             print tb
 
