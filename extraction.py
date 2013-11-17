@@ -3,19 +3,18 @@ import numpy as np
 import scipy.io
 import scipy.signal as sps
 import matplotlib.pyplot as plt
+import cv2
 
 class Extractor:
     def __init__(self,path):
         self.path=path
-        tmp=scipy.io.loadmat(path)
-        self.d=tmp['mov']
-        if 'framerate' in tmp:
-            self.framerate=tmp['framerate']
-        else:
-            self.framerate=2
-#         if 'cuts' in tmp:
-#             self.cuts=tmp['cuts']
-#         else:
+        try:
+            self.cap=cv2.VideoCapture(path)
+        except:
+            print "Could not open video file"
+            raise
+        self.d=None
+        self.framerate=2
         self.cuts=None
         self.intensities=None
         self.ds=None
@@ -108,8 +107,6 @@ class Extractor:
         print(grid)
         self.showgrid(grid)
 
-ex=Extractor('/home/tom/youtube/Bears/4msUhLnQtn0.mat')
+ex=Extractor('/home/tom/youtube/Bears/4msUhLnQtn0.mp4')
 
-ex.detectcuts()
 
-frames=ex.showshots()
