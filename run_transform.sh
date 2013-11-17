@@ -1,2 +1,2 @@
 #!/bin/bash
-python transform_frames_shots.py | tee ./log_extraction/$1
+python transform_frames_shots.py 2>&1 | tee ./log_extraction/$1

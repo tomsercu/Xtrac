@@ -9,7 +9,7 @@ import traceback
 import cPickle as pickle
 
 maindir = '/mnt/datadrive/CILVR'
-#maindir = '/misc/vlgscratch2/FergusGroup/sercu'
+maindir = '/misc/vlgscratch2/FergusGroup/sercu'
 viddir=join(maindir,'youtube')
 framedir=join(maindir,'frames')
 
@@ -38,7 +38,8 @@ for subj in listdir(viddir):
         out=join(spathO,vidid)
         if (isdir(out)):
             if (len(glob.glob(join(out,'frame*.jpeg')))>0):
-                pass #continue
+                print "Skipping video %s"%vidid
+                continue
         else:
             os.mkdir(out)
         print "Starting to extract frames for id=%s, dumping to %s"%(vidid,out)
