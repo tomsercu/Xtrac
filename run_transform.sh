@@ -1,2 +1,2 @@
 #!/bin/bash
-python transform_frames_shots.py 2>&1 | tee ./log_extraction/$1
+stdbuf -oL python extract_frames_ffmpeg.py 2>&1 | tee ./log_extraction/$1
