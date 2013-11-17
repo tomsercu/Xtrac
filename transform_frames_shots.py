@@ -58,12 +58,16 @@ for subj in listdir(viddir):
         try:
             with open(join(out,logfn),'r') as fh:
                 lines=fh.readlines()
-            assert(len(lines)==len(glob.glob(join(out,'*.jpeg')))) # todo catch this
+            if len(lines)!=len(glob.glob(join(out,'*.jpeg'))):
+                print "%s - Parsing ffmpeg log: unexpected loglines: %d, jpeg files: %d"%(len(lines),len(glob.glob(join(out,'*.jpeg'))) )
             headers=['frame_id','shotid','fn','out_id','t','ffmpeg_scene']
             shots=[] # contains list of shots
             shotid=-1
             for i,line in enumerate(lines):
                 rel=line[str.find(line,'n:'):]
+                if (rel==-1):
+                    print "%s - encountered bad line %d/%d in ffmpeg log, starts as: "%(vidid,i,len(lines),line[:40])
+                    continue
                 info=[s for s in rel.split(' ') if s.count(':')==1]
                 for k,v in [kv.split(':') for kv in info]:
                     if k=='n': frame_id=int(float(v))
@@ -83,7 +87,7 @@ for subj in listdir(viddir):
             tb="%s - Error occured during parsing of ffmpeg output to scene info \n"%vidid
             tb+=traceback.format_exc()
         else:
-            tb+="\n%s - Succesfully compiled info and dumped to %s"%(vidid,picklefile)
+            tb+="\n%s - Succesfully parsed ffmpeg log to shot info and pickled to %s"%(vidid,picklefile)
         finally:
             print tb
 
