@@ -47,7 +47,7 @@ for subj in listdir(viddir):
             os.mkdir(out)
         with open(join(out,'started'), 'wb') as fh:
             fh.write('really busy')
-        print "%s - Subprocess ffmpeg to extract frames, writing to %s"%(vidid,'/'.join(out.split('/')[:-3]))
+        print "%s - Subprocess ffmpeg to extract frames, writing to %s"%(vidid,'/'.join(out.split('/')[-3:]))
         outframes=join(out,fprefix+'%05d.jpeg')
         thiscommand=command%(vidpath,scene_threshold, 1./framerate, outframes,join(out,logfn))
         result=subprocess.call(thiscommand,shell=True)
