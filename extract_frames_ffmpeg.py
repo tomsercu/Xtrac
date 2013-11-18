@@ -10,7 +10,8 @@ import cPickle as pickle
 
 maindir = '/mnt/datadrive/CILVR'
 maindir = '/misc/vlgscratch2/FergusGroup/sercu'
-viddir=join(maindir,'youtube')
+wojdir= '/misc/vlgscratch2/FergusGroup/zaremba'
+viddir=join(wojdir,'youtube')
 framedir=join(maindir,'frames')
 
 framerate=2
@@ -27,7 +28,9 @@ for subj in listdir(viddir):
     spathO=join(framedir,subj)
     if not isdir (spath):
         continue
-    vidlist=glob.glob(join(spath,'*.mp4'))
+
+    vidlist=glob.glob(join(spath,'*.flv'))
+    vidlist.extend(glob.glob(join(spath,'*.mp4')))
     if not isdir(spathO) and len(vidlist)>0:
         print "Make directory %s"%spathO
         os.mkdir(spathO)
