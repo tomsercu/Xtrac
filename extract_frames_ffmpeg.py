@@ -47,7 +47,7 @@ for subj in listdir(viddir):
             os.mkdir(out)
         with open(join(out,'started'), 'wb') as fh:
             fh.write('really busy')
-        print "%s - Subprocess ffmpeg to extract frames for id=%s, writing frames to %s"%(vidid,vidid,out)
+        print "%s - Subprocess ffmpeg to extract frames, writing to %s"%(vidid,'/'.join(out.split('/')[:-3]))
         outframes=join(out,fprefix+'%05d.jpeg')
         thiscommand=command%(vidpath,scene_threshold, 1./framerate, outframes,join(out,logfn))
         result=subprocess.call(thiscommand,shell=True)
@@ -87,7 +87,7 @@ for subj in listdir(viddir):
                 assert(os.path.exists(shots[-1][-1][2]))
             picklefile=join(out,picklefn)
             pickle.dump({'headers':headers,'shots':shots}, open(picklefile,'wb'))
-            tb="%s - Extracted %d frames, in %d shots. Time from %.1f to %.1f miliseconds."%(vidid,len(lines),shotid+1,shots[0][0][4],shots[-1][-1][4])
+            tb="%s - Extracted %d frames, in %d shots. Time from %.1f to %.1f seconds."%(vidid,len(lines),shotid+1,shots[0][0][4],shots[-1][-1][4])
         except:
             tb="%s - Error occured during parsing of ffmpeg output to scene info \n"%vidid
             tb+=traceback.format_exc()
