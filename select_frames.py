@@ -14,13 +14,19 @@ class Selector:
         assert(isdir(path) and isfile(join(path,'info.pk')))
         self.path=path
         self.loadpickle()
-        self.data=
+        # Load images
+        self.shots=[]
+        for i,shot in enumerate(self.shots_info):
+            self.shots.append([])
+            for j,frame in enumerate(shot):
+                img=cv2.imread(frame[2])
+                self.shots[i].append(img)
 
 
     def loadpickle(self):
         tmp=pickle.load(open(join(self.path,'info.pk'),'rb'))
-        self.headers=tmp['headers']
-        self.shotinfo=tmp['shots']
+        self.headers_info=tmp['headers']
+        self.shots_info=tmp['shots']
 
     def showimg(self,sid,fid):
         pass
