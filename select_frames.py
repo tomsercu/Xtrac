@@ -28,9 +28,9 @@ class Selector:
         self.shots=[]
         for si,shot in enumerate(self.shots_info):
             nframes=len(shot)
-            self.shots.append(np.zeros((nframes,x,y,3))) # allocate for speed
+            self.shots.append(np.zeros((nframes,x,y,3),dtype='uint8')) # allocate for speed
             for fi,frame in enumerate(shot):
-                img=cv2.imread(frame[2])
+                img=plt.imread(frame[2])
                 self.shots[si][fi,:,:,:]=img
                 print ".",
 
@@ -41,7 +41,7 @@ class Selector:
         self.shots_info=tmp['shots']
 
     def showimg(self,i,j):
-        plt.imshow(self.shots[i][j]);
+        plt.imshow(self.shots[i][j],origin='lower');
         plt.show()
 
     def showgrid(self,inds={}):
@@ -55,12 +55,12 @@ class Selector:
             r+=1
             print ('shot %d, shot length %d, showing %d frames'%(si,len(self.shots[si]),len(inds[si]))),
             for fi in inds[si]:
-                fr=self.shots[si][fi]
+                fr=self.shots[si][fi,:,:,:]
                 i+=1
                 plt.subplot(rows,cols,i)
                 plt.subplots_adjust(left=0.01, right=0.99, top=0.99, bottom=0.01)
                 print ('%d,'%fi),
-                plt.imshow(fr)
+                plt.imshow(fr,origin='lower')
                 plt.axis('off')
             i=cols*r
             print('')
@@ -79,8 +79,10 @@ class Selector:
         pass
 
 if __name__=="__main__":
-    path='/home/tom/frames/Lions/jF5eDmDPUDk/'
-    sel=Selector(path)
+    base='/home/tom/'
+    fpath=join(base,'frames/Lions/jF5eDmDPUDk/')
+    sel=Selector(fpath)
     #show={4:range(8), 5:range(5), 6:range(8)}
     show={4:range(8), 5:range(5), 6:range(8), 7:range(9), 8:range(8), 9:range(9), 10:range(5), 11:range(5)}
     sel.showgrid(show)
+    #outpath=join(base,'Xtrac/Lions/jF5eDmDPUDk/')
