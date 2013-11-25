@@ -1,2 +1,10 @@
-transform_output
-youtube
+.metadata/
+.settings/
+.classpath
+*.pdf
+*.class
+*.swp
+*.pyc
+*.pydevproject
+*.project
+*.*~

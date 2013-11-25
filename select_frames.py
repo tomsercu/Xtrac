@@ -30,7 +30,7 @@ class Selector:
             nframes=len(shot)
             self.shots.append(np.zeros((nframes,x,y,3),dtype='uint8')) # allocate for speed
             for fi,frame in enumerate(shot):
-                img=plt.imread(frame[2])
+                img=plt.imread(join(self.path,'frame_%05d.jpeg'%frame[3]))
                 self.shots[si][fi,:,:,:]=img
                 print ".",
 
@@ -79,9 +79,10 @@ class Selector:
         pass
 
 if __name__=="__main__":
-    base='/home/tom/'
-    fpath=join(base,'frames/Lions/jF5eDmDPUDk/')
-    sel=Selector(fpath)
+    #base='/home/tom/'
+    #frpath=join(base,'frames/Lions/jF5eDmDPUDk/')
+    frpath='samples/jF5eDmDPUDk/'
+    sel=Selector(frpath)
     #show={4:range(8), 5:range(5), 6:range(8)}
     show={4:range(8), 5:range(5), 6:range(8), 7:range(9), 8:range(8), 9:range(9), 10:range(5), 11:range(5)}
     sel.showgrid(show)
