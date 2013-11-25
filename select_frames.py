@@ -42,3 +42,7 @@ class Selector:
 
     def filter_frontobject(self):
         pass
+
+if __name__=="__main__":
+    path='/home/ts2387/frames/Bears/txED4ByjtCU/'
+    sel=Selector(path)
