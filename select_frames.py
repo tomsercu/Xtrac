@@ -4,6 +4,7 @@ from os.path import isfile,isdir,join
 import scipy.io
 import scipy.signal as sps
 import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
 import cv2
 import cPickle as pickle
 import datetime
@@ -16,7 +17,7 @@ class Selector:
         self.path=path
         self.loadpickle()
         # determine framesize
-        img=cv2.imread(self.shots_info[0][0][2])
+        img=mpimg.imread(self.shots_info[0][0][2])
         x,y,c=img.shape
         assert(c==3)
         self.x=x
@@ -48,16 +49,18 @@ class Selector:
         rows=len(inds)
         cols=max( [len(inds[k]) for k in inds])
         i=0
+        r=0
         plt.figure(figsize=(20,12))
-        for si in enumerate(inds):
-            print ('shot %d:'%si),
+        for si in inds:
+            r+=1
+            print ('shot %d, shot length %d, showing %d frames'%(si,len(self.shots[si]),len(inds[si]))),
             for fi in inds[si]:
                 fr=self.shots[si][fi]
                 i+=1
                 plt.subplot(rows,cols,i)
                 plt.subplots_adjust(left=0.01, right=0.99, top=0.99, bottom=0.01)
-                print ('%d,'%fr),
-                plt.imshow(self.d[fr])
+                print ('%d,'%fi),
+                plt.imshow(fr)
                 plt.axis('off')
             i=cols*r
             print('')
@@ -76,5 +79,8 @@ class Selector:
         pass
 
 if __name__=="__main__":
-    path='/home/tom/frames/Bears/EgcVTNgOkV4/'
+    path='/home/tom/frames/Lions/jF5eDmDPUDk/'
     sel=Selector(path)
+    #show={4:range(8), 5:range(5), 6:range(8)}
+    show={4:range(8), 5:range(5), 6:range(8), 7:range(9), 8:range(8), 9:range(9), 10:range(5), 11:range(5)}
+    sel.showgrid(show)
