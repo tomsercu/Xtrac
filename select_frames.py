@@ -17,7 +17,7 @@ class Selector:
         self.path=path
         self.loadpickle()
         # determine framesize
-        img=mpimg.imread(self.shots_info[0][0][2])
+        img=mpimg.imread(join(self.path,'frame_%05d.jpeg'%self.shots_info[0][0][3]))
         x,y,c=img.shape
         assert(c==3)
         self.x=x
