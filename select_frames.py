@@ -87,3 +87,4 @@ if __name__=="__main__":
     show={4:range(8), 5:range(5), 6:range(8), 7:range(9), 8:range(8), 9:range(9), 10:range(5), 11:range(5)}
     sel.showgrid(show)
     #outpath=join(base,'Xtrac/Lions/jF5eDmDPUDk/')
+    # bullshit test
