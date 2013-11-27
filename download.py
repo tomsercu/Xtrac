@@ -26,7 +26,7 @@ for subj in subjects:
     queries[subj] = ['%s %s'%(subj,app) for app in appendices]
 
 #===============================================================================
-# What did we already downlod 
+# What did we already downlod
 #===============================================================================
 movielist = set(); # movies downloaded over all subdirs
 for subj in subjects:
@@ -34,7 +34,7 @@ for subj in subjects:
     if isdir(spath):
         for f in listdir(spath):
             if isfile(join(spath, f)):
-                if f[-4:]=='.mp4':
+                if f[-4:]=='.mp4' or f[-4:]=='.flv':
                     movielist.add(f[0:-4])
     elif not os.path.exists(spath):
         print "Make dir %s"%spath
@@ -42,7 +42,7 @@ for subj in subjects:
 
 
 #===============================================================================
-# Assemble videos to download 
+# Assemble videos to download
 #===============================================================================
 dlist={}
 for subj in subjects:
@@ -90,7 +90,7 @@ for subj in subjects:
                 subprocess.call(cli, shell=True)
             else:
                 print "Movie %s is already downloaded, skip"%movie
-                
-                            
+
+
 
 
