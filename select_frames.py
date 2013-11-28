@@ -84,7 +84,10 @@ if __name__=="__main__":
     frpath='samples/jF5eDmDPUDk/'
     sel=Selector(frpath)
     #show={4:range(8), 5:range(5), 6:range(8)}
-    show={4:range(8), 5:range(5), 6:range(8), 7:range(9), 8:range(8), 9:range(9), 10:range(5), 11:range(5)}
+    #show={4:range(8), 5:range(5), 6:range(8), 7:range(9), 8:range(8), 9:range(9), 10:range(5), 11:range(5)}
+    show={}
+    for shot in [5,8,10,11,17,18,19]:
+        show[shot]=range(len(sel.shots[shot]))
     sel.showgrid(show)
     #outpath=join(base,'Xtrac/Lions/jF5eDmDPUDk/')
     # bullshit test
