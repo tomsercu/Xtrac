@@ -59,13 +59,20 @@ def filter_matches(kp1, kp2, matches, ratio = 0.75):
     kp_pairs = zip(mkp1, mkp2)
     return p1, p2, kp_pairs
 
-def explore_match(win, img1, img2, kp_pairs, status = None, H = None):
+def explore_match(win, img1, img2, kp_pairs, status = None, H = None, convert=None):
     h1, w1 = img1.shape[:2]
     h2, w2 = img2.shape[:2]
-    vis = np.zeros((max(h1, h2), w1+w2), np.uint8)
-    vis[:h1, :w1] = img1
-    vis[:h2, w1:w1+w2] = img2
-    vis = cv2.cvtColor(vis, cv2.COLOR_GRAY2BGR)
+    try: dep=img1.shape[2]
+    except: dep=1
+    vis = np.zeros((max(h1, h2), w1+w2, dep), np.uint8)
+    if convert is None:
+        vis[:h1, :w1, :] = img1
+        vis[:h2, w1:w1+w2, :] = img2
+    else:
+        vis[:h1, :w1, :] = cv2.cvtColor(img1,convert)
+        vis[:h2, w1:w1+w2, :] = cv2.cvtColor(img2,convert)
+
+    #vis = cv2.cvtColor(vis, cv2.COLOR_GRAY2BGR)
 
     if H is not None:
         corners = np.float32([[0, 0], [w1, 0], [w1, h1], [0, h1]])
