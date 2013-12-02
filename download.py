@@ -3,40 +3,45 @@ import urllib2
 import re
 import sys, os, subprocess
 from os import listdir
-from os.path import isfile, join, isdir
+from os.path import expanduser, isfile, join, isdir
 import shutil
 import cPickle as pickle
 import datetime
+import simplejson
 
 #===============================================================================
 # Parameters
 #===============================================================================
-#outdir='/mnt/datadrive/CILVR/youtube'
-outdir='/misc/vlgscratch2/FergusGroup/sercu/youtube/'
-subjects=['Bears', 'Lions', 'Giraffe']
-appendices=['documentary','national geographic', 'wildlife', 'attenborough']
+outdir=expanduser('~/youtube')
 Nperquery=20 # increase to download more per subject
 maxpages=5
-ytstring='http://www.youtube.com/results?filters=hd%2C+long%2C+video&'
+ytstring='http://www.youtube.com/results?filters=video%2C+long&'
 #===============================================================================
-# Make all queries
+# Load all queries
 #===============================================================================
-queries={}
-for subj in subjects:
-    queries[subj] = ['%s %s'%(subj,app) for app in appendices]
+with open('cifar10.json','rU') as fh:
+    queries=simplejson.load(fh)
+subjects=queries.keys()
 
 #===============================================================================
 # What did we already downlod
 #===============================================================================
 movielist = set(); # movies downloaded over all subdirs
+def updatemovielist():
+    global movielist, outdir
+    for subj in listdir(outdir):
+        spath=join(outdir,subj)
+        if isdir(spath):
+            for f in listdir(spath):
+                if isfile(join(spath, f)):
+                    if f[-4:]=='.mp4' or f[-4:]=='.flv':
+                        movielist.add(f[0:-4])
+#===============================================================================
+# Generate directories if needed
+#===============================================================================
 for subj in subjects:
     spath=join(outdir,subj)
-    if isdir(spath):
-        for f in listdir(spath):
-            if isfile(join(spath, f)):
-                if f[-4:]=='.mp4' or f[-4:]=='.flv':
-                    movielist.add(f[0:-4])
-    elif not os.path.exists(spath):
+    if not os.path.exists(spath):
         print "Make dir %s"%spath
         os.mkdir(spath)
 
@@ -82,6 +87,7 @@ pickle.dump(dlist, open(join(outdir,fn), 'wb'))
 for subj in subjects:
     for q in queries[subj]:
         for movie in dlist[subj][q]:
+            updatemovielist()
             if (movie not in movielist):
                 movielist.add(movie)
                 out=join(outdir,subj,movie+'.mp4')
@@ -89,7 +95,7 @@ for subj in subjects:
                 print cli
                 subprocess.call(cli, shell=True)
             else:
-                print "Movie %s is already downloaded, skip"%movie
+                print "%s -- Movie  is already downloaded, skip"%movie
 
 
 
