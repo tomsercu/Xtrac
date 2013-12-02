@@ -1,0 +1,67 @@
+{
+    "airplane": [
+        "airplane flight",
+        "airplane landing",
+        "airbus",
+        "boeing"
+    ],
+    "automobile": [
+        "racing",
+        "top gear",
+        "bmw",
+        "audi",
+        "chevrolet",
+        "mercedes"
+    ],
+    "bird": [
+        "chicken documentary",
+        "birds documentary",
+        "birds national geographic"
+    ],
+    "cat": [
+        "cat video compilation",
+        "funny cat",
+        "cute cat",
+        "ugly cat",
+        "cat documentary"
+    ],
+    "deer": [
+        "deer documentary",
+        "elk documentary",
+        "moose documentary",
+        "reindeer documentary",
+        "fallow deer documentary",
+        "chital documentary",
+        "deer national geographic",
+        "elk national geographic",
+        "moose national geographic",
+        "reindeer national geographic",
+        "fallow deer national geographic",
+        "chital national geographic"
+    ],
+    "dog": [
+        "dog video compilation",
+        "funny dog",
+        "cute dog",
+        "ugly dog",
+        "dog documentary"
+    ],
+    "frog": [
+        "frog documentary",
+        "frog national geographic",
+        "bullfrog"
+    ],
+    "horse": [
+        "horse wildlife",
+        "horses documentary",
+        "horses national geographic"
+    ],
+    "ship": [
+        "ships documentary",
+        "sea ships"
+    ],
+    "truck": [
+        "trucks",
+        "road trucks"
+    ]
+}test
