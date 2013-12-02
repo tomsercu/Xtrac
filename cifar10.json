@@ -1,11 +1,15 @@
 {
     "airplane": [
+        "airplane documentary",
+        "airplane national geographic",
         "airplane flight",
         "airplane landing",
         "airbus",
         "boeing"
     ],
     "automobile": [
+        "automobile documentary",
+        "automobile national geographic",
         "racing",
         "top gear",
         "bmw",
@@ -14,54 +18,57 @@
         "mercedes"
     ],
     "bird": [
+        "bird documentary",
+        "bird national geographic",
         "chicken documentary",
-        "birds documentary",
-        "birds national geographic"
+        "ducks"
     ],
     "cat": [
+        "cat documentary",
+        "cat national geographic",
         "cat video compilation",
         "funny cat",
         "cute cat",
-        "ugly cat",
-        "cat documentary"
+        "ugly cat"
     ],
     "deer": [
         "deer documentary",
-        "elk documentary",
-        "moose documentary",
-        "reindeer documentary",
-        "fallow deer documentary",
-        "chital documentary",
         "deer national geographic",
+        "elk documentary",
         "elk national geographic",
+        "moose documentary",
         "moose national geographic",
-        "reindeer national geographic",
-        "fallow deer national geographic",
-        "chital national geographic"
+        "reindeer documentary",
+        "reindeer national geographic"
     ],
     "dog": [
+        "dog documentary",
+        "dog national geographic",
         "dog video compilation",
         "funny dog",
         "cute dog",
-        "ugly dog",
-        "dog documentary"
+        "ugly dog"
     ],
     "frog": [
         "frog documentary",
         "frog national geographic",
-        "bullfrog"
+        "bullfrog documentary",
+        "bullfrog national geographic"
     ],
     "horse": [
-        "horse wildlife",
-        "horses documentary",
-        "horses national geographic"
+        "horse documentary",
+        "horse national geographic",
+        "horses wildlife"
     ],
     "ship": [
-        "ships documentary",
+        "ship documentary",
+        "ship national geographic",
         "sea ships"
     ],
     "truck": [
+        "truck documentary",
+        "truck national geographic",
         "trucks",
         "road trucks"
     ]
-}test
+}

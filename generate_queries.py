@@ -1,18 +1,28 @@
 import simplejson as json
+
+def documentify(subj):
+    return ['%s documentary'%subj, '%s national geographic'%subj]
+
+# automatic: subject documentaries
+subjects=['airplane','automobile','bird','cat','deer','dog','frog','horse','ship','truck']
 q={}
-q['airplane'] = ['airplane flight', 'airplane landing', 'airbus','boeing']
-q['automobile']=['racing','top gear', 'bmw','audi', 'chevrolet','mercedes']
-q['bird']      =['chicken documentary', 'birds documentary', 'birds national geographic']
-q['cat']       =['cat video compilation', 'funny cat', 'cute cat', 'ugly cat','cat documentary']
-q['dog']       =['dog video compilation', 'funny dog', 'cute dog', 'ugly dog','dog documentary']
-deertypes=['deer','elk','moose','reindeer','fallow deer','chital']
-q['deer']      =['%s documentary'%deer for deer in deertypes]
-q['deer'].extend(['%s national geographic'%deer for deer in deertypes])
-q['frog']     =['frog documentary', 'frog national geographic', 'bullfrog']
-q['horse']    =['horse wildlife', 'horses documentary', 'horses national geographic']
-q['ship']     =['ships documentary', 'sea ships',]
-q['truck']    =['trucks', 'road trucks' ]
+for subj in subjects:
+    q[subj]=documentify(subj)
+# manual queries
+q['airplane'].extend(  ['airplane flight', 'airplane landing', 'airbus','boeing'])
+q['automobile'].extend(['racing','top gear', 'bmw','audi', 'chevrolet','mercedes'])
+q['bird'].extend(      ['chicken documentary','ducks'])
+q['cat'].extend(       ['cat video compilation', 'funny cat', 'cute cat', 'ugly cat'])
+q['dog'].extend(       ['dog video compilation', 'funny dog', 'cute dog', 'ugly dog'])
+deertypes= ['elk','moose','reindeer']
+for deer in deertypes:
+    q['deer'].extend(documentify(deer))
+q['frog'].extend(documentify('bullfrog'))
+q['horse'].extend(    ['horses wildlife'])
+q['ship'].extend(     ['sea ships',])
+q['truck'].extend(    ['trucks', 'road trucks' ])
 
 print "Dump to cifar10.json"
-with open('cifar10.json','wb') as fh:
+with open('cifar10.json','w') as fh:
     out=json.dump(q, fh, sort_keys=True, indent=4*' ')
+
