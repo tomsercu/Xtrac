@@ -13,7 +13,7 @@ import simplejson
 # Parameters
 #===============================================================================
 outdir=expanduser('~/youtube')
-Nperquery=20 # increase to download more per subject
+Npersubj=200 # increase to download more per subject
 maxpages=5
 ytstring='http://www.youtube.com/results?filters=video%2C+long&'
 #===============================================================================
@@ -47,10 +47,11 @@ for subj in subjects:
 
 
 #===============================================================================
-# Assemble videos to download
+# Assemble videos to download, including movies we already have.
 #===============================================================================
 dlist={}
 for subj in subjects:
+    Nperquery=Npersubj/len(queries[subj])
     dlist[subj]={}
     print "Looking for subject %s"%subj
     for query in queries[subj]:
@@ -59,7 +60,7 @@ for subj in subjects:
         p=0
         while (not enough and p<maxpages): # open new pages
             p+=1
-            print "Subject %s, query:  %s page %d"%(subj,query,p)
+            print "Subject %s, query:  %s page %d, downloading %d movies"%(subj,query,p, Nperquery)
             url=ytstring+'search_query=%s&page=%d' % (query.replace(' ','+'), p)
             response = urllib2.urlopen(url)
     #         response = urllib2.urlopen('http://www.youtube.com/results?search_query=discovery%20channel&page=' + str(i))
