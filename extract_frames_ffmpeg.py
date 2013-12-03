@@ -30,33 +30,34 @@ else:
 # this command needs: (inpfile,scene_threshold,frameskip,outdir/frame,outdir/log.txt)
 
 def parse_logfile(logfn, frames_fn, picklefn):
-        with open(logfn,'r') as fh:
-            lines=fh.readlines()
-        if len(lines)!=len(glob.glob(join(out,'*.jpeg'))):
-            print "%s - Parsing ffmpeg log: unexpected loglines: %d, jpeg files: %d"%(len(lines),len(glob.glob(join(out,'*.jpeg'))) )
-        shots=[] # contains list of shots
-        shotid=-1
-        for i,line in enumerate(lines):
-            rel=line[str.find(line,'n:'):]
-            if (rel==-1):
-                print "%s - encountered bad line %d/%d in ffmpeg log, starts as: "%(vidid,i,len(lines),line[:40])
-                continue
-            info=[s for s in rel.split(' ') if s.count(':')==1]
-            for k,v in [kv.split(':') for kv in info]:
-                if k=='n': frame_id=int(float(v))
-                if k=='t': t=float(v)
-                if k=='scene':
-                    ffmpeg_scene=float(v)
-                    if ffmpeg_scene>=scene_threshold:
-                        shotid+=1
-                        shots.append([])
-            # collected all info from line, add to frames list
-            shots[shotid].append({'frame_id_movie':frame_id,'shotid':shotid,'fn':frames_fn%(i+1),'frame_id_jpeg':i+1,'t':t,'ffmpeg_scene':ffmpeg_scene})
-            assert(os.path.exists(shots[-1][-1]['fn']))
-        pickle.dump(shots, open(picklefn,'wb'))
-        tb="%s - Extracted %d frames, in %d shots. Movie time from %.1f to %.1f seconds."%(vidid,len(lines),shotid+1,shots[0][0]['t'],shots[-1][-1]['t'])
-        tb+='\nResult pickled to %s'%picklefn
-        return tb
+    vidid=frames_fn.split('/')[-2]
+    with open(logfn,'r') as fh:
+        lines=fh.readlines()
+    if len(lines)!=len(glob.glob(join(out,'*.jpeg'))):
+        print "%s - Parsing ffmpeg log: unexpected loglines: %d, jpeg files: %d"%(len(lines),len(glob.glob(join(out,'*.jpeg'))) )
+    shots=[] # contains list of shots
+    shotid=-1
+    for i,line in enumerate(lines):
+        rel=line[str.find(line,'n:'):]
+        if (rel==-1):
+            print "%s - encountered bad line %d/%d in ffmpeg log, starts as: "%(vidid,i,len(lines),line[:40])
+            continue
+        info=[s for s in rel.split(' ') if s.count(':')==1]
+        for k,v in [kv.split(':') for kv in info]:
+            if k=='n': frame_id=int(float(v))
+            if k=='t': t=float(v)
+            if k=='scene':
+                ffmpeg_scene=float(v)
+                if ffmpeg_scene>=scene_threshold:
+                    shotid+=1
+                    shots.append([])
+        # collected all info from line, add to frames list
+        shots[shotid].append({'frame_id_movie':frame_id,'shotid':shotid,'fn':frames_fn%(i+1),'frame_id_jpeg':i+1,'t':t,'ffmpeg_scene':ffmpeg_scene})
+        assert(os.path.exists(shots[-1][-1]['fn']))
+    pickle.dump(shots, open(picklefn,'wb'))
+    tb="%s - Extracted %d frames, in %d shots. Movie time from %.1f to %.1f seconds."%(vidid,len(lines),shotid+1,shots[0][0]['t'],shots[-1][-1]['t'])
+    tb+="\n%s - Succesfully parsed ffmpeg log to shot info and pickled to %s"%(vidid,picklefn)
+    return tb
 
 for subj in listdir(viddir):
     spath=join(viddir,subj)
@@ -100,8 +101,6 @@ for subj in listdir(viddir):
         except:
             tb="%s - Error occured during parsing of ffmpeg output to scene info \n"%vidid
             tb+=traceback.format_exc()
-        else:
-            tb+="\n%s - Succesfully parsed ffmpeg log to shot info and pickled to %s"%(vidid,picklefile)
         finally:
             print tb
 
