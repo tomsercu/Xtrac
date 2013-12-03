@@ -1,10 +1,12 @@
 import numpy as np
-import os
+from os import listdir,mkdir
 from os.path import isfile,isdir,join, expanduser
+import shutil
 import scipy.io
 import scipy.signal as sps
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
+import Image
 import matplotlib
 import cv2
 import smpl_find_obj
@@ -12,38 +14,59 @@ from smpl_find_obj import init_feature, filter_matches, explore_match
 import cPickle as pickle
 import datetime
 
+#=================
+#FILTER PARAMETERS
+#=================
+MIN_SHOT_LEN=3
+MIN_REL_DIFF_FRAMES=0.01
+MIN_BRIGHTNESS=10
+MAX_BRIGHTNESS=200
+
+#=================
+# CLASS SELECTOR
+#=================
 class Selector:
-    def __init__(self,path):
+    def __init__(self,path,vidid):
         """ Selector  """
         #path is folder with frames and info.
         assert(isdir(path) and isfile(join(path,'info.pk')))
         print "Opening selector for %s"%path
         self.path=path
+        self.vidid=vidid
         self.loadpickle()
         # determine framesize
-        img=mpimg.imread(join(self.path,'frame_%05d.jpeg'%self.shots_info[0][0][3]))
+        img=mpimg.imread(join(self.path,'frame_%05d.jpeg'%self.shots_info[0][0]['frame_id_jpeg']))
         x,y,c=img.shape
         assert(c==3)
         self.x=x
         self.y=y
-        print "Frames are {0}x{1}".format(x,y)
+        print "{0} - Frames are {1}x{2}".format(self.vidid,x,y)
+        self.shots=[]
+        self.shots_pass=np.ones((self.Nshots))
+
+    def loadimages(self):
+        if len(self.shots)==self.Nshots:
+            return False
         # Load images
-        print "Load images"
+        print "{0} - Load all shots".format(self.vidid)
         self.shots=[]
         for si,shot in enumerate(self.shots_info):
+            if self.shots_pass[si]==0:
+                self.shots.append(None)
+                continue
             nframes=len(shot)
-            self.shots.append(np.zeros((nframes,x,y,3),dtype='uint8')) # allocate for speed
+            self.shots.append(np.zeros((nframes,self.x,self.y,3),dtype='uint8')) # allocate for speed
             for fi,frame in enumerate(shot):
-                img=plt.imread(join(self.path,'frame_%05d.jpeg'%frame[3]))
+                img=plt.imread(join(self.path,'frame_%05d.jpeg'%frame['frame_id_jpeg']))
                 self.shots[si][fi,:,:,:]=img
-                print ".",
+            print ".",
         print ""
+        return True
 
 
     def loadpickle(self):
-        tmp=pickle.load(open(join(self.path,'info.pk'),'rb'))
-        self.headers_info=tmp['headers']
-        self.shots_info=tmp['shots']
+        self.shots_info=pickle.load(open(join(self.path,'info.pk'),'rb'))
+        self.Nshots=len(self.shots_info)
 
     def showimg(self,i,j):
         plt.imshow(self.shots[i][j])
@@ -72,71 +95,117 @@ class Selector:
         plt.show()
 
     def filter_shotlength(self):
+        nogo=0
+        passed=0
+        failed=0
+        for shotid in xrange(self.Nshots):
+            if not self.shots_pass[shotid]==1:
+                nogo+=1
+                continue
+            if len(self.shots_info[shotid])<MIN_SHOT_LEN:
+                failed+=1
+                self.shots_pass[shotid]=0
+            else:
+                passed+=1
+        print "%s - Filter on shotlength: %.1f pct of shots passed (%d/%d, nogo=%d)"%(self.vidid, 100.0*passed/(passed+failed), passed,passed+failed, nogo)
+
+
+    def filter_brightness(self):
+        self.loadimages() # load images if not laoded yet
+        self.calcbrightness()
+        nogo=0
+        passed=0
+        toobright=0
+        toodark=0
+        for shotid in xrange(self.Nshots):
+            if not self.shots_pass[shotid]==1:
+                nogo+=1
+                continue
+            if np.min(self.brightness[shotid])<MIN_BRIGHTNESS:
+                toodark+=1
+                self.shots_pass[shotid]=0
+            elif np.max(self.brightness[shotid])>MAX_BRIGHTNESS:
+                toobright+=1
+                self.shots_pass[shotid]=0
+            else:
+                passed+=1
+        print "%s - Filter on brightness: %.1f pct of shots passed (%d/%d), %.1f too bright, %.1f too dark"%\
+                (self.vidid, 100.0*passed/(passed+toobright+toodark), passed,passed+toobright+toodark, 100.0*toobright/(passed+toobright+toodark), 100.0*toodark/(passed+toobright+toodark))
+
+    def calcbrightness(self):
+        self.brightness=[None]*self.Nshots
+        for shotid in np.where(self.shots_pass)[0]:
+            shot=self.shots[shotid] # np array with shape (shotlen, x,y,3)
+            self.brightness[shotid]=shot.reshape((shot.shape[0],-1)).mean(axis=1)
+
+
+    def filter_framediff(self):
         pass
 
     def filter_unnatural(self):
-        pass
-
-    def filter_brightness(self):
-        pass
+        for shotid in xrange(self.Nshots):
+            if not self.shots_pass[shotid]==1:
+                continue
+        pass #TODO
 
     def filter_frontobject(self):
         pass
 
-def show_with_keypts(img,kpts):
-    plt.imshow(img)
-    #plt.xlim(0,img.shape[0])
-    #plt.ylim(0,img.shape[1])
-    for kp in kpts:
-        plt.plot(kp[0],kp[1],'.',color="#AAFFAA")
+    def apply_filters_write(self,outdir):
+        """ This is the core function that will apply all cheap filters and write
+        the result to outdir, subdivided in folders per shot"""
+        print "%s - Apply filters and export selected shots to %s"%(self.vidid,outdir)
+        self.filter_shotlength()
+        self.loadimages()
+        self.filter_brightness()
+        self.filter_framediff()
+        ### SHOTS THAT PASSED
+        print "%s - Export selected shots to %s"%(self.vidid,outdir)
+        for shotid in xrange(self.Nshots):
+            if not self.shots_pass[shotid]==1:
+                print "X",
+                continue
+            for fid,fn in enumerate([fr['fn'] for fr in self.shots_info[shotid]]):
+                shutil.copy(fn,join(outdir,'shot_%04d_fr_%03d.jpeg'%(shotid,fid)))
+            print ".",
+        print ""
 
-def compare_with_keypts(img1,kp1,mkp1, img2,kp2, mkp2):
-    fig=plt.figure(figsize=(18,9))
-    plt.subplot(121)
-    ax1=plt.gca()
-    show_with_keypts(img1,mkp1)
-    plt.subplot(122)
-    ax2=plt.gca()
-    show_with_keypts(img2,mkp2)
-    ## Draw matching lines
-    # from http://stackoverflow.com/questions/17543359/drawing-lines-between-two-plots-in-matplotlib
-    transFigure = fig.transFigure.inverted()
-    for m1,m2 in zip(mkp1,mkp2):
-        coord1 = transFigure.transform(ax1.transData.transform([m1[0],m1[1]]))
-        coord2 = transFigure.transform(ax2.transData.transform([m2[0],m2[1]]))
-        line = matplotlib.lines.Line2D((coord1[0],coord2[0]),(coord1[1],coord2[1]),transform=fig.transFigure)
-        fig.lines.append(line)
-    plt.show()
+
 
 if __name__=="__main__":
-    #base='/home/tom/'
-    #frpath=join(base,'frames/Lions/jF5eDmDPUDk/')
-    frpath='samplevids/jF5eDmDPUDk/'
-    sel=Selector(frpath)
-    show={}
-    for shot in [5,8,10,11,17,18,19]:
-        show[shot]=range(len(sel.shots[shot]))
-    #sel.showgrid(show)
-    #outpath=join(base,'Xtrac/Lions/jF5eDmDPUDk/')
+    inpath=expanduser('~/cifar32')
+    outpath=expanduser('~/selected_shots')
+    for subj in listdir(inpath):
+        Sinpath=join(inpath,subj)
+        Soutpath=join(outpath,subj)
+        if not isdir(Sinpath):
+            continue
+        vidlist=listdir(Sinpath)
+        if not isdir(Soutpath) and len(vidlist)>0:
+            print "Make directory %s"%Soutpath
+            mkdir(Soutpath)
+        print "Enter directory %s with %d videos"%(Sinpath,len(vidlist))
+        for vidid in vidlist:
+            Vinpath=join(Sinpath,vidid)
+            if not isfile(join(Vinpath,'info.pk')):
+                print "%s - No infofile found, skipping video"%vidid
+                continue
+            Voutpath=join(Soutpath,vidid)
+            if isdir(Voutpath):
+                if isfile(join(Voutpath,'started')):
+                    print "%s - Movie is processed or busy, Skipping video"%vidid
+                    continue
+            else:
+                mkdir(Voutpath)
+            open(join(Voutpath,'started'),'wb').close()
+            print "%s - cheapfilter video to discard bad shots"%vidid
+            sel=Selector(Vinpath,vidid)
+            sel.apply_filters_write(Voutpath)
 
-    ## ACTUAL KEYPOINT EXTRACTION
-    print "Get keypoint detector and matcher"
-    feature_name='sift'
-    detector,matcher=init_feature(feature_name)
-    img1=sel.shots[10][1]
-    img2=sel.shots[10][4]
-    kp1,desc1 = detector.detectAndCompute(img1,None)
-    kp2,desc2 = detector.detectAndCompute(img2,None)
-    print 'img1 - %d features, img2 - %d features' % (len(kp1), len(kp2))
-    raw_matches=matcher.knnMatch(desc1,trainDescriptors=desc2, k=2)
-    mkp1,mkp2, pairs=filter_matches(kp1,kp2,raw_matches)
-    H, status = cv2.findHomography(mkp1, mkp2, cv2.RANSAC, 5.0)
-    print '%d / %d  inliers/matched' % (np.sum(status), len(status))
-    vis = explore_match('Lions :)', img1, img2, pairs, status, H, convert=cv2.COLOR_RGB2BGR)
-    # opens up a window
-    cv2.waitKey()
-    cv2.destroyAllWindows()
 
+    #frpath='samplevids/jF5eDmDPUDk/'
+    #sel=Selector(frpath)
+    #show={}
+    #for shot in [5,8,10,11,17,18,19]:
+        #show[shot]=range(len(sel.shots[shot]))
 
-    print "Initialize test stuff"
-    plt.ion()
