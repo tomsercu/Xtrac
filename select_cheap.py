@@ -18,7 +18,8 @@ import datetime
 #FILTER PARAMETERS
 #=================
 MIN_SHOT_LEN=3
-MIN_REL_DIFF_FRAMES=0.01
+MIN_REL_DIFF_FRAMES=0.02
+MAX_REL_DIFF_FRAMES=0.4
 MIN_BRIGHTNESS=10
 MAX_BRIGHTNESS=200
 
@@ -42,6 +43,8 @@ class Selector:
         self.y=y
         print "{0} - Frames are {1}x{2}".format(self.vidid,x,y)
         self.shots=[]
+        self.brightness=[]
+        self.reldiffs=[]
         self.shots_pass=np.ones((self.Nshots))
 
     def loadimages(self):
@@ -59,8 +62,8 @@ class Selector:
             for fi,frame in enumerate(shot):
                 img=plt.imread(join(self.path,'frame_%05d.jpeg'%frame['frame_id_jpeg']))
                 self.shots[si][fi,:,:,:]=img
-            print ".",
-        print ""
+            #print ".",
+        #print ""
         return True
 
 
@@ -132,15 +135,27 @@ class Selector:
         print "%s - Filter on brightness: %.1f pct of shots passed (%d/%d), %.1f too bright, %.1f too dark"%\
                 (self.vidid, 100.0*passed/(passed+toobright+toodark), passed,passed+toobright+toodark, 100.0*toobright/(passed+toobright+toodark), 100.0*toodark/(passed+toobright+toodark))
 
-    def calcbrightness(self):
-        self.brightness=[None]*self.Nshots
-        for shotid in np.where(self.shots_pass)[0]:
-            shot=self.shots[shotid] # np array with shape (shotlen, x,y,3)
-            self.brightness[shotid]=shot.reshape((shot.shape[0],-1)).mean(axis=1)
-
-
     def filter_framediff(self):
-        pass
+        self.calcrelativediff()
+        nogo=0
+        passed=0
+        toostatic=0
+        toodynamic=0
+        for shotid in xrange(self.Nshots):
+            if not self.shots_pass[shotid]==1:
+                nogo+=1
+                continue
+            if np.mean(self.reldiffs[shotid])<MIN_REL_DIFF_FRAMES:
+                toostatic+=1
+                self.shots_pass[shotid]=0
+            elif np.mean(self.reldiffs[shotid])>MAX_REL_DIFF_FRAMES:
+                toodynamic+=1
+                self.shots_pass[shotid]=0
+            else:
+                passed+=1
+        Nproc=self.Nshots-nogo
+        print "%s - Filter on frame difference: %.1f pct of shots passed (%d/%d), %.1f too static, %.1f too dynamic"%\
+                (self.vidid, 100.0*passed/Nproc, passed,Nproc, 100.0*toostatic/Nproc, 100.0*toodynamic/Nproc)
 
     def filter_unnatural(self):
         for shotid in xrange(self.Nshots):
@@ -150,6 +165,28 @@ class Selector:
 
     def filter_frontobject(self):
         pass
+
+    def calcbrightness(self):
+        if len(self.brightness)>0:
+            return
+        self.brightness=[None]*self.Nshots
+        # TODO weigh with grayscale-perception weights
+        for shotid in np.where(self.shots_pass)[0]:
+            shot=self.shots[shotid] # np array with shape (shotlen, x,y,3)
+            self.brightness[shotid]=shot.reshape((shot.shape[0],-1)).mean(axis=1)
+
+    def calcrelativediff(self):
+        ## Calculate the difference between two frames and reweigh by the maximum of their brightness
+        if len(self.reldiffs)>0:
+            return False
+        self.reldiffs=[None]*self.Nshots
+        for shotid in np.where(self.shots_pass)[0]:
+            shot=self.shots[shotid]
+            #framediffs=shot[:-1,:,:,:]-shot[1:,:,:,:]
+            framediffs=np.abs(shot[:-1,:,:,:].astype('int16') -shot[1:,:,:,:].astype('int16')).astype('uint8')
+            self.reldiffs[shotid]=framediffs.reshape((framediffs.shape[0],-1)).mean(axis=1)
+            maxbr=np.max(np.vstack((self.brightness[shotid][:-1],self.brightness[shotid][1:])),axis=0)
+            self.reldiffs[shotid] /= maxbr
 
     def apply_filters_write(self,outdir):
         """ This is the core function that will apply all cheap filters and write
@@ -165,7 +202,8 @@ class Selector:
             if not self.shots_pass[shotid]==1:
                 print "X",
                 continue
-            for fid,fn in enumerate([fr['fn'] for fr in self.shots_info[shotid]]):
+            for fid,frame in enumerate(self.shots_info[shotid]):
+                fn=join(self.path,'frame_%05d.jpeg'%frame['frame_id_jpeg'])
                 shutil.copy(fn,join(outdir,'shot_%04d_fr_%03d.jpeg'%(shotid,fid)))
             print ".",
         print ""
@@ -173,8 +211,8 @@ class Selector:
 
 
 if __name__=="__main__":
-    inpath=expanduser('~/cifar32')
-    outpath=expanduser('~/selected_shots')
+    inpath=expanduser('~/cifar32_all')
+    outpath=expanduser('~/cifar32_selected')
     for subj in listdir(inpath):
         Sinpath=join(inpath,subj)
         Soutpath=join(outpath,subj)
