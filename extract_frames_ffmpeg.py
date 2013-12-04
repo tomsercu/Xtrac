@@ -59,49 +59,60 @@ def parse_logfile(logfn, frames_fn, picklefn):
     tb+="\n%s - Succesfully parsed ffmpeg log to shot info and pickled to %s"%(vidid,picklefn)
     return tb
 
-for subj in listdir(viddir):
-    spath=join(viddir,subj)
-    spathO=join(framedir,subj)
-    if not isdir (spath):
-        continue
 
-    vidlist=glob.glob(join(spath,'*.flv'))
-    vidlist.extend(glob.glob(join(spath,'*.mp4')))
-    if not isdir(spathO) and len(vidlist)>0:
-        print "Make directory %s"%spathO
-        os.mkdir(spathO)
-    print "Entered directory %s with %d videos"%(spath,len(vidlist))
-    for vidpath in vidlist:
-        vidid=os.path.split(vidpath)[1].split('.')[0]
-        #Todo go into framedir, check if frames exist and keyframes exists then continue. Otherwise mkdir and execute command.
-        out=join(spathO,vidid)
-        if (isdir(out)):
-            if (len(glob.glob(join(out,'frame*.jpeg')))>0 or exists(join(out,'started'))):
-                print "%s - Skipping video"%vidid
-                continue
-        else:
-            os.mkdir(out)
-        with open(join(out,'started'), 'wb') as fh:
-            fh.write('really busy')
-        print "%s - Subprocess ffmpeg to extract frames, writing to %s"%(vidid,'/'.join(out.split('/')[-4:]))
-        outframes=join(out,fprefix+'%05d.jpeg')
-        thiscommand=command%(vidpath,scene_threshold, 1./framerate, outframes,join(out,logfn))
-        result=subprocess.call(thiscommand,shell=True)
-        if (result==0):
-            print "%s - Finished extracting frames, start making overview."%vidid
-        else:
-            print "%s - ffmpeg returned unsuccesful with code %d."%(vidid,result)
-            with open(join(out,'command.log'),'w') as fh:
-                fh.write(thiscommand+'\n')
-            print "%s - Wrote failing command to %s."%(vidid,join(out,'command.log'))
+nprocessed=1
+while nprocessed>0:
+    print "==========="
+    print "START CYCLE"
+    print "==========="
+    nprocessed=0
+    for subj in listdir(viddir):
+        spath=join(viddir,subj)
+        spathO=join(framedir,subj)
+        if not isdir (spath):
             continue
-        # START compiling output log to shot info
-        try:
-            tb=parse_logfile(join(out,logfn),outframes,join(out,picklefn))
-        except:
-            tb="%s - Error occured during parsing of ffmpeg output to scene info \n"%vidid
-            tb+=traceback.format_exc()
-        finally:
-            print tb
+
+        vidlist=glob.glob(join(spath,'*.flv'))
+        vidlist.extend(glob.glob(join(spath,'*.mp4')))
+        if not isdir(spathO) and len(vidlist)>0:
+            print "Make directory %s"%spathO
+            os.mkdir(spathO)
+        print "Entered directory %s with %d videos"%(spath,len(vidlist))
+        for vidpath in vidlist:
+            vidid=os.path.split(vidpath)[1].split('.')[0]
+            #Todo go into framedir, check if frames exist and keyframes exists then continue. Otherwise mkdir and execute command.
+            out=join(spathO,vidid)
+            if (isdir(out)):
+                if (len(glob.glob(join(out,'frame*.jpeg')))>0 or exists(join(out,'started'))):
+                    print "%s - Skipping video"%vidid
+                    continue
+            else:
+                os.mkdir(out)
+            with open(join(out,'started'), 'wb') as fh:
+                fh.write('really busy')
+            print "%s - Subprocess ffmpeg to extract frames, writing to %s"%(vidid,'/'.join(out.split('/')[-4:]))
+            outframes=join(out,fprefix+'%05d.jpeg')
+            thiscommand=command%(vidpath,scene_threshold, 1./framerate, outframes,join(out,logfn))
+            result=subprocess.call(thiscommand,shell=True)
+            if (result==0):
+                print "%s - Finished extracting frames, start making overview."%vidid
+                nprocessed+=1
+            else:
+                print "%s - ffmpeg returned unsuccesful with code %d."%(vidid,result)
+                with open(join(out,'command.log'),'w') as fh:
+                    fh.write(thiscommand+'\n')
+                print "%s - Wrote failing command to %s."%(vidid,join(out,'command.log'))
+                continue
+            # START compiling output log to shot info
+            try:
+                tb=parse_logfile(join(out,logfn),outframes,join(out,picklefn))
+            except:
+                tb="%s - Error occured during parsing of ffmpeg output to scene info \n"%vidid
+                tb+=traceback.format_exc()
+            finally:
+                print tb
+    print "================================="
+    print "END CYCLE--- %d videos processed"
+    print "================================="
 
 
