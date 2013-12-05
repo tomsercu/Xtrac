@@ -1,0 +1,558 @@
+===========
+START CYCLE
+===========
+Entered directory /home/ts2387/youtube/horse with 15 videos
+TQUMAJCh1fA - Skipping video
+1spIBy_nUPE - Subprocess ffmpeg to extract frames, writing to ts2387/cifar32_all/horse/1spIBy_nUPE
+1spIBy_nUPE - Finished extracting frames, start making overview.
+1spIBy_nUPE - Extracted 6303 frames, in 359 shots. Movie time from 66.4 to 3130.6 seconds.
+1spIBy_nUPE - Succesfully parsed ffmpeg log to shot info and pickled to /home/ts2387/cifar32_all/horse/1spIBy_nUPE/info.pk
+zwOImSrzmCg - Skipping video
+Cg2tVKvKp1A - Skipping video
+zgv00lndzQ0 - Skipping video
+86XGhbhwTwo - Skipping video
+mtEUPyf5UC8 - Subprocess ffmpeg to extract frames, writing to ts2387/cifar32_all/horse/mtEUPyf5UC8
+mtEUPyf5UC8 - Finished extracting frames, start making overview.
+mtEUPyf5UC8 - Extracted 6866 frames, in 775 shots. Movie time from 23.1 to 3274.9 seconds.
+mtEUPyf5UC8 - Succesfully parsed ffmpeg log to shot info and pickled to /home/ts2387/cifar32_all/horse/mtEUPyf5UC8/info.pk
+QsvS6gEBJuE - Skipping video
+bQvdOhJmqEI - Skipping video
+dfIHhj4xbYw - Skipping video
+oJquuyK4s2E - Skipping video
+qtX3ir4eWMM - Skipping video
+TuQe4-I9FW4 - Subprocess ffmpeg to extract frames, writing to ts2387/cifar32_all/horse/TuQe4-I9FW4
+TuQe4-I9FW4 - Finished extracting frames, start making overview.
+TuQe4-I9FW4 - Extracted 5473 frames, in 519 shots. Movie time from 0.0 to 2712.3 seconds.
+TuQe4-I9FW4 - Succesfully parsed ffmpeg log to shot info and pickled to /home/ts2387/cifar32_all/horse/TuQe4-I9FW4/info.pk
+nd2z8Imi77w - Skipping video
+ZWiZocE1zck - Skipping video
+Entered directory /home/ts2387/youtube/automobile with 22 videos
+hiVmGBD6udQ - Skipping video
+GiBR2o70pTo - Subprocess ffmpeg to extract frames, writing to ts2387/cifar32_all/automobile/GiBR2o70pTo
+GiBR2o70pTo - Finished extracting frames, start making overview.
+GiBR2o70pTo - Extracted 2678 frames, in 157 shots. Movie time from 55.1 to 1409.4 seconds.
+GiBR2o70pTo - Succesfully parsed ffmpeg log to shot info and pickled to /home/ts2387/cifar32_all/automobile/GiBR2o70pTo/info.pk
+oouOTsFcISE - Skipping video
+3lYwP0hzCXg - Skipping video
+Uup7jVqEIss - Subprocess ffmpeg to extract frames, writing to ts2387/cifar32_all/automobile/Uup7jVqEIss
+Uup7jVqEIss - Finished extracting frames, start making overview.
+Uup7jVqEIss - Extracted 5483 frames, in 617 shots. Movie time from 0.0 to 2700.6 seconds.
+Uup7jVqEIss - Succesfully parsed ffmpeg log to shot info and pickled to /home/ts2387/cifar32_all/automobile/Uup7jVqEIss/info.pk
+ZT5nLjM6FcU - Skipping video
+_M7R3GYHki8 - Skipping video
+n4slFq1iNaY - Skipping video
+KJCWxn1y12o - Skipping video
+jMNoQSdOMNM - Subprocess ffmpeg to extract frames, writing to ts2387/cifar32_all/automobile/jMNoQSdOMNM
+jMNoQSdOMNM - Finished extracting frames, start making overview.
+jMNoQSdOMNM - Extracted 7428 frames, in 1104 shots. Movie time from 3.6 to 3598.8 seconds.
+jMNoQSdOMNM - Succesfully parsed ffmpeg log to shot info and pickled to /home/ts2387/cifar32_all/automobile/jMNoQSdOMNM/info.pk
+j2zsuO1rBB0 - Skipping video
+7KftVUFVSMM - Skipping video
+Sb102PUYf84 - Skipping video
+gt1k3BLN7pw - Subprocess ffmpeg to extract frames, writing to ts2387/cifar32_all/automobile/gt1k3BLN7pw
+gt1k3BLN7pw - Finished extracting frames, start making overview.
+gt1k3BLN7pw - Extracted 2709 frames, in 179 shots. Movie time from 8.6 to 1373.4 seconds.
+gt1k3BLN7pw - Succesfully parsed ffmpeg log to shot info and pickled to /home/ts2387/cifar32_all/automobile/gt1k3BLN7pw/info.pk
+7EYaD6Z8Z24 - Skipping video
+6pwsiBVpBE0 - Skipping video
+672HAOq5678 - Subprocess ffmpeg to extract frames, writing to ts2387/cifar32_all/automobile/672HAOq5678
+672HAOq5678 - Finished extracting frames, start making overview.
+672HAOq5678 - Extracted 2816 frames, in 301 shots. Movie time from 0.3 to 1339.2 seconds.
+672HAOq5678 - Succesfully parsed ffmpeg log to shot info and pickled to /home/ts2387/cifar32_all/automobile/672HAOq5678/info.pk
+iSodQMghf6Y - Skipping video
+8bT6txm4RpA - Subprocess ffmpeg to extract frames, writing to ts2387/cifar32_all/automobile/8bT6txm4RpA
+8bT6txm4RpA - Finished extracting frames, start making overview.
+8bT6txm4RpA - Extracted 3345 frames, in 214 shots. Movie time from 15.4 to 1639.7 seconds.
+8bT6txm4RpA - Succesfully parsed ffmpeg log to shot info and pickled to /home/ts2387/cifar32_all/automobile/8bT6txm4RpA/info.pk
+wwK5K1c2kG0 - Skipping video
+WWDI6pXa9i4 - Skipping video
+qPyKVkSDLbU - Subprocess ffmpeg to extract frames, writing to ts2387/cifar32_all/automobile/qPyKVkSDLbU
+qPyKVkSDLbU - Finished extracting frames, start making overview.
+qPyKVkSDLbU - Extracted 2548 frames, in 127 shots. Movie time from 33.7 to 1326.2 seconds.
+qPyKVkSDLbU - Succesfully parsed ffmpeg log to shot info and pickled to /home/ts2387/cifar32_all/automobile/qPyKVkSDLbU/info.pk
+Entered directory /home/ts2387/youtube/deer with 16 videos
+nI97ca94w8k - Skipping video
+qQbSUO6HGEQ - Skipping video
+yzwX77PTvZs - Skipping video
+v_lyOfZXKDU - Subprocess ffmpeg to extract frames, writing to ts2387/cifar32_all/deer/v_lyOfZXKDU
+v_lyOfZXKDU - Finished extracting frames, start making overview.
+v_lyOfZXKDU - Extracted 3872 frames, in 29 shots. Movie time from 152.4 to 2082.9 seconds.
+v_lyOfZXKDU - Succesfully parsed ffmpeg log to shot info and pickled to /home/ts2387/cifar32_all/deer/v_lyOfZXKDU/info.pk
+I_zWYPr7pBI - Skipping video
+g1LqYXq_iJA - Subprocess ffmpeg to extract frames, writing to ts2387/cifar32_all/deer/g1LqYXq_iJA
+g1LqYXq_iJA - ffmpeg returned unsuccesful with code 1.
+g1LqYXq_iJA - Wrote failing command to /home/ts2387/cifar32_all/deer/g1LqYXq_iJA/command.log.
+F1VhNWb-Opw - Skipping video
+XX5h0a9YiOo - Subprocess ffmpeg to extract frames, writing to ts2387/cifar32_all/deer/XX5h0a9YiOo
+XX5h0a9YiOo - Finished extracting frames, start making overview.
+XX5h0a9YiOo - Extracted 2638 frames, in 45 shots. Movie time from 10.7 to 1319.7 seconds.
+XX5h0a9YiOo - Succesfully parsed ffmpeg log to shot info and pickled to /home/ts2387/cifar32_all/deer/XX5h0a9YiOo/info.pk
+Ex_ka8KhWHU - Skipping video
+7HwEp3dTnfE - Skipping video
+DE7hNdkNmsI - Skipping video
+qi-kdEgjCkc - Skipping video
+DR3hJ1kKi4Q - Subprocess ffmpeg to extract frames, writing to ts2387/cifar32_all/deer/DR3hJ1kKi4Q
+DR3hJ1kKi4Q - Finished extracting frames, start making overview.
+DR3hJ1kKi4Q - Extracted 5700 frames, in 1008 shots. Movie time from 3.0 to 2699.2 seconds.
+DR3hJ1kKi4Q - Succesfully parsed ffmpeg log to shot info and pickled to /home/ts2387/cifar32_all/deer/DR3hJ1kKi4Q/info.pk
+oL-xDhEvD30 - Skipping video
+HFWj0jEaJ5w - Skipping video
+e7nWRCZL25Y - Skipping video
+Entered directory /home/ts2387/youtube/dog with 21 videos
+16IxqJ7_M8Q - Skipping video
+omUIhrCcGqI - Skipping video
+s9t2RKYCBvE - Skipping video
+gAnVS27WODg - Subprocess ffmpeg to extract frames, writing to ts2387/cifar32_all/dog/gAnVS27WODg
+gAnVS27WODg - Finished extracting frames, start making overview.
+gAnVS27WODg - Extracted 6998 frames, in 877 shots. Movie time from 1.6 to 3297.4 seconds.
+gAnVS27WODg - Succesfully parsed ffmpeg log to shot info and pickled to /home/ts2387/cifar32_all/dog/gAnVS27WODg/info.pk
+yKHznwVTxYg - Skipping video
+eWBcVp-3cmc - Skipping video
+OFhRtPrfXr4 - Subprocess ffmpeg to extract frames, writing to ts2387/cifar32_all/dog/OFhRtPrfXr4
+OFhRtPrfXr4 - Finished extracting frames, start making overview.
+OFhRtPrfXr4 - Extracted 5838 frames, in 885 shots. Movie time from 2.2 to 2819.8 seconds.
+OFhRtPrfXr4 - Succesfully parsed ffmpeg log to shot info and pickled to /home/ts2387/cifar32_all/dog/OFhRtPrfXr4/info.pk
+HNtBphqE_LA - Skipping video
+N913VOemqt8 - Skipping video
+y2dlHNOJkpA - Skipping video
+N9aLY4AJaSs - Subprocess ffmpeg to extract frames, writing to ts2387/cifar32_all/dog/N9aLY4AJaSs
+N9aLY4AJaSs - Finished extracting frames, start making overview.
+N9aLY4AJaSs - Extracted 2426 frames, in 91 shots. Movie time from 8.6 to 1199.8 seconds.
+N9aLY4AJaSs - Succesfully parsed ffmpeg log to shot info and pickled to /home/ts2387/cifar32_all/dog/N9aLY4AJaSs/info.pk
+OMWshXDmQ2M - Skipping video
+OI-CKiX1uZc - Skipping video
+VGdTKjWQnAo - Skipping video
+ZtDXyn3sV8U - Skipping video
+c6k58220hJ4 - Subprocess ffmpeg to extract frames, writing to ts2387/cifar32_all/dog/c6k58220hJ4
+c6k58220hJ4 - Finished extracting frames, start making overview.
+c6k58220hJ4 - Extracted 2628 frames, in 233 shots. Movie time from 4.4 to 1255.8 seconds.
+c6k58220hJ4 - Succesfully parsed ffmpeg log to shot info and pickled to /home/ts2387/cifar32_all/dog/c6k58220hJ4/info.pk
+Nj5aK3wPk28 - Subprocess ffmpeg to extract frames, writing to ts2387/cifar32_all/dog/Nj5aK3wPk28
+Nj5aK3wPk28 - Finished extracting frames, start making overview.
+Nj5aK3wPk28 - Extracted 1289 frames, in 40 shots. Movie time from 667.5 to 1326.1 seconds.
+Nj5aK3wPk28 - Succesfully parsed ffmpeg log to shot info and pickled to /home/ts2387/cifar32_all/dog/Nj5aK3wPk28/info.pk
+DE1nQwUvhGg - Skipping video
+IFUHcROix0s - Skipping video
+yDyvRayFvJw - Subprocess ffmpeg to extract frames, writing to ts2387/cifar32_all/dog/yDyvRayFvJw
+yDyvRayFvJw - Finished extracting frames, start making overview.
+yDyvRayFvJw - Extracted 3507 frames, in 14 shots. Movie time from 42.3 to 1794.1 seconds.
+yDyvRayFvJw - Succesfully parsed ffmpeg log to shot info and pickled to /home/ts2387/cifar32_all/dog/yDyvRayFvJw/info.pk
+LrbcbP7am-0 - Skipping video
+Entered directory /home/ts2387/youtube/frog with 17 videos
+Ush1__TO0fQ - Skipping video
+bHwAguHqYnU - Skipping video
+C3Yd7M3JNlw - Skipping video
+dwvyniKeDsY - Subprocess ffmpeg to extract frames, writing to ts2387/cifar32_all/frog/dwvyniKeDsY
+dwvyniKeDsY - Finished extracting frames, start making overview.
+dwvyniKeDsY - Extracted 2585 frames, in 60 shots. Movie time from 31.4 to 1309.7 seconds.
+dwvyniKeDsY - Succesfully parsed ffmpeg log to shot info and pickled to /home/ts2387/cifar32_all/frog/dwvyniKeDsY/info.pk
+EQZjNBPfNNA - Skipping video
+ONw9pafpr7U - Skipping video
+uXWYCm2eLw8 - Skipping video
+8Y6VyrGITG4 - Subprocess ffmpeg to extract frames, writing to ts2387/cifar32_all/frog/8Y6VyrGITG4
+8Y6VyrGITG4 - Finished extracting frames, start making overview.
+8Y6VyrGITG4 - Extracted 11605 frames, in 510 shots. Movie time from 2.7 to 5675.2 seconds.
+8Y6VyrGITG4 - Succesfully parsed ffmpeg log to shot info and pickled to /home/ts2387/cifar32_all/frog/8Y6VyrGITG4/info.pk
+eX54klzOJpY - Skipping video
+gti_knh9O50 - Skipping video
+5K_LVkcVq-g - Skipping video
+hQcBV6k_27I - Skipping video
+sCcFXdiODf0 - Subprocess ffmpeg to extract frames, writing to ts2387/cifar32_all/frog/sCcFXdiODf0
+sCcFXdiODf0 - Finished extracting frames, start making overview.
+sCcFXdiODf0 - Extracted 2393 frames, in 8 shots. Movie time from 9.6 to 1251.1 seconds.
+sCcFXdiODf0 - Succesfully parsed ffmpeg log to shot info and pickled to /home/ts2387/cifar32_all/frog/sCcFXdiODf0/info.pk
+ulSS4K2xc8M - Skipping video
+10OVZHEpaDc - Subprocess ffmpeg to extract frames, writing to ts2387/cifar32_all/frog/10OVZHEpaDc
+10OVZHEpaDc - Finished extracting frames, start making overview.
+10OVZHEpaDc - Extracted 8387 frames, in 3311 shots. Movie time from 3.2 to 3112.9 seconds.
+10OVZHEpaDc - Succesfully parsed ffmpeg log to shot info and pickled to /home/ts2387/cifar32_all/frog/10OVZHEpaDc/info.pk
+XbzcJ0NGNSI - Skipping video
+qrZBxlN62DU - Skipping video
+Entered directory /home/ts2387/youtube/cat with 18 videos
+u6qvMAyI44A - Skipping video
+izqCgnEEKwc - Skipping video
+gkWuLoHdF2s - Skipping video
+uuQRcP2V2kc - Subprocess ffmpeg to extract frames, writing to ts2387/cifar32_all/cat/uuQRcP2V2kc
+uuQRcP2V2kc - Finished extracting frames, start making overview.
+uuQRcP2V2kc - Extracted 5544 frames, in 519 shots. Movie time from 5.2 to 2762.3 seconds.
+uuQRcP2V2kc - Succesfully parsed ffmpeg log to shot info and pickled to /home/ts2387/cifar32_all/cat/uuQRcP2V2kc/info.pk
+x-ZN4qtVqR8 - Skipping video
+TH6dTSbmTt0 - Skipping video
+A42U5njyx6c - Skipping video
+ZBAGEeOms-8 - Skipping video
+iW1wWE6Ughk - Subprocess ffmpeg to extract frames, writing to ts2387/cifar32_all/cat/iW1wWE6Ughk
+iW1wWE6Ughk - Finished extracting frames, start making overview.
+iW1wWE6Ughk - Extracted 2427 frames, in 93 shots. Movie time from 8.6 to 1199.8 seconds.
+iW1wWE6Ughk - Succesfully parsed ffmpeg log to shot info and pickled to /home/ts2387/cifar32_all/cat/iW1wWE6Ughk/info.pk
+4tzhyfWHdLo - Skipping video
+G-vLgkO4XIc - Skipping video
+Kdgt1ZHkvnM - Subprocess ffmpeg to extract frames, writing to ts2387/cifar32_all/cat/Kdgt1ZHkvnM
+Kdgt1ZHkvnM - Finished extracting frames, start making overview.
+Kdgt1ZHkvnM - Extracted 2427 frames, in 93 shots. Movie time from 8.6 to 1199.8 seconds.
+Kdgt1ZHkvnM - Succesfully parsed ffmpeg log to shot info and pickled to /home/ts2387/cifar32_all/cat/Kdgt1ZHkvnM/info.pk
+0GN0rNzojTY - Skipping video
+vWjOEINtX_8 - Skipping video
+Osmzms9ANnE - Skipping video
+tNMxLvY9jv8 - Subprocess ffmpeg to extract frames, writing to ts2387/cifar32_all/cat/tNMxLvY9jv8
+tNMxLvY9jv8 - Finished extracting frames, start making overview.
+tNMxLvY9jv8 - Extracted 2459 frames, in 17 shots. Movie time from 8.5 to 1235.7 seconds.
+tNMxLvY9jv8 - Succesfully parsed ffmpeg log to shot info and pickled to /home/ts2387/cifar32_all/cat/tNMxLvY9jv8/info.pk
+fF8uJWufF8c - Skipping video
+SVgzWmqC_rg - Skipping video
+Entered directory /home/ts2387/youtube/truck with 21 videos
+81IAMEZshrU - Skipping video
+OOdHc9RrAKM - Subprocess ffmpeg to extract frames, writing to ts2387/cifar32_all/truck/OOdHc9RrAKM
+OOdHc9RrAKM - Finished extracting frames, start making overview.
+OOdHc9RrAKM - Extracted 2666 frames, in 102 shots. Movie time from 91.4 to 1402.9 seconds.
+OOdHc9RrAKM - Succesfully parsed ffmpeg log to shot info and pickled to /home/ts2387/cifar32_all/truck/OOdHc9RrAKM/info.pk
+GOv4H6N-PV0 - Skipping video
+GGx-iqYjeLs - Skipping video
+iJxPm-avGeI - Skipping video
+lJ45iaQgJjk - Skipping video
+Ef98FiDMqVA - Subprocess ffmpeg to extract frames, writing to ts2387/cifar32_all/truck/Ef98FiDMqVA
+Ef98FiDMqVA - Finished extracting frames, start making overview.
+Ef98FiDMqVA - Extracted 5625 frames, in 981 shots. Movie time from 5.3 to 2694.9 seconds.
+Ef98FiDMqVA - Succesfully parsed ffmpeg log to shot info and pickled to /home/ts2387/cifar32_all/truck/Ef98FiDMqVA/info.pk
+TaO7ZTdF75s - Skipping video
+2etrT025NiY - Skipping video
+6hFXotBz-mQ - Skipping video
+0ATzWE688bI - Skipping video
+m8d6br7r4LM - Skipping video
+G837cDBvQe8 - Subprocess ffmpeg to extract frames, writing to ts2387/cifar32_all/truck/G837cDBvQe8
+G837cDBvQe8 - Finished extracting frames, start making overview.
+G837cDBvQe8 - Extracted 2905 frames, in 17 shots. Movie time from 40.0 to 1489.0 seconds.
+G837cDBvQe8 - Succesfully parsed ffmpeg log to shot info and pickled to /home/ts2387/cifar32_all/truck/G837cDBvQe8/info.pk
+uvJJUMLe6ik - Skipping video
+bAC4eAA2u5M - Subprocess ffmpeg to extract frames, writing to ts2387/cifar32_all/truck/bAC4eAA2u5M
+bAC4eAA2u5M - Finished extracting frames, start making overview.
+bAC4eAA2u5M - Extracted 3232 frames, in 37 shots. Movie time from 5.0 to 1612.9 seconds.
+bAC4eAA2u5M - Succesfully parsed ffmpeg log to shot info and pickled to /home/ts2387/cifar32_all/truck/bAC4eAA2u5M/info.pk
+-s1JGFjzqUo - Skipping video
+IJz2iABjaqs - Skipping video
+ysHj77HeuFo - Skipping video
+QCSrS7k2lGc - Subprocess ffmpeg to extract frames, writing to ts2387/cifar32_all/truck/QCSrS7k2lGc
+QCSrS7k2lGc - Finished extracting frames, start making overview.
+QCSrS7k2lGc - Extracted 5231 frames, in 238 shots. Movie time from 6.7 to 2561.8 seconds.
+QCSrS7k2lGc - Succesfully parsed ffmpeg log to shot info and pickled to /home/ts2387/cifar32_all/truck/QCSrS7k2lGc/info.pk
+D8kZRMpP8cw - Skipping video
+Z3cQjuWXGlU - Skipping video
+Entered directory /home/ts2387/youtube/ship with 22 videos
+xg0AzXDcFsc - Skipping video
+-LFzHhU-Rro - Skipping video
+NADWGNRYOLU - Skipping video
+Zwz00XLTrxo - Subprocess ffmpeg to extract frames, writing to ts2387/cifar32_all/ship/Zwz00XLTrxo
+Zwz00XLTrxo - Finished extracting frames, start making overview.
+Zwz00XLTrxo - Extracted 13030 frames, in 507 shots. Movie time from 148.8 to 6524.8 seconds.
+Zwz00XLTrxo - Succesfully parsed ffmpeg log to shot info and pickled to /home/ts2387/cifar32_all/ship/Zwz00XLTrxo/info.pk
+lzJZ6U5kkbo - Skipping video
+d20_kMOFR2E - Skipping video
+jv2qfGymXTc - Skipping video
+xo_jxJPjKzw - Skipping video
+Q8V00b_OstU - Skipping video
+m1ZSNHqpeYI - Skipping video
+0l_6vJzq21Y - Skipping video
+hJF0-D_LGtc - Skipping video
+-PN9bcSdKyY - Skipping video
+zm_k3TlbCVM - Skipping video
+MBjX7-P5eC0 - Skipping video
+FRaGlxriFDI - Skipping video
+OYFIO4qmUz8 - Skipping video
+rPHPqNh1fd0 - Skipping video
+skjA6OfoR2E - Skipping video
+osBfZOItcZU - Skipping video
+6Z706ccqrx4 - Subprocess ffmpeg to extract frames, writing to ts2387/cifar32_all/ship/6Z706ccqrx4
+6Z706ccqrx4 - Finished extracting frames, start making overview.
+6Z706ccqrx4 - Extracted 11042 frames, in 871 shots. Movie time from 50.6 to 5377.9 seconds.
+6Z706ccqrx4 - Succesfully parsed ffmpeg log to shot info and pickled to /home/ts2387/cifar32_all/ship/6Z706ccqrx4/info.pk
+oWaBCCZtOBQ - Skipping video
+Entered directory /home/ts2387/youtube/airplane with 22 videos
+bQKSn4-fZwk - Skipping video
+8CCFjMRQTYI - Skipping video
+pnHjYqIvtbY - Skipping video
+Sw0POFsgzFk - Skipping video
+59DMHhQcy7A - Skipping video
+zdl6M4JWcyA - Subprocess ffmpeg to extract frames, writing to ts2387/cifar32_all/airplane/zdl6M4JWcyA
+zdl6M4JWcyA - Finished extracting frames, start making overview.
+zdl6M4JWcyA - Extracted 6468 frames, in 492 shots. Movie time from 4.2 to 3118.6 seconds.
+zdl6M4JWcyA - Succesfully parsed ffmpeg log to shot info and pickled to /home/ts2387/cifar32_all/airplane/zdl6M4JWcyA/info.pk
+0Q6lmXHfwQE - Skipping video
+mJBN-pPHezA - Skipping video
+JSIsoj1QPAc - Skipping video
+Rx179XNR2ak - Subprocess ffmpeg to extract frames, writing to ts2387/cifar32_all/airplane/Rx179XNR2ak
+Rx179XNR2ak - Finished extracting frames, start making overview.
+Rx179XNR2ak - Extracted 1919 frames, in 1 shots. Movie time from 282.4 to 1242.3 seconds.
+Rx179XNR2ak - Succesfully parsed ffmpeg log to shot info and pickled to /home/ts2387/cifar32_all/airplane/Rx179XNR2ak/info.pk
+GR4sHcRThWs - Skipping video
+HKYdy-xPpVU - Skipping video
+tZc6xWQALt8 - Subprocess ffmpeg to extract frames, writing to ts2387/cifar32_all/airplane/tZc6xWQALt8
+tZc6xWQALt8 - Finished extracting frames, start making overview.
+tZc6xWQALt8 - Extracted 3119 frames, in 10 shots. Movie time from 125.9 to 1681.5 seconds.
+tZc6xWQALt8 - Succesfully parsed ffmpeg log to shot info and pickled to /home/ts2387/cifar32_all/airplane/tZc6xWQALt8/info.pk
+fMaY3jrzRkQ - Skipping video
+FO_mJbJn-04 - Skipping video
+4CZkmgxuahQ - Skipping video
+RISxGgryX_Y - Subprocess ffmpeg to extract frames, writing to ts2387/cifar32_all/airplane/RISxGgryX_Y
+RISxGgryX_Y - Finished extracting frames, start making overview.
+RISxGgryX_Y - Extracted 22698 frames, in 2288 shots. Movie time from 14.3 to 11257.0 seconds.
+RISxGgryX_Y - Succesfully parsed ffmpeg log to shot info and pickled to /home/ts2387/cifar32_all/airplane/RISxGgryX_Y/info.pk
+CG6n7ZO7MAY - Skipping video
+WBVhY_d4lv4 - Skipping video
+o8hDWSg16o0 - Skipping video
+x_yHtfGH0nI - Skipping video
+0oyWZjdXxlw - Skipping video
+Entered directory /home/ts2387/youtube/bird with 22 videos
+DeMCDprlMmI - Skipping video
+8k7bSsYgVFA - Skipping video
+gAUsvm_jcJU - Skipping video
+0Ub0W-fDchA - Skipping video
+84-SSASmOoI - Skipping video
+9wxgEuvWKD8 - Skipping video
+OcCP4_R8QBw - Skipping video
+WobSrX2wxsw - Skipping video
+qtBloRAxFK8 - Skipping video
+zvLCgv2jPAk - Subprocess ffmpeg to extract frames, writing to ts2387/cifar32_all/bird/zvLCgv2jPAk
+zvLCgv2jPAk - Finished extracting frames, start making overview.
+zvLCgv2jPAk - Extracted 3945 frames, in 136 shots. Movie time from 16.9 to 1965.1 seconds.
+zvLCgv2jPAk - Succesfully parsed ffmpeg log to shot info and pickled to /home/ts2387/cifar32_all/bird/zvLCgv2jPAk/info.pk
+E6PdCEj_b1s - Skipping video
+1c06xOF4uQ8 - Subprocess ffmpeg to extract frames, writing to ts2387/cifar32_all/bird/1c06xOF4uQ8
+1c06xOF4uQ8 - Finished extracting frames, start making overview.
+1c06xOF4uQ8 - Extracted 7218 frames, in 911 shots. Movie time from 8.8 to 3539.2 seconds.
+1c06xOF4uQ8 - Succesfully parsed ffmpeg log to shot info and pickled to /home/ts2387/cifar32_all/bird/1c06xOF4uQ8/info.pk
+AlcocVRQAaI - Skipping video
+i36SKJOoFoo - Skipping video
+LzQtPH7jOlc - Skipping video
+1aRcw6yOObg - Skipping video
+nsbAUwsrW2Q - Skipping video
+52RvhMI0TXo - Skipping video
+WrIVYELyl7I - Subprocess ffmpeg to extract frames, writing to ts2387/cifar32_all/bird/WrIVYELyl7I
+WrIVYELyl7I - Finished extracting frames, start making overview.
+WrIVYELyl7I - Extracted 3542 frames, in 196 shots. Movie time from 17.4 to 1739.0 seconds.
+WrIVYELyl7I - Succesfully parsed ffmpeg log to shot info and pickled to /home/ts2387/cifar32_all/bird/WrIVYELyl7I/info.pk
+Za9xgu9H8-s - Skipping video
+SLWM75yA-Ko - Subprocess ffmpeg to extract frames, writing to ts2387/cifar32_all/bird/SLWM75yA-Ko
+SLWM75yA-Ko - ffmpeg returned unsuccesful with code 1.
+SLWM75yA-Ko - Wrote failing command to /home/ts2387/cifar32_all/bird/SLWM75yA-Ko/command.log.
+ssQoJqdZcRw - Skipping video
+=================================
+END CYCLE--- %d videos processed
+=================================
+===========
+START CYCLE
+===========
+Entered directory /home/ts2387/youtube/horse with 21 videos
+TQUMAJCh1fA - Skipping video
+1spIBy_nUPE - Skipping video
+zwOImSrzmCg - Skipping video
+Cg2tVKvKp1A - Skipping video
+zgv00lndzQ0 - Skipping video
+86XGhbhwTwo - Skipping video
+mtEUPyf5UC8 - Skipping video
+QsvS6gEBJuE - Skipping video
+bQvdOhJmqEI - Skipping video
+dfIHhj4xbYw - Skipping video
+oJquuyK4s2E - Skipping video
+qtX3ir4eWMM - Skipping video
+TuQe4-I9FW4 - Skipping video
+nd2z8Imi77w - Skipping video
+ZWiZocE1zck - Skipping video
+NGoV5S3BVcg - Skipping video
+LNCfLAPXL9E - Skipping video
+quMCX3MkcTM - Skipping video
+aQxzU0Lf1mw - Skipping video
+OY_xSsW5eOU - Skipping video
+e4_VABp4n6U - Skipping video
+Entered directory /home/ts2387/youtube/automobile with 23 videos
+hiVmGBD6udQ - Skipping video
+GiBR2o70pTo - Skipping video
+oouOTsFcISE - Skipping video
+3lYwP0hzCXg - Skipping video
+Uup7jVqEIss - Skipping video
+ZT5nLjM6FcU - Skipping video
+_M7R3GYHki8 - Skipping video
+n4slFq1iNaY - Skipping video
+KJCWxn1y12o - Skipping video
+jMNoQSdOMNM - Skipping video
+j2zsuO1rBB0 - Skipping video
+7KftVUFVSMM - Skipping video
+Sb102PUYf84 - Skipping video
+gt1k3BLN7pw - Skipping video
+7EYaD6Z8Z24 - Skipping video
+6pwsiBVpBE0 - Skipping video
+672HAOq5678 - Skipping video
+iSodQMghf6Y - Skipping video
+8bT6txm4RpA - Skipping video
+wwK5K1c2kG0 - Skipping video
+WWDI6pXa9i4 - Skipping video
+qPyKVkSDLbU - Skipping video
+3DV-UaCQmpc - Skipping video
+Entered directory /home/ts2387/youtube/deer with 16 videos
+nI97ca94w8k - Skipping video
+qQbSUO6HGEQ - Skipping video
+yzwX77PTvZs - Skipping video
+v_lyOfZXKDU - Skipping video
+I_zWYPr7pBI - Skipping video
+g1LqYXq_iJA - Skipping video
+F1VhNWb-Opw - Skipping video
+XX5h0a9YiOo - Skipping video
+Ex_ka8KhWHU - Skipping video
+7HwEp3dTnfE - Skipping video
+DE7hNdkNmsI - Skipping video
+qi-kdEgjCkc - Skipping video
+DR3hJ1kKi4Q - Skipping video
+oL-xDhEvD30 - Skipping video
+HFWj0jEaJ5w - Skipping video
+e7nWRCZL25Y - Skipping video
+Entered directory /home/ts2387/youtube/dog with 21 videos
+16IxqJ7_M8Q - Skipping video
+omUIhrCcGqI - Skipping video
+s9t2RKYCBvE - Skipping video
+gAnVS27WODg - Skipping video
+yKHznwVTxYg - Skipping video
+eWBcVp-3cmc - Skipping video
+OFhRtPrfXr4 - Skipping video
+HNtBphqE_LA - Skipping video
+N913VOemqt8 - Skipping video
+y2dlHNOJkpA - Skipping video
+N9aLY4AJaSs - Skipping video
+OMWshXDmQ2M - Skipping video
+OI-CKiX1uZc - Skipping video
+VGdTKjWQnAo - Skipping video
+ZtDXyn3sV8U - Skipping video
+c6k58220hJ4 - Skipping video
+Nj5aK3wPk28 - Skipping video
+DE1nQwUvhGg - Skipping video
+IFUHcROix0s - Skipping video
+yDyvRayFvJw - Skipping video
+LrbcbP7am-0 - Skipping video
+Entered directory /home/ts2387/youtube/frog with 17 videos
+Ush1__TO0fQ - Skipping video
+bHwAguHqYnU - Skipping video
+C3Yd7M3JNlw - Skipping video
+dwvyniKeDsY - Skipping video
+EQZjNBPfNNA - Skipping video
+ONw9pafpr7U - Skipping video
+uXWYCm2eLw8 - Skipping video
+8Y6VyrGITG4 - Skipping video
+eX54klzOJpY - Skipping video
+gti_knh9O50 - Skipping video
+5K_LVkcVq-g - Skipping video
+hQcBV6k_27I - Skipping video
+sCcFXdiODf0 - Skipping video
+ulSS4K2xc8M - Skipping video
+10OVZHEpaDc - Skipping video
+XbzcJ0NGNSI - Skipping video
+qrZBxlN62DU - Skipping video
+Entered directory /home/ts2387/youtube/cat with 18 videos
+u6qvMAyI44A - Skipping video
+izqCgnEEKwc - Skipping video
+gkWuLoHdF2s - Skipping video
+uuQRcP2V2kc - Skipping video
+x-ZN4qtVqR8 - Skipping video
+TH6dTSbmTt0 - Skipping video
+A42U5njyx6c - Skipping video
+ZBAGEeOms-8 - Skipping video
+iW1wWE6Ughk - Skipping video
+4tzhyfWHdLo - Skipping video
+G-vLgkO4XIc - Skipping video
+Kdgt1ZHkvnM - Skipping video
+0GN0rNzojTY - Skipping video
+vWjOEINtX_8 - Skipping video
+Osmzms9ANnE - Skipping video
+tNMxLvY9jv8 - Skipping video
+fF8uJWufF8c - Skipping video
+SVgzWmqC_rg - Skipping video
+Entered directory /home/ts2387/youtube/truck with 21 videos
+81IAMEZshrU - Skipping video
+OOdHc9RrAKM - Skipping video
+GOv4H6N-PV0 - Skipping video
+GGx-iqYjeLs - Skipping video
+iJxPm-avGeI - Skipping video
+lJ45iaQgJjk - Skipping video
+Ef98FiDMqVA - Skipping video
+TaO7ZTdF75s - Skipping video
+2etrT025NiY - Skipping video
+6hFXotBz-mQ - Skipping video
+0ATzWE688bI - Skipping video
+m8d6br7r4LM - Skipping video
+G837cDBvQe8 - Skipping video
+uvJJUMLe6ik - Skipping video
+bAC4eAA2u5M - Skipping video
+-s1JGFjzqUo - Skipping video
+IJz2iABjaqs - Skipping video
+ysHj77HeuFo - Skipping video
+QCSrS7k2lGc - Skipping video
+D8kZRMpP8cw - Skipping video
+Z3cQjuWXGlU - Skipping video
+Entered directory /home/ts2387/youtube/ship with 22 videos
+xg0AzXDcFsc - Skipping video
+-LFzHhU-Rro - Skipping video
+NADWGNRYOLU - Skipping video
+Zwz00XLTrxo - Skipping video
+lzJZ6U5kkbo - Skipping video
+d20_kMOFR2E - Skipping video
+jv2qfGymXTc - Skipping video
+xo_jxJPjKzw - Skipping video
+Q8V00b_OstU - Skipping video
+m1ZSNHqpeYI - Skipping video
+0l_6vJzq21Y - Skipping video
+hJF0-D_LGtc - Skipping video
+-PN9bcSdKyY - Skipping video
+zm_k3TlbCVM - Skipping video
+MBjX7-P5eC0 - Skipping video
+FRaGlxriFDI - Skipping video
+OYFIO4qmUz8 - Skipping video
+rPHPqNh1fd0 - Skipping video
+skjA6OfoR2E - Skipping video
+osBfZOItcZU - Skipping video
+6Z706ccqrx4 - Skipping video
+oWaBCCZtOBQ - Skipping video
+Entered directory /home/ts2387/youtube/airplane with 22 videos
+bQKSn4-fZwk - Skipping video
+8CCFjMRQTYI - Skipping video
+pnHjYqIvtbY - Skipping video
+Sw0POFsgzFk - Skipping video
+59DMHhQcy7A - Skipping video
+zdl6M4JWcyA - Skipping video
+0Q6lmXHfwQE - Skipping video
+mJBN-pPHezA - Skipping video
+JSIsoj1QPAc - Skipping video
+Rx179XNR2ak - Skipping video
+GR4sHcRThWs - Skipping video
+HKYdy-xPpVU - Skipping video
+tZc6xWQALt8 - Skipping video
+fMaY3jrzRkQ - Skipping video
+FO_mJbJn-04 - Skipping video
+4CZkmgxuahQ - Skipping video
+RISxGgryX_Y - Skipping video
+CG6n7ZO7MAY - Skipping video
+WBVhY_d4lv4 - Skipping video
+o8hDWSg16o0 - Skipping video
+x_yHtfGH0nI - Skipping video
+0oyWZjdXxlw - Skipping video
+Entered directory /home/ts2387/youtube/bird with 22 videos
+DeMCDprlMmI - Skipping video
+8k7bSsYgVFA - Skipping video
+gAUsvm_jcJU - Skipping video
+0Ub0W-fDchA - Skipping video
+84-SSASmOoI - Skipping video
+9wxgEuvWKD8 - Skipping video
+OcCP4_R8QBw - Skipping video
+WobSrX2wxsw - Skipping video
+qtBloRAxFK8 - Skipping video
+zvLCgv2jPAk - Skipping video
+E6PdCEj_b1s - Skipping video
+1c06xOF4uQ8 - Skipping video
+AlcocVRQAaI - Skipping video
+i36SKJOoFoo - Skipping video
+LzQtPH7jOlc - Skipping video
+1aRcw6yOObg - Skipping video
+nsbAUwsrW2Q - Skipping video
+52RvhMI0TXo - Skipping video
+WrIVYELyl7I - Skipping video
+Za9xgu9H8-s - Skipping video
+SLWM75yA-Ko - Skipping video
+ssQoJqdZcRw - Skipping video
+=================================
+END CYCLE--- %d videos processed
+=================================
