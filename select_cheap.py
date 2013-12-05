@@ -8,9 +8,9 @@ import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 import Image
 import matplotlib
-import cv2
-import smpl_find_obj
-from smpl_find_obj import init_feature, filter_matches, explore_match
+#import cv2
+#import smpl_find_obj
+#from smpl_find_obj import init_feature, filter_matches, explore_match
 import cPickle as pickle
 import datetime
 
@@ -41,7 +41,7 @@ class Selector:
         assert(c==3)
         self.x=x
         self.y=y
-        print "{0} - Frames are {1}x{2}".format(self.vidid,x,y)
+        print "{0} - Frames are {1}x{2}".format(self.vidid,self.x,self.y)
         self.shots=[]
         self.brightness=[]
         self.reldiffs=[]

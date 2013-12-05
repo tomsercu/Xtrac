@@ -9,11 +9,12 @@ import cPickle as pickle
 import datetime
 import simplejson
 
+# TODO detect doubles in selected queries!
 #===============================================================================
 # Parameters
 #===============================================================================
 outdir=expanduser('~/youtube')
-Npersubj=200 # increase to download more per subject
+Npersubj=50 # increase to download more per subject
 maxpages=5
 ytstring='http://www.youtube.com/results?filters=video%2C+long&'
 #===============================================================================

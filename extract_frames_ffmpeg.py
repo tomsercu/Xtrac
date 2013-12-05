@@ -12,7 +12,7 @@ import cPickle as pickle
 cifar32=True
 viddir=expanduser('~/youtube')
 if cifar32:
-    framedir=expanduser('~/cifar32')
+    framedir=expanduser('~/cifar32_all')
 else:
     framedir=expanduser('~/thumbs')
 
