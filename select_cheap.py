@@ -1,6 +1,7 @@
 import numpy as np
 from os import listdir,mkdir
 from os.path import isfile,isdir,join, expanduser
+import sys
 import shutil
 import scipy.io
 import scipy.signal as sps
@@ -13,6 +14,8 @@ import matplotlib
 #from smpl_find_obj import init_feature, filter_matches, explore_match
 import cPickle as pickle
 import datetime
+import simplejson as json
+import glob
 
 #=================
 #FILTER PARAMETERS
@@ -23,6 +26,17 @@ MAX_REL_DIFF_FRAMES=0.4
 MIN_BRIGHTNESS=10
 MAX_BRIGHTNESS=200
 
+#FILTER IDS
+#==========
+filter_ids={
+'short':-1,
+'bright':-2,
+'dark':-3,
+'static':-4,
+'dynamic':-5,
+'unnatural':-6,
+}
+
 #=================
 # CLASS SELECTOR
 #=================
@@ -31,9 +45,10 @@ class Selector:
         """ Selector  """
         #path is folder with frames and info.
         assert(isdir(path) and isfile(join(path,'info.pk')))
-        print "Opening selector for %s"%path
+        print "%s - Opening selector for %s"%(vidid,path)
         self.path=path
         self.vidid=vidid
+        self.filtered=False
         self.loadpickle()
         # determine framesize
         img=mpimg.imread(join(self.path,'frame_%05d.jpeg'%self.shots_info[0][0]['frame_id_jpeg']))
@@ -45,7 +60,12 @@ class Selector:
         self.shots=[]
         self.brightness=[]
         self.reldiffs=[]
-        self.shots_pass=np.ones((self.Nshots))
+        if self.filtered: # if there has been a filtering before
+            print "Loaded filtering results, ready to display or do second filter"
+        else:
+            global filter_ids
+            self.shots_pass=np.ones((self.Nshots))
+            self.filter_ids=filter_ids
 
     def loadimages(self):
         if len(self.shots)==self.Nshots:
@@ -54,7 +74,7 @@ class Selector:
         print "{0} - Load all shots".format(self.vidid)
         self.shots=[]
         for si,shot in enumerate(self.shots_info):
-            if self.shots_pass[si]==0:
+            if self.shots_pass[si]<=0:
                 self.shots.append(None)
                 continue
             nframes=len(shot)
@@ -70,12 +90,28 @@ class Selector:
     def loadpickle(self):
         self.shots_info=pickle.load(open(join(self.path,'info.pk'),'rb'))
         self.Nshots=len(self.shots_info)
+        if isfile(join(self.path,'filtered.json')):
+            try:
+                self.filtered=True
+                tmp=json.load(open(join(self.path,'filtered.json'),'rU'))
+                self.shots_pass=np.array(tmp['shots_pass'])
+                self.filter_ids=tmp['filter_ids']
+            except Exception as e:
+                print "Could not load filtered.json file: %s" % str(e)
+                self.filtered=False
+
+    def dumpfiltered(self):
+        if not self.filtered:
+            print "No pickle written, apply filters first"
+        else:
+            dic={'shots_pass':list(self.shots_pass) , 'filter_ids':filter_ids}
+            json.dump(dic, open(join(self.path,'filtered.json'),'w'))
 
     def showimg(self,i,j):
         plt.imshow(self.shots[i][j])
         plt.show()
 
-    def showgrid(self,inds={}):
+    def showshots(self,inds={}):
         """ inds contains dict with key: shotid, vals: frameids. """
         rows=len(inds)
         cols=max( [len(inds[k]) for k in inds])
@@ -97,6 +133,9 @@ class Selector:
             print('')
         plt.show()
 
+    def show_filter_sample(self,filter_id):
+        pass
+
     def filter_shotlength(self):
         nogo=0
         passed=0
@@ -107,7 +146,7 @@ class Selector:
                 continue
             if len(self.shots_info[shotid])<MIN_SHOT_LEN:
                 failed+=1
-                self.shots_pass[shotid]=0
+                self.shots_pass[shotid]=filter_ids['short']
             else:
                 passed+=1
         print "%s - Filter on shotlength: %.1f pct of shots passed (%d/%d, nogo=%d)"%(self.vidid, 100.0*passed/(passed+failed), passed,passed+failed, nogo)
@@ -126,10 +165,10 @@ class Selector:
                 continue
             if np.min(self.brightness[shotid])<MIN_BRIGHTNESS:
                 toodark+=1
-                self.shots_pass[shotid]=0
+                self.shots_pass[shotid]=filter_ids['bright']
             elif np.max(self.brightness[shotid])>MAX_BRIGHTNESS:
                 toobright+=1
-                self.shots_pass[shotid]=0
+                self.shots_pass[shotid]=filter_ids['dark']
             else:
                 passed+=1
         print "%s - Filter on brightness: %.1f pct of shots passed (%d/%d), %.1f too bright, %.1f too dark"%\
@@ -147,10 +186,10 @@ class Selector:
                 continue
             if np.mean(self.reldiffs[shotid])<MIN_REL_DIFF_FRAMES:
                 toostatic+=1
-                self.shots_pass[shotid]=0
+                self.shots_pass[shotid]=filter_ids['static']
             elif np.mean(self.reldiffs[shotid])>MAX_REL_DIFF_FRAMES:
                 toodynamic+=1
-                self.shots_pass[shotid]=0
+                self.shots_pass[shotid]=filter_ids['dynamic']
             else:
                 passed+=1
         Nproc=self.Nshots-nogo
@@ -163,6 +202,9 @@ class Selector:
                 continue
         pass #TODO
 
+    def filter_faces(self):
+        pass
+
     def filter_frontobject(self):
         pass
 
@@ -171,7 +213,7 @@ class Selector:
             return
         self.brightness=[None]*self.Nshots
         # TODO weigh with grayscale-perception weights
-        for shotid in np.where(self.shots_pass)[0]:
+        for shotid in np.where(self.shots_pass == 1)[0]:
             shot=self.shots[shotid] # np array with shape (shotlen, x,y,3)
             self.brightness[shotid]=shot.reshape((shot.shape[0],-1)).mean(axis=1)
 
@@ -180,7 +222,7 @@ class Selector:
         if len(self.reldiffs)>0:
             return False
         self.reldiffs=[None]*self.Nshots
-        for shotid in np.where(self.shots_pass)[0]:
+        for shotid in np.where(self.shots_pass == 1)[0]:
             shot=self.shots[shotid]
             #framediffs=shot[:-1,:,:,:]-shot[1:,:,:,:]
             framediffs=np.abs(shot[:-1,:,:,:].astype('int16') -shot[1:,:,:,:].astype('int16')).astype('uint8')
@@ -188,58 +230,59 @@ class Selector:
             maxbr=np.max(np.vstack((self.brightness[shotid][:-1],self.brightness[shotid][1:])),axis=0)
             self.reldiffs[shotid] /= maxbr
 
-    def apply_filters_write(self,outdir):
-        """ This is the core function that will apply all cheap filters and write
-        the result to outdir, subdivided in folders per shot"""
-        print "%s - Apply filters and export selected shots to %s"%(self.vidid,outdir)
+    def apply_filters_write(self):
+        """ This is the core function that will apply all cheap filters and
+        save the results in internal array self.shots_pass"""
+        print "%s - Apply filters"%(self.vidid)
         self.filter_shotlength()
         self.loadimages()
         self.filter_brightness()
         self.filter_framediff()
-        ### SHOTS THAT PASSED
-        print "%s - Export selected shots to %s"%(self.vidid,outdir)
-        for shotid in xrange(self.Nshots):
-            if not self.shots_pass[shotid]==1:
-                print "X",
-                continue
-            for fid,frame in enumerate(self.shots_info[shotid]):
-                fn=join(self.path,'frame_%05d.jpeg'%frame['frame_id_jpeg'])
-                shutil.copy(fn,join(outdir,'shot_%04d_fr_%03d.jpeg'%(shotid,fid)))
-            print ".",
-        print ""
+        self.filter_unnatural()
+        self.filter_faces()
+        ## SET filtered parameter and print info
+        self.filtered=True
+        Npass=np.sum(sel.shots_pass==1)
+        print "%s - Filter results: %.1f pct of shots passed tests (%d / %d )" % (vidid, 100.*Npass/self.Nshots, Npass, self.Nshots)
 
 
 
-if __name__=="__main__":
+if __name__=="__main__" and len(sys.argv)==1:
+    # Go through full directory structure and apply cheap filter
     inpath=expanduser('~/cifar32_all')
-    outpath=expanduser('~/cifar32_selected')
     for subj in listdir(inpath):
         Sinpath=join(inpath,subj)
-        Soutpath=join(outpath,subj)
         if not isdir(Sinpath):
             continue
         vidlist=listdir(Sinpath)
-        if not isdir(Soutpath) and len(vidlist)>0:
-            print "Make directory %s"%Soutpath
-            mkdir(Soutpath)
         print "Enter directory %s with %d videos"%(Sinpath,len(vidlist))
         for vidid in vidlist:
             Vinpath=join(Sinpath,vidid)
             if not isfile(join(Vinpath,'info.pk')):
                 print "%s - No infofile found, skipping video"%vidid
                 continue
-            Voutpath=join(Soutpath,vidid)
-            if isdir(Voutpath):
-                if isfile(join(Voutpath,'started')):
-                    print "%s - Movie is processed or busy, Skipping video"%vidid
-                    continue
-            else:
-                mkdir(Voutpath)
-            open(join(Voutpath,'started'),'wb').close()
+            if isfile(join(Vinpath,'filtered.json')) or isfile(join(Vinpath,'started_filtering')):
+                print "%s - Movie is processed or busy, Skipping video"%vidid
+                continue
+            open(join(Vinpath,'started_filtering'),'wb').close()
             print "%s - cheapfilter video to discard bad shots"%vidid
             sel=Selector(Vinpath,vidid)
-            sel.apply_filters_write(Voutpath)
+            sel.apply_filters_write()
+            sel.dumpfiltered()
 
+if __name__=="__main__" and len(sys.argv)==2:
+    # Load one specific video
+    inpath=expanduser('~/cifar32_all')
+    vidid=sys.argv[1]
+    vidpath=glob.glob(join(inpath,'*',vidid))
+    if (len(vidpath)!=1):
+        raise Exception('I found %d vids: %s'%(len(vidpath), str(vidpath)))
+    vidpath=vidpath[0]
+    print "Load selector for video at %s"%vidpath
+    sel=Selector(vidpath,vidid)
+    if not sel.filtered:
+        sel.apply_filters_write()
+        sel.dumpfiltered()
 
     #frpath='samplevids/jF5eDmDPUDk/'
     #sel=Selector(frpath)

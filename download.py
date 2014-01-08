@@ -7,7 +7,7 @@ from os.path import expanduser, isfile, join, isdir
 import shutil
 import cPickle as pickle
 import datetime
-import simplejson
+import simplejson as json
 
 # TODO detect doubles in selected queries!
 #===============================================================================
@@ -21,7 +21,7 @@ ytstring='http://www.youtube.com/results?filters=video%2C+long&'
 # Load all queries
 #===============================================================================
 with open('cifar10.json','rU') as fh:
-    queries=simplejson.load(fh)
+    queries=json.load(fh)
 subjects=queries.keys()
 
 #===============================================================================
