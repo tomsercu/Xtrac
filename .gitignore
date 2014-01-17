@@ -9,3 +9,4 @@
 *.project
 *.*~
 opencv_samples
+*.png
