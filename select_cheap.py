@@ -329,7 +329,7 @@ class Selector:
             maxbr=np.max(np.vstack((self.brightness[shotid][:-1],self.brightness[shotid][1:])),axis=0)
             self.reldiffs[shotid] /= maxbr
 
-    def apply_filters_write(self):
+def apply_filters_write(self):
         """ This is the core function that will apply all cheap filters and
         save the results in internal array self.shots_pass"""
         print "%s - Apply filters"%(self.vidid)
