@@ -1,6 +1,7 @@
 import numpy as np
+import os
 from os import listdir,mkdir
-from os.path import isfile,isdir,join, expanduser
+from os.path import isfile,isdir,join, expanduser, split
 import sys
 import shutil
 import scipy.io
@@ -12,20 +13,13 @@ import matplotlib
 #import cv2
 #import smpl_find_obj
 #from smpl_find_obj import init_feature, filter_matches, explore_match
-import cPickle as pickle
 import datetime
 import simplejson as json
 import glob
 from util import full_extent
+import  conf
+import subprocess
 
-#=================
-#FILTER PARAMETERS
-#=================
-MIN_SHOT_LEN=3
-MIN_REL_DIFF_FRAMES=0.02
-MAX_REL_DIFF_FRAMES=0.4
-MIN_BRIGHTNESS=47
-MAX_BRIGHTNESS=185
 
 #FILTER IDS
 #==========
@@ -52,17 +46,22 @@ filter_colors={
 # CLASS SELECTOR
 #=================
 class Selector:
-    def __init__(self,path,vidid):
+    def __init__(self,subj,vidid):
         """ Selector  """
+        print "%s - Opening selector for %s"%(vidid, vidid)
         #path is folder with frames and info.
-        assert(isdir(path) and isfile(join(path,'info.pk')))
-        print "%s - Opening selector for %s"%(vidid,path)
+        path = join(conf.path.thumbs, subj, vidid)
         self.path=path
+        assert(isdir(path) and isfile(join(path, conf.fn.shots)))
+        self.outpath = join(conf.path.frames, subj, vidid)
+        self.subj = subj
         self.vidid=vidid
+        self.thumb_fn = join(self.path,
+                              conf.thumbs.fn.format(vidid = vidid,num = '%06d'))
         self.filtered=False
-        self.loadpickle()
+        self.load_shots_info()
         # determine framesize
-        img=mpimg.imread(join(self.path,'frame_%05d.jpeg'%self.shots_info[0][0]['frame_id_jpeg']))
+        img=mpimg.imread(self.thumb_fn % self.shots_info[0][0]['thumb_n'])
         x,y,c=img.shape
         assert(c==3)
         self.x=x
@@ -71,12 +70,12 @@ class Selector:
         self.shots=[]
         self.brightness=[]
         self.reldiffs=[]
-        if self.filtered: # if there has been a filtering before
-            print "Loaded filtering results, ready to display or do second filter"
-        else:
-            global filter_ids
-            self.shots_pass=np.ones((self.Nshots))
-            self.filter_ids=filter_ids
+        #if self.filtered: # if there has been a filtering before
+            #print "Loaded filtering results, ready to display or do second filter"
+        #else:
+        global filter_ids
+        self.shots_pass=np.ones((self.Nshots))
+        self.filter_ids=filter_ids
 
     def loadimages(self, all=False):
         if len(self.shots)==self.Nshots:
@@ -91,37 +90,82 @@ class Selector:
             nframes=len(shot)
             self.shots.append(np.zeros((nframes,self.x,self.y,3),dtype='uint8')) # allocate for speed
             for fi,frame in enumerate(shot):
-                img=plt.imread(join(self.path,'frame_%05d.jpeg'%frame['frame_id_jpeg']))
+                img=plt.imread(self.thumb_fn % frame['thumb_n'])
                 self.shots[si][fi,:,:,:]=img
             #print ".",
         #print ""
         return True
 
-    def loadpickle(self):
-        self.shots_info=pickle.load(open(join(self.path,'info.pk'),'rb'))
+    def load_shots_info(self):
+        self.shots_info=json.load(open(join(self.path, conf.fn.shots),'rU'))
         self.Nshots=len(self.shots_info)
-        if isfile(join(self.path,'filtered.json')):
-            try:
-                self.filtered=True
-                tmp=json.load(open(join(self.path,'filtered.json'),'rU'))
-                self.shots_pass=np.array(tmp['shots_pass'])
-                self.filter_ids=tmp['filter_ids']
-            except Exception as e:
-                print "Could not load filtered.json file: %s" % str(e)
-                self.filtered=False
+        #if isfile(join(self.path,'filtered.json')):
+            #try:
+                #self.filtered=True
+                #tmp=json.load(open(join(self.path,'filtered.json'),'rU'))
+                #self.shots_pass=np.array(tmp['shots_pass'])
+                #self.filter_ids=tmp['filter_ids']
+            #except Exception as e:
+                #print "Could not load filtered.json file: %s" % str(e)
+                #self.filtered=False
 
-    def dumpfiltered(self):
+    def save_results(self):
         if not self.filtered:
-            print "No pickle written, apply filters first"
-        else:
-            dic={'shots_pass':list(self.shots_pass) , 'filter_ids':filter_ids}
-            json.dump(dic, open(join(self.path,'filtered.json'),'w'))
+            print "Not filtered yet: nothing written, apply filters first"
+            return
+        # TOdo update for per-thumb filter
+        dic={'shots_pass':list(self.shots_pass) , 'filter_ids':filter_ids}
+        json.dump(dic, open(join(self.path,'filtered.json'),'w'))
+        # TODO save grid to visualize different filters results
+        for f in filter_ids:
+            if f == 'short': continue
+            fn = join(self.path, 'filter_%s.jpg' % f)
+            self.show_filter_sample([f,], (16,20), frames_per_shot = 5, fn = fn)
+
+
+    def ffmpeg(self):
+        #logfn = join(self.outpath, conf.fn.ffmpeg_log)
+        vidid = self.vidid
+        vidpath = join(conf.path.video, self.subj, self.vidid+'.mp4')
+        if not isfile(vidpath): vidpath = join(conf.path.video, self.subj, self.vidid+'.flv')
+        cmd  = ('ffmpeg -i "{vidpath}" '
+                '-vf select=\'between(n\,{nstart}\,{nstop})\','
+                'scale={w}:{h} -vsync \'vfr\' '
+                '-f image2 "%s"')
+        cmd = cmd % join(self.outpath, conf.frames.fn)
+        print cmd
+        shotinfo = [(None, None) for shot in xrange(self.Nshots)]
+        Nfails = 0
+        for shot in xrange(self.Nshots):
+            if not self.shots_pass[shot]==1:
+                continue
+            nstart = self.shots_info[shot][0]['n']
+            try: nstop  = self.shots_info[shot+1][0]['n']
+            except: nstop = self.shots_info[shot][-1]['n'] # last shot
+            w = conf.frames.w
+            h = conf.frames.h
+            cmd_now = cmd.format(**locals())
+            # RUN FFMPEG, in SILENCE
+            result = subprocess.call(cmd_now, shell=True, stdout = open(os.devnull, 'wb'), stderr = open(os.devnull, 'wb'))
+            if (result==0):
+                print "%s - shot %d frames extracted." % (vidid, shot)
+                shotinfo[shot] = (nstart, nstop)
+            else:
+                print "%s - ffmpeg returned  unsuccesful with code %d."%(vidid,result)
+                with open(join(out,'command.log'),'w') as fh:
+                    fh.write(command+'\n')
+                print "%s - Wrote failing command to %s."%(vidid,join(out,'%05d_command.log' % shot))
+                Nfails +=1
+        # Write overview json file, with nstart and nstop in original video
+        with open( join(self.outpath, conf.fn.shots), 'w') as fh:
+            json.dump(shotinfo, fh)
+        return Nfails
 
     def showimg(self,i,j):
         plt.imshow(self.shots[i][j])
         plt.show()
 
-    def showgrid(self, frames, tile=(20,30),colors=None):
+    def showgrid(self, frames, tile=(20,30),colors=None, fn = None, title = None):
         assert(len(frames)==tile[0]*tile[1])
         rows=tile[0]
         cols=tile[1]
@@ -150,7 +194,8 @@ class Selector:
                 print ""
             print ('%d'%i),
         print ""
-
+        if title is not None:
+            plt.suptitle(title)
         if colors is not None:
             print "Coloring background"
             from matplotlib.transforms import Bbox
@@ -168,9 +213,11 @@ class Selector:
                                          facecolor=colors[ci][1] ,edgecolor='none', zorder=-1,
                                                           transform=fig.transFigure)
                 fig.patches.append(rect)
-        print "Save and show"
-        plt.savefig('grid.png')
-        plt.show()
+        #print "Save or show"
+        if fn is not None:
+            plt.savefig(fn)
+        else:
+            plt.show()
 
     def showshots(self,inds={}):
         """ inds contains dict with key: shotid, vals: frameids. """
@@ -194,7 +241,7 @@ class Selector:
             print('')
         plt.show()
 
-    def show_filter_sample(self,filter_show=['pass'], tile=(16,21),frames_per_shot=3):
+    def show_filter_sample(self,filter_show=['pass'], tile=(16,21),frames_per_shot=3, fn = None):
         """Show a grid of shots with filter codes in filter_show,
         and number of frames in tile."""
         self.loadimages(all=True)
@@ -202,7 +249,7 @@ class Selector:
         rows_per_filter=[tile[0]/len(filter_show)]*len(filter_show)
         rows_per_filter[0]=tile[0]-np.sum(rows_per_filter[1:])
         Nframes=np.cumsum(rows_per_filter)*tile[1]
-        print Nframes
+        #print Nframes
         frames=[]
         colors=[]
         # show results of each filter
@@ -211,32 +258,35 @@ class Selector:
             np.random.shuffle(shot_ids)
             for sid in shot_ids:
                 s=self.shots[sid]
-                if s is None:
+                if s is None: # img not loaded
                     continue
-                for frameid in range(0,len(s),len(s)/frames_per_shot):
+                rate = max([1, len(s)/frames_per_shot])
+                for frameid in range(0,rate*frames_per_shot,rate):
                     frames.append((sid,frameid))
                     if len(frames)==Nframes[i]: break
                 if len(frames)==Nframes[i]: break
             # pad
+            print "filter id = %s, showing %d thumbs"%(filterid, len(frames))
             if len(frames)<Nframes[i]:
                 npad=(Nframes[i]-len(frames))
-                print "Pad %d, filter id = %s, npad=%d"%(i,filterid,npad)
                 frames.extend([None]*npad)
             # save colors
             colors.append((len(frames),filter_colors[filterid]))
-        self.showgrid(frames,tile,colors)
-        #self.showgrid(frames,tile,None)
+        if len(filter_show) > 1:
+            self.showgrid(frames,tile,colors, fn)
+        else:
+            self.showgrid(frames,tile,None, fn)
         #return frames
 
     def filter_shotlength(self):
-        nogo=0
+        nogo= 0
         passed=0
         failed=0
         for shotid in xrange(self.Nshots):
             if not self.shots_pass[shotid]==1:
                 nogo+=1
                 continue
-            if len(self.shots_info[shotid])<MIN_SHOT_LEN:
+            if len(self.shots_info[shotid])<conf.filt.min_shot_len:
                 failed+=1
                 self.shots_pass[shotid]=filter_ids['short']
             else:
@@ -254,10 +304,10 @@ class Selector:
             if not self.shots_pass[shotid]==1:
                 nogo+=1
                 continue
-            if np.mean(self.brightness[shotid])<MIN_BRIGHTNESS:
+            if np.mean(self.brightness[shotid])<conf.filt.min_brightness:
                 toodark+=1
                 self.shots_pass[shotid]=filter_ids['dark']
-            elif np.mean(self.brightness[shotid])>MAX_BRIGHTNESS:
+            elif np.mean(self.brightness[shotid])>conf.filt.max_brightness:
                 toobright+=1
                 self.shots_pass[shotid]=filter_ids['bright']
             else:
@@ -275,10 +325,10 @@ class Selector:
             if not self.shots_pass[shotid]==1:
                 nogo+=1
                 continue
-            if np.mean(self.reldiffs[shotid])<MIN_REL_DIFF_FRAMES:
+            if np.mean(self.reldiffs[shotid])<conf.filt.min_rel_diff_frames:
                 toostatic+=1
                 self.shots_pass[shotid]=filter_ids['static']
-            #elif np.mean(self.reldiffs[shotid])>MAX_REL_DIFF_FRAMES:
+            #elif np.mean(self.reldiffs[shotid])>conf.filt.max_rel_diff_frames:
                 #toodynamic+=1
                 #self.shots_pass[shotid]=filter_ids['dynamic']
             else:
@@ -329,7 +379,7 @@ class Selector:
             maxbr=np.max(np.vstack((self.brightness[shotid][:-1],self.brightness[shotid][1:])),axis=0)
             self.reldiffs[shotid] /= maxbr
 
-def apply_filters_write(self):
+    def apply_filters_write(self):
         """ This is the core function that will apply all cheap filters and
         save the results in internal array self.shots_pass"""
         print "%s - Apply filters"%(self.vidid)
@@ -351,48 +401,63 @@ def apply_filters_write(self):
 
 if __name__=="__main__" and len(sys.argv)==1:
     # Go through full directory structure and apply cheap filter
-    inpath=expanduser('~/cifar32_all')
+    inpath = conf.path.thumbs
     for subj in listdir(inpath):
         Sinpath=join(inpath,subj)
         if not isdir(Sinpath):
             continue
+        Soutpath=join(conf.path.frames, subj)
+        if not isdir(Soutpath):
+            mkdir(Soutpath)
         vidlist=listdir(Sinpath)
         print "Enter directory %s with %d videos"%(Sinpath,len(vidlist))
         for vidid in vidlist:
-            Vinpath=join(Sinpath,vidid)
-            if not isfile(join(Vinpath,'info.pk')):
+            Vinpath = join(Sinpath,vidid)
+            Voutpath= join(conf.path.frames, subj, vidid)
+            if not isfile(join(Vinpath, conf.fn.shots)):
                 print "%s - No infofile found, skipping video"%vidid
                 continue
-            if isfile(join(Vinpath,'filtered.json')) or isfile(join(Vinpath,'started_filtering')):
+            # check if frame path exist -- if this processing is done.
+            if not isdir(Voutpath):
+                mkdir(Voutpath)
+            elif isfile(join(Voutpath, conf.fn.shots)) or isfile(join(Voutpath,'started_filtering')):
                 print "%s - Movie is processed or busy, Skipping video"%vidid
                 continue
-            open(join(Vinpath,'started_filtering'),'wb').close()
+            open(join(Voutpath,'started_filtering'),'wb').close()
             print "%s - cheapfilter video to discard bad shots"%vidid
-            sel=Selector(Vinpath,vidid)
-            sel.apply_filters_write()
-            sel.dumpfiltered()
+            try:
+                sel=Selector(subj, vidid)
+                sel.apply_filters_write()
+                sel.save_results()
+                sel.ffmpeg()
+                os.remove(join(Voutpath,'started_filtering')) # Will only be removed if ended nicely
+            except Exception as e:
+                print "%s - filtering failed with error:"
+                print e
+
 
 if __name__=="__main__" and len(sys.argv)==2:
     # Load one specific video
-    inpath=expanduser('~/cifar32_all')
     vidid=sys.argv[1]
-    vidpath=glob.glob(join(inpath,'*',vidid))
+    vidpath=glob.glob(join(conf.path.thumbs,'*',vidid))
     if (len(vidpath)!=1):
         raise Exception('I found %d vids: %s'%(len(vidpath), str(vidpath)))
     vidpath=vidpath[0]
-    print "Load selector for video at %s"%vidpath
-    sel=Selector(vidpath,vidid)
+    subj = split(split(vidpath)[0])[1]
+    print "Load selector for video %s, in subj %s"%(vidpath, subj)
+    sel=Selector(subj, vidid)
     if not sel.filtered:
         sel.apply_filters_write()
-        sel.dumpfiltered()
+        sel.save_results()
+    sel.ffmpeg()
     ## VISUALIZE
-    sel.show_filter_sample(['pass','bright','dark','static'])
-    # check darks manually
-    darks=np.where(sel.shots_pass==filter_ids['dark'])[0]
-    inds={}
-    for d in darks[:16]:
-        inds[d]=range(len(sel.shots[d]))
-    sel.showshots(inds)
+    #sel.show_filter_sample(['pass','bright','dark','static'])
+    ## check darks manually
+    #darks=np.where(sel.shots_pass==filter_ids['dark'])[0]
+    #inds={}
+    #for d in darks[:16]:
+        #inds[d]=range(len(sel.shots[d]))
+    #sel.showshots(inds)
 
     #frpath='samplevids/jF5eDmDPUDk/'
     #sel=Selector(frpath)

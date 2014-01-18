@@ -36,7 +36,7 @@ class thumbs:
     fn = '{vidid}_{num}.jpg'
 
 ### CHEAP FILTERING
-class filter:
+class filt:
     min_shot_len = 3
     min_rel_diff_frames = 0.02
     max_rel_diff_frames = 0.9
