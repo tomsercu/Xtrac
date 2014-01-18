@@ -1,40 +1,41 @@
 import numpy as np
 import subprocess
 import os
-from os.path import join,isdir,exists, expanduser
+from os.path import join,isdir,exists, expanduser, split
 from os import listdir
+import sys
 import glob
 #import cv2
 import traceback
-import cPickle as pickle
+import simplejson as json
+import conf
 
 #wojdir= '/misc/vlgscratch2/FergusGroup/zaremba'
-cifar32=True
-viddir=expanduser('~/youtube')
-if cifar32:
-    framedir=expanduser('~/cifar32_all')
-else:
-    framedir=expanduser('~/thumbs')
+#cifar32=True
+#viddir=expanduser('~/youtube')
+#if cifar32:
+    #framedir=expanduser('~/cifar32_all')
+#else:
+    #framedir=expanduser('~/thumbs')
 
-framerate=2
-scene_threshold=0.3 # see ffmpeg scene  selection
-fprefix='frame_'
-logfn='out.log'
-picklefn='info.pk'
+#framerate=2
+#scene_threshold=0.3 # see ffmpeg scene  selection
+#fprefix='frame_'
+#logfn='out.log'
+#picklefn='info.pk'
 
-if cifar32:
-    command='ffmpeg -i "%s" -vf select=\'gt(scene\,%.2f)+gte(t-prev_selected_t\,%.2f)\',scale=-1:32,crop=32:32 -vsync 2 -f image2 "%s" -loglevel debug 2>&1 | grep "select:[^0]" > "%s"'
-else:
-    # make thumbnails that preserve aspect ratio
-    command='ffmpeg -i "%s" -vf select=\'gt(scene\,%.2f)+gte(t-prev_selected_t\,%.2f)\',scale=-1:80 -vsync 2 -f image2 "%s" -loglevel debug 2>&1 | grep "select:[^0]" > "%s"'
-# this command needs: (inpfile,scene_threshold,frameskip,outdir/frame,outdir/log.txt)
+# OR make thumbnails that preserve aspect ratio
+#command='ffmpeg -i "%s" -vf select=\'gt(scene\,%.2f)+gte(t-prev_selected_t\,%.2f)\',scale=-1:80 -vsync 2 -f image2 "%s" -loglevel debug 2>&1 | grep "select:[^0]" > "%s"'
 
-def parse_logfile(logfn, frames_fn, picklefn):
-    vidid=frames_fn.split('/')[-2]
-    with open(logfn,'r') as fh:
+def parse_logfile(vidid, subj):
+    p = join(conf.path.thumbs, subj, vidid)
+    ffmpeg_log = join(p, conf.fn.ffmpeg_log)
+    shots_fn   = join(p, conf.fn.shots)
+    with open(ffmpeg_log,'r') as fh:
         lines=fh.readlines()
-    if len(lines)!=len(glob.glob(join(out,'*.jpeg'))):
-        print "%s - Parsing ffmpeg log: unexpected loglines: %d, jpeg files: %d"%(len(lines),len(glob.glob(join(out,'*.jpeg'))) )
+    nfiles = len(glob.glob(join(conf.path.thumbs, subj, vidid, '*.jpeg')))
+    if len(lines) != nfiles:
+        print "%s - Parsing ffmpeg log -- unexpected # loglines: %d, jpeg files: %d"%(vidid, len(lines), nfiles)
     shots=[] # contains list of shots
     shotid=-1
     for i,line in enumerate(lines):
@@ -48,71 +49,113 @@ def parse_logfile(logfn, frames_fn, picklefn):
             if k=='t': t=float(v)
             if k=='scene':
                 ffmpeg_scene=float(v)
-                if ffmpeg_scene>=scene_threshold:
+                if ffmpeg_scene >= conf.shotdetect.threshold:
                     shotid+=1
                     shots.append([])
         # collected all info from line, add to frames list
-        shots[shotid].append({'frame_id_movie':frame_id,'shotid':shotid,'fn':frames_fn%(i+1),'frame_id_jpeg':i+1,'t':t,'ffmpeg_scene':ffmpeg_scene})
-        assert(os.path.exists(shots[-1][-1]['fn']))
-    pickle.dump(shots, open(picklefn,'wb'))
-    tb="%s - Extracted %d frames, in %d shots. Movie time from %.1f to %.1f seconds."%(vidid,len(lines),shotid+1,shots[0][0]['t'],shots[-1][-1]['t'])
-    tb+="\n%s - Succesfully parsed ffmpeg log to shot info and pickled to %s"%(vidid,picklefn)
-    return tb
+        shots[shotid].append({'thumb_n':i+1,   # in thumb output jpeg files, not following movie
+                              'n' : frame_id,  # in original movie
+                              't':t,
+                              'ffmpeg_scene':ffmpeg_scene})
+        assert(os.path.exists(join(conf.path.thumbs, subj, vidid, conf.thumbs.fn.format(vidid=vidid, num='000001'))))
+    if shots_fn is not None:
+        json.dump(shots, open(shots_fn, 'w'), indent = 2)
+    tb="%s - Extracted %d sample thumbnails, in %d shots. Movie time from %.1f to %.1f seconds."%(vidid,len(lines),shotid+1,shots[0][0]['t'],shots[-1][-1]['t'])
+    tb+="\n%s - Succesfully parsed ffmpeg log to shot info and saved to %s"%(vidid,shots_fn)
+    print tb
+    return shots
+
+def ffmpeg(subj, vidid):
+    video = join(conf.path.video,  subj, vidid)
+    if exists(video + '.mp4'): video = video + '.mp4'
+    else: video = video + '.flv'
+    out = join(conf.path.thumbs, subj, vidid)
+    if (isdir(out)):
+        if (exists(join(out,'started')) or len(glob.glob(join(out, conf.thumbs.fn.format(vidid=vidid, num='*'))))>0):
+            print "%s - Skipping video"%vidid
+            return -1
+    else:
+        os.mkdir(out)
+    with open(join(out,'started'), 'wb') as fh:
+        fh.write('busy')
+    print "%s - Subprocess ffmpeg to extract frames, writing to %s"%(vidid,'/'.join(out.split('/')[-4:]))
+    thumb_fn = join(out, conf.thumbs.fn.format(vidid = vidid, num = '%06d'))
+    # FFMPEG COMMAND
+    command =  'ffmpeg -i "%s" ' % video
+    command += '-vf select=\'gt(scene\,%.2f)' % (conf.shotdetect.threshold)
+    command += '+gte(t-prev_selected_t\,%.2f)\',' % (1.0 / conf.thumbs.framerate)
+    command += 'scale=%d:%d' % (conf.thumbs.w, conf.thumbs.h)
+    if conf.thumbs.crop is not None:
+        command += ',crop=%d:%d' % (crop, crop)
+    command += ' -vsync 2 -f image2 "%s" ' % thumb_fn
+    command += ' -loglevel debug 2>&1 | grep "select:[^0]" > "%s"' % join(out, conf.fn.ffmpeg_log)
+    #Run ffmpeg
+    #===============
+    result=subprocess.call(command,shell=True)
+
+    if (result==0):
+        print "%s - Finished extracting frames, start making overview."%vidid
+    else:
+        print "%s - ffmpeg returned  unsuccesful with code %d."%(vidid,result)
+        with open(join(out,'command.log'),'w') as fh:
+            fh.write(command+'\n')
+        print "%s - Wrote failing command to %s."%(vidid,join(out,'command.log'))
+    return result
 
 
-nprocessed=1
-while nprocessed>0:
-    print "==========="
-    print "START CYCLE"
-    print "==========="
-    nprocessed=0
-    for subj in listdir(viddir):
-        spath=join(viddir,subj)
-        spathO=join(framedir,subj)
-        if not isdir (spath):
-            continue
 
-        vidlist=glob.glob(join(spath,'*.flv'))
-        vidlist.extend(glob.glob(join(spath,'*.mp4')))
-        if not isdir(spathO) and len(vidlist)>0:
-            print "Make directory %s"%spathO
-            os.mkdir(spathO)
-        print "Entered directory %s with %d videos"%(spath,len(vidlist))
-        for vidpath in vidlist:
-            vidid=os.path.split(vidpath)[1].split('.')[0]
-            #Todo go into framedir, check if frames exist and keyframes exists then continue. Otherwise mkdir and execute command.
-            out=join(spathO,vidid)
-            if (isdir(out)):
-                if (len(glob.glob(join(out,'frame*.jpeg')))>0 or exists(join(out,'started'))):
-                    print "%s - Skipping video"%vidid
-                    continue
-            else:
-                os.mkdir(out)
-            with open(join(out,'started'), 'wb') as fh:
-                fh.write('really busy')
-            print "%s - Subprocess ffmpeg to extract frames, writing to %s"%(vidid,'/'.join(out.split('/')[-4:]))
-            outframes=join(out,fprefix+'%05d.jpeg')
-            thiscommand=command%(vidpath,scene_threshold, 1./framerate, outframes,join(out,logfn))
-            result=subprocess.call(thiscommand,shell=True)
-            if (result==0):
-                print "%s - Finished extracting frames, start making overview."%vidid
-                nprocessed+=1
-            else:
-                print "%s - ffmpeg returned unsuccesful with code %d."%(vidid,result)
-                with open(join(out,'command.log'),'w') as fh:
-                    fh.write(thiscommand+'\n')
-                print "%s - Wrote failing command to %s."%(vidid,join(out,'command.log'))
+if __name__=="__main__" and len(sys.argv)==1:
+    nprocessed=1 # how many processed in last cycle
+    while nprocessed>0:
+        print "==========="
+        print "START CYCLE"
+        print "==========="
+        nprocessed=0
+        for subj in listdir(conf.path.video):
+            spath=join(conf.path.video,subj)
+            spath_th=join(conf.path.thumbs,subj)
+            if not isdir (spath):
                 continue
-            # START compiling output log to shot info
-            try:
-                tb=parse_logfile(join(out,logfn),outframes,join(out,picklefn))
-            except:
-                tb="%s - Error occured during parsing of ffmpeg output to scene info \n"%vidid
-                tb+=traceback.format_exc()
-            finally:
-                print tb
-    print "================================="
-    print "END CYCLE--- %d videos processed"
-    print "================================="
+            vidlist=glob.glob(join(spath,'*.flv'))
+            vidlist.extend(glob.glob(join(spath,'*.mp4')))
+            if not isdir(spath_th) and len(vidlist)>0:
+                print "Make directory %s"%spath_th
+                os.mkdir(spath_th)
+            print "Entered directory %s with %d videos"%(spath,len(vidlist))
+            for vidpath in vidlist:
+                vidid=os.path.split(vidpath)[1].split('.')[0]
+                # SUBPROCESS FFMPEG
+                result = ffmpeg(subj, vidid)
+                if result == 0:
+                    nprocessed += 1
+                else:
+                    continue
+                # START compiling output log to shot info
+                try:
+                    shot_info = parse_logfile(vidid, subj)
+                    tb = ""
+                except:
+                    tb="%s - Error occured during parsing of ffmpeg output to scene info \n"%vidid
+                    tb+=traceback.format_exc()
+                finally:
+                    print tb
+        print "================================="
+        print "END CYCLE--- %d videos processed" % nprocessed
+        print "================================="
 
+
+if __name__=="__main__" and len(sys.argv)==2:
+    # Load one specific video
+    vidid=sys.argv[1]
+    vidpath=glob.glob(join(conf.path.video, '*', vidid+'.mp4'))
+    vidpath.extend(glob.glob(join(conf.path.video, '*', vidid+'.flv')))
+    if (len(vidpath)!=1):
+        raise Exception('I found %d vids: %s'%(len(vidpath), str(vidpath)))
+    vidpath=vidpath[0]
+    subj = split(split(vidpath)[0])[1]
+    print "Found %s in subject %s" % (vidid, subj)
+    result = ffmpeg(subj, vidid)
+    print "FFMPEG result: %d" % result
+    if result == 0:
+        shot_info = parse_logfile(vidid, subj)
 
