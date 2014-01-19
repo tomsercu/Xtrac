@@ -67,7 +67,8 @@ class Selector:
         self.x=x
         self.y=y
         print "{0} - Frames are {1}x{2}".format(self.vidid,self.x,self.y)
-        self.shots=[]
+        self.shots = []
+        self.gray = []
         self.brightness=[]
         self.reldiffs=[]
         #if self.filtered: # if there has been a filtering before
@@ -118,9 +119,9 @@ class Selector:
         json.dump(dic, open(join(self.path,'filtered.json'),'w'))
         # TODO save grid to visualize different filters results
         for f in filter_ids:
-            if f == 'short': continue
+            if f == 'short': continue # not worth showing
             fn = join(self.path, 'filter_%s.jpg' % f)
-            self.show_filter_sample([f,], (16,20), frames_per_shot = 5, fn = fn)
+            self.show_filter_sample(f, fn)
 
 
     def ffmpeg(self):
@@ -165,8 +166,29 @@ class Selector:
         plt.imshow(self.shots[i][j])
         plt.show()
 
-    def showgrid(self, frames, tile=(20,30),colors=None, fn = None, title = None):
-        assert(len(frames)==tile[0]*tile[1])
+    def showshots(self,inds={}):
+        """ inds contains dict with key: shotid, vals: frameids. """
+        rows=len(inds)
+        cols=max( [len(inds[k]) for k in inds])
+        i=0
+        r=0
+        plt.figure(figsize=(20,12))
+        for si in inds:
+            r+=1
+            print ('shot %d, shot length %d, showing %d frames'%(si,len(self.shots[si]),len(inds[si]))),
+            for fi in inds[si]:
+                fr=self.shots[si][fi,:,:,:]
+                i+=1
+                plt.subplot(rows,cols,i)
+                plt.subplots_adjust(left=0.01, right=0.99, top=0.99, bottom=0.01)
+                print ('%d,'%fi),
+                plt.imshow(fr)
+                plt.axis('off')
+            i=cols*r
+            print('')
+        plt.show()
+
+    def showgrid(self, frames, tile=(20,30), fn = None, title = None, colors=None):
         rows=tile[0]
         cols=tile[1]
         fig=plt.figure(figsize=(18,12))
@@ -176,6 +198,8 @@ class Selector:
         #figManager = plt.get_current_fig_manager()
         #figManager.window.showMaximized()
         axes=[]
+        if title is not None:
+            plt.suptitle(title)
         for i,fr_id in enumerate(frames):
             if type(fr_id)==np.ndarray:
                 fr=fr_id
@@ -190,12 +214,10 @@ class Selector:
             plt.subplots_adjust(left=0.01, right=0.99, top=0.99, bottom=0.01)
             plt.imshow(fr)
             plt.axis('off')
-            if i%cols==0:
-                print ""
-            print ('%d'%i),
-        print ""
-        if title is not None:
-            plt.suptitle(title)
+            #if i%cols==0:
+                #print ""
+            #print ('%d'%i),
+        #print ""
         if colors is not None:
             print "Coloring background"
             from matplotlib.transforms import Bbox
@@ -219,64 +241,29 @@ class Selector:
         else:
             plt.show()
 
-    def showshots(self,inds={}):
-        """ inds contains dict with key: shotid, vals: frameids. """
-        rows=len(inds)
-        cols=max( [len(inds[k]) for k in inds])
-        i=0
-        r=0
-        plt.figure(figsize=(20,12))
-        for si in inds:
-            r+=1
-            print ('shot %d, shot length %d, showing %d frames'%(si,len(self.shots[si]),len(inds[si]))),
-            for fi in inds[si]:
-                fr=self.shots[si][fi,:,:,:]
-                i+=1
-                plt.subplot(rows,cols,i)
-                plt.subplots_adjust(left=0.01, right=0.99, top=0.99, bottom=0.01)
-                print ('%d,'%fi),
-                plt.imshow(fr)
-                plt.axis('off')
-            i=cols*r
-            print('')
-        plt.show()
-
-    def show_filter_sample(self,filter_show=['pass'], tile=(16,21),frames_per_shot=3, fn = None):
-        """Show a grid of shots with filter codes in filter_show,
-        and number of frames in tile."""
-        self.loadimages(all=True)
-        #Nframes=tile[0]*tile[1]
-        rows_per_filter=[tile[0]/len(filter_show)]*len(filter_show)
-        rows_per_filter[0]=tile[0]-np.sum(rows_per_filter[1:])
-        Nframes=np.cumsum(rows_per_filter)*tile[1]
-        #print Nframes
+    def show_filter_sample(self,filt='pass', fn = None, tile=(16,20),frames_per_shot=5 ):
+        """Show a grid of shots with frames that have been filtered out
+        by filter."""
         frames=[]
-        colors=[]
+        Nshots = tile[0] * (tile[1] / frames_per_shot)
         # show results of each filter
-        for i,filterid in enumerate(filter_show):
-            shot_ids=np.where(sel.shots_pass==filter_ids[filterid])[0]
-            np.random.shuffle(shot_ids)
-            for sid in shot_ids:
-                s=self.shots[sid]
-                if s is None: # img not loaded
-                    continue
-                rate = max([1, len(s)/frames_per_shot])
-                for frameid in range(0,rate*frames_per_shot,rate):
+        shot_ids=np.where(self.shots_pass==filter_ids[filt])[0]
+        np.random.shuffle(shot_ids)
+        #print "Filter %s: %s" % (filt, str(shot_ids))
+        for sid in shot_ids:
+            s=self.shots[sid]
+            if s is None: # img not loaded
+                print "Want to show shot id %d but it's not loaded :( this shouldn't really happen" % sid
+                continue
+            rate = max([1, len(s)/frames_per_shot])
+            for i in range(frames_per_shot):
+                frameid = rate * i
+                #print "frameid %d of %d total in shot %d" % (frameid, len(s), sid)
+                if frameid < len(s):
                     frames.append((sid,frameid))
-                    if len(frames)==Nframes[i]: break
-                if len(frames)==Nframes[i]: break
-            # pad
-            print "filter id = %s, showing %d thumbs"%(filterid, len(frames))
-            if len(frames)<Nframes[i]:
-                npad=(Nframes[i]-len(frames))
-                frames.extend([None]*npad)
-            # save colors
-            colors.append((len(frames),filter_colors[filterid]))
-        if len(filter_show) > 1:
-            self.showgrid(frames,tile,colors, fn)
-        else:
-            self.showgrid(frames,tile,None, fn)
-        #return frames
+                else:
+                    frames.append(None)
+        self.showgrid(frames, tile, fn, "Filter = %s"%filt)
 
     def filter_shotlength(self):
         nogo= 0
@@ -295,19 +282,27 @@ class Selector:
 
     def filter_brightness(self):
         self.loadimages() # load images if not laoded yet
-        self.calcbrightness()
+        self.calcbrightness() # weighted grayscales
         nogo=0
         passed=0
         toobright=0
         toodark=0
         for shotid in xrange(self.Nshots):
+            #already filtered
+            #----------------------------
             if not self.shots_pass[shotid]==1:
                 nogo+=1
                 continue
-            if np.mean(self.brightness[shotid])<conf.filt.min_brightness:
+            # too many dark pixels
+            shot = self.gray[shotid]
+            darkpixels = (shot < conf.filt.min_brightness).sum(axis = 2).sum(axis = 1)
+            if np.sum(darkpixels > conf.filt.max_dark_area * self.x * self.y) > 0:# now: if any thumb is too dark -> discard
                 toodark+=1
                 self.shots_pass[shotid]=filter_ids['dark']
-            elif np.mean(self.brightness[shotid])>conf.filt.max_brightness:
+                continue
+            # too many bright
+            brightpixels = (shot > conf.filt.max_brightness).sum(axis = 2).sum(axis = 1)
+            if np.sum(brightpixels > conf.filt.max_bright_area * self.x * self.y) > 0:
                 toobright+=1
                 self.shots_pass[shotid]=filter_ids['bright']
             else:
@@ -350,21 +345,19 @@ class Selector:
         pass
 
     def calcbrightness(self):
-        if len(self.brightness)>0:
+        if len(self.gray)>0:
             return
-        self.brightness=[None]*self.Nshots
-        # TODO weigh with grayscale-perception weights
+        self.gray=[None]*self.Nshots
+        self.brightness = [None] * self.Nshots
         for shotid in xrange(len(self.shots)):
-            shot=self.shots[shotid] # np array with shape (shotlen, x,y,3)
-            if shot is None: continue
-            self.brightness[shotid]=shot.reshape((shot.shape[0],-1)).mean(axis=1)
-        self.brightnessmean=[]
-        for ar in self.brightness:
-            if ar is None:
-                self.brightnessmean.append(None)
-            else:
-                self.brightnessmean.append(np.mean(ar))
-        self.brightnessmean=np.array(self.brightnessmean)
+            if self.shots[shotid] is None: continue
+            shot=self.shots[shotid].copy() # np array with shape (shotlen, x,y,3)
+            # weight with grayscale-perception before averaging
+            shot[:,:,:,0] *= 0.2126 # R
+            shot[:,:,:,1] *= 0.7152 # G
+            shot[:,:,:,2] *= 0.0722 # B
+            self.gray[shotid] = shot.sum(axis=3)
+            self.brightness[shotid] = self.gray[shotid].mean(axis = 2).mean(axis = 1)
 
     def calcrelativediff(self):
         ## Calculate the difference between two frames and reweigh by the maximum of their brightness
@@ -446,22 +439,6 @@ if __name__=="__main__" and len(sys.argv)==2:
     subj = split(split(vidpath)[0])[1]
     print "Load selector for video %s, in subj %s"%(vidpath, subj)
     sel=Selector(subj, vidid)
-    if not sel.filtered:
-        sel.apply_filters_write()
-        sel.save_results()
-    sel.ffmpeg()
-    ## VISUALIZE
-    #sel.show_filter_sample(['pass','bright','dark','static'])
-    ## check darks manually
-    #darks=np.where(sel.shots_pass==filter_ids['dark'])[0]
-    #inds={}
-    #for d in darks[:16]:
-        #inds[d]=range(len(sel.shots[d]))
-    #sel.showshots(inds)
-
-    #frpath='samplevids/jF5eDmDPUDk/'
-    #sel=Selector(frpath)
-    #show={}
-    #for shot in [5,8,10,11,17,18,19]:
-        #show[shot]=range(len(sel.shots[shot]))
-
+    sel.apply_filters_write()
+    sel.save_results()
+    #sel.ffmpeg()

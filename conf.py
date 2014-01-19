@@ -40,10 +40,10 @@ class filt:
     min_shot_len = 3
     min_rel_diff_frames = 0.02
     max_rel_diff_frames = 0.9
-    min_brightness = 80
-    min_bright_area = 0.15
+    min_brightness = 60
+    max_bright_area = 0.75
     max_brightness = 170
-    min_dark_area  = 0.15
+    max_dark_area  = 0.75 # 25% need to be light
 
 class frames:
     w = -1
