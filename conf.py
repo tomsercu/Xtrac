@@ -5,8 +5,10 @@ import datetime
 ### PATHS
 class path:
     video = expanduser('~/youtube')
-    thumbs = expanduser('~/thumbs')   # sparse small thumbs -- small part of frames
-    frames = expanduser('~/frames')   # frames for tracking -- all frames
+    #thumbs = expanduser('~/thumbs')   # sparse small thumbs -- small part of frames
+    #frames = expanduser('~/frames')   # frames for tracking -- all frames
+    thumbs = expanduser('/scratch/sercu/thumbs')   # sparse small thumbs -- small part of frames
+    frames = expanduser('/scratch/sercu/frames')   # frames for tracking -- all frames
     track  = '../region_proposals'
     output = expanduser('~/cifar32')  # actual selections
 

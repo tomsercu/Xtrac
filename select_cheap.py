@@ -6,10 +6,11 @@ import sys
 import shutil
 import scipy.io
 import scipy.signal as sps
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 import Image
-import matplotlib
 #import cv2
 #import smpl_find_obj
 #from smpl_find_obj import init_feature, filter_matches, explore_match
@@ -19,6 +20,8 @@ import glob
 from util import full_extent
 import  conf
 import subprocess
+import traceback
+import pdb
 
 
 #FILTER IDS
@@ -78,6 +81,9 @@ class Selector:
         self.shots_pass=np.ones((self.Nshots))
         self.filter_ids=filter_ids
 
+    def pr(self, msg):
+        print "%s - %s" % (self.vidid, msg)
+
     def loadimages(self, all=False):
         if len(self.shots)==self.Nshots:
             return False
@@ -118,11 +124,13 @@ class Selector:
         dic={'shots_pass':list(self.shots_pass) , 'filter_ids':filter_ids}
         json.dump(dic, open(join(self.path,'filtered.json'),'w'))
         # TODO save grid to visualize different filters results
+        print ("%s - Dump filters overviews: " % self.vidid),
         for f in filter_ids:
             if f == 'short': continue # not worth showing
             fn = join(self.path, 'filter_%s.jpg' % f)
             self.show_filter_sample(f, fn)
-
+            print ("%s, " % f),
+        print ""
 
     def ffmpeg(self):
         #logfn = join(self.outpath, conf.fn.ffmpeg_log)
@@ -130,7 +138,7 @@ class Selector:
         vidpath = join(conf.path.video, self.subj, self.vidid+'.mp4')
         if not isfile(vidpath): vidpath = join(conf.path.video, self.subj, self.vidid+'.flv')
         cmd  = ('ffmpeg -i "{vidpath}" '
-                '-vf select=\'between(n\,{nstart}\,{nstop})\','
+                '-vf select=\'gte(n\,{nstart})*lte(n\,{nstop})\','
                 'scale={w}:{h} -vsync \'vfr\' '
                 '-f image2 "%s"')
         cmd = cmd % join(self.outpath, conf.frames.fn)
@@ -149,13 +157,15 @@ class Selector:
             # RUN FFMPEG, in SILENCE
             result = subprocess.call(cmd_now, shell=True, stdout = open(os.devnull, 'wb'), stderr = open(os.devnull, 'wb'))
             if (result==0):
-                print "%s - shot %d frames extracted." % (vidid, shot)
+                self.pr("shot %d - %d frames extracted from %d to %d."\
+                        % (shot, nstop-nstart, nstart, nstop))
                 shotinfo[shot] = (nstart, nstop)
             else:
-                print "%s - ffmpeg returned  unsuccesful with code %d."%(vidid,result)
-                with open(join(out,'command.log'),'w') as fh:
-                    fh.write(command+'\n')
-                print "%s - Wrote failing command to %s."%(vidid,join(out,'%05d_command.log' % shot))
+                self.pr("ffmpeg returned unsuccesful: shot %d frames from %d to %d." % (shot, nstart, nstop))
+                self.pr("return code = %d"%result)
+                with open(join(self.outpath,'%05d_command.log' % shot),'w') as fh:
+                    fh.write(cmd_now + '\n')
+                print "%s - Wrote failing command to %s."%(vidid,join(self.outpath,'%05d_command.log' % shot))
                 Nfails +=1
         # Write overview json file, with nstart and nstop in original video
         with open( join(self.outpath, conf.fn.shots), 'w') as fh:
@@ -250,7 +260,7 @@ class Selector:
         shot_ids=np.where(self.shots_pass==filter_ids[filt])[0]
         np.random.shuffle(shot_ids)
         #print "Filter %s: %s" % (filt, str(shot_ids))
-        for sid in shot_ids:
+        for sid in shot_ids[:Nshots]:
             s=self.shots[sid]
             if s is None: # img not loaded
                 print "Want to show shot id %d but it's not loaded :( this shouldn't really happen" % sid
@@ -425,7 +435,9 @@ if __name__=="__main__" and len(sys.argv)==1:
                 sel.ffmpeg()
                 os.remove(join(Voutpath,'started_filtering')) # Will only be removed if ended nicely
             except Exception as e:
-                print "%s - filtering failed with error:"
+                traceback.print_exc()
+                pdb.set_trace()
+                print "%s - filtering failed with error:" % vidid
                 print e
 
 
