@@ -109,15 +109,6 @@ class Selector:
     def load_shots_info(self):
         self.shots_info=json.load(open(join(self.path, conf.fn.shots),'rU'))
         self.Nshots=len(self.shots_info)
-        #if isfile(join(self.path,'filtered.json')):
-            #try:
-                #self.filtered=True
-                #tmp=json.load(open(join(self.path,'filtered.json'),'rU'))
-                #self.shots_pass=np.array(tmp['shots_pass'])
-                #self.filter_ids=tmp['filter_ids']
-            #except Exception as e:
-                #print "Could not load filtered.json file: %s" % str(e)
-                #self.filtered=False
 
     def save_results(self):
         if not self.filtered:
@@ -321,14 +312,14 @@ class Selector:
                 continue
             # too many dark pixels
             shot = self.gray[shotid]
-            darkpixels = (shot < conf.filt.min_brightness).sum(axis = 2).sum(axis = 1)
-            if np.sum(darkpixels > conf.filt.max_dark_area * self.x * self.y) > 0:# now: if any thumb is too dark -> discard
+            darkpixels = (shot < conf.filt.min_brightness).sum(axis = 2).sum(axis = 1) # num dark pixels per thumb in shot
+            if np.sum(darkpixels > conf.filt.max_dark_area * self.x * self.y) > conf.filt.max_dark_thumbs * len(shot):
                 toodark+=1
                 self.shots_pass[shotid]=filter_ids['dark']
                 continue
             # too many bright
             brightpixels = (shot > conf.filt.max_brightness).sum(axis = 2).sum(axis = 1)
-            if np.sum(brightpixels > conf.filt.max_bright_area * self.x * self.y) > 0:
+            if np.sum(brightpixels > conf.filt.max_bright_area * self.x * self.y) > conf.filt.max_bright_thumbs * len(shot):
                 toobright+=1
                 self.shots_pass[shotid]=filter_ids['bright']
             else:
