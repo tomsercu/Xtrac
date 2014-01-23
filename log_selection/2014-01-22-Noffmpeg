@@ -1,0 +1,1258 @@
+Enter directory /scratch/sercu/thumbs/bird with 22 videos
+AlcocVRQAaI - Movie is processed or busy, Skipping video
+1aRcw6yOObg - Movie is processed or busy, Skipping video
+8k7bSsYgVFA - Movie is processed or busy, Skipping video
+0Ub0W-fDchA - Movie is processed or busy, Skipping video
+i36SKJOoFoo - Movie is processed or busy, Skipping video
+ssQoJqdZcRw - Movie is processed or busy, Skipping video
+9wxgEuvWKD8 - Movie is processed or busy, Skipping video
+84-SSASmOoI - Movie is processed or busy, Skipping video
+DeMCDprlMmI - Movie is processed or busy, Skipping video
+nsbAUwsrW2Q - Movie is processed or busy, Skipping video
+52RvhMI0TXo - Movie is processed or busy, Skipping video
+qtBloRAxFK8 - Movie is processed or busy, Skipping video
+E6PdCEj_b1s - Movie is processed or busy, Skipping video
+Za9xgu9H8-s - Movie is processed or busy, Skipping video
+WobSrX2wxsw - Movie is processed or busy, Skipping video
+gAUsvm_jcJU - cheapfilter video to discard bad shots
+gAUsvm_jcJU - Opening selector for gAUsvm_jcJU
+gAUsvm_jcJU - Frames are 32x42
+gAUsvm_jcJU - Apply filters
+gAUsvm_jcJU - Filter on shotlength: 97.2 pct of shots passed (240/247, nogo=0)
+gAUsvm_jcJU - Load all shots
+gAUsvm_jcJU - Filter on brightness: 73.3 pct of shots passed (176/240), 14.6 too bright, 12.1 too dark
+gAUsvm_jcJU - Filter on frame difference: 95.5 pct of shots passed (168/176), 4.5 too static, 0.0 too dynamic
+gAUsvm_jcJU - Filter results: 68.0 pct of shots passed tests (168 / 247 )
+gAUsvm_jcJU - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+LzQtPH7jOlc - cheapfilter video to discard bad shots
+LzQtPH7jOlc - Opening selector for LzQtPH7jOlc
+LzQtPH7jOlc - Frames are 32x43
+LzQtPH7jOlc - Apply filters
+LzQtPH7jOlc - Filter on shotlength: 97.3 pct of shots passed (285/293, nogo=0)
+LzQtPH7jOlc - Load all shots
+LzQtPH7jOlc - Filter on brightness: 98.2 pct of shots passed (280/285), 1.1 too bright, 0.7 too dark
+LzQtPH7jOlc - Filter on frame difference: 98.6 pct of shots passed (276/280), 1.4 too static, 0.0 too dynamic
+LzQtPH7jOlc - Filter results: 94.2 pct of shots passed tests (276 / 293 )
+LzQtPH7jOlc - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+1c06xOF4uQ8 - cheapfilter video to discard bad shots
+1c06xOF4uQ8 - Opening selector for 1c06xOF4uQ8
+1c06xOF4uQ8 - Frames are 32x58
+1c06xOF4uQ8 - Apply filters
+1c06xOF4uQ8 - Filter on shotlength: 92.0 pct of shots passed (838/911, nogo=0)
+1c06xOF4uQ8 - Load all shots
+1c06xOF4uQ8 - Filter on brightness: 89.1 pct of shots passed (747/838), 0.2 too bright, 10.6 too dark
+1c06xOF4uQ8 - Filter on frame difference: 96.9 pct of shots passed (724/747), 3.1 too static, 0.0 too dynamic
+1c06xOF4uQ8 - Filter results: 79.5 pct of shots passed tests (724 / 911 )
+1c06xOF4uQ8 - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+zvLCgv2jPAk - cheapfilter video to discard bad shots
+zvLCgv2jPAk - Opening selector for zvLCgv2jPAk
+zvLCgv2jPAk - Frames are 32x43
+zvLCgv2jPAk - Apply filters
+zvLCgv2jPAk - Filter on shotlength: 51.5 pct of shots passed (70/136, nogo=0)
+zvLCgv2jPAk - Load all shots
+zvLCgv2jPAk - Filter on brightness: 58.6 pct of shots passed (41/70), 1.4 too bright, 40.0 too dark
+zvLCgv2jPAk - Filter on frame difference: 100.0 pct of shots passed (41/41), 0.0 too static, 0.0 too dynamic
+zvLCgv2jPAk - Filter results: 30.1 pct of shots passed tests (41 / 136 )
+/usr/local/pkg/python/2.7/lib/python2.7/site-packages/matplotlib/pyplot.py:412: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_num_figures`).
+  max_open_warning, RuntimeWarning)
+zvLCgv2jPAk - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+SLWM75yA-Ko - No infofile found, skipping video
+WrIVYELyl7I - cheapfilter video to discard bad shots
+WrIVYELyl7I - Opening selector for WrIVYELyl7I
+WrIVYELyl7I - Frames are 32x57
+WrIVYELyl7I - Apply filters
+WrIVYELyl7I - Filter on shotlength: 84.2 pct of shots passed (165/196, nogo=0)
+WrIVYELyl7I - Load all shots
+WrIVYELyl7I - Filter on brightness: 75.8 pct of shots passed (125/165), 18.8 too bright, 5.5 too dark
+WrIVYELyl7I - Filter on frame difference: 100.0 pct of shots passed (125/125), 0.0 too static, 0.0 too dynamic
+WrIVYELyl7I - Filter results: 63.8 pct of shots passed tests (125 / 196 )
+WrIVYELyl7I - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+OcCP4_R8QBw - cheapfilter video to discard bad shots
+OcCP4_R8QBw - Opening selector for OcCP4_R8QBw
+OcCP4_R8QBw - Frames are 32x57
+OcCP4_R8QBw - Apply filters
+OcCP4_R8QBw - Filter on shotlength: 88.6 pct of shots passed (62/70, nogo=0)
+OcCP4_R8QBw - Load all shots
+OcCP4_R8QBw - Filter on brightness: 40.3 pct of shots passed (25/62), 1.6 too bright, 58.1 too dark
+OcCP4_R8QBw - Filter on frame difference: 100.0 pct of shots passed (25/25), 0.0 too static, 0.0 too dynamic
+OcCP4_R8QBw - Filter results: 35.7 pct of shots passed tests (25 / 70 )
+OcCP4_R8QBw - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+Enter directory /scratch/sercu/thumbs/deer with 16 videos
+v_lyOfZXKDU - cheapfilter video to discard bad shots
+v_lyOfZXKDU - Opening selector for v_lyOfZXKDU
+v_lyOfZXKDU - Frames are 32x43
+v_lyOfZXKDU - Apply filters
+v_lyOfZXKDU - Filter on shotlength: 100.0 pct of shots passed (29/29, nogo=0)
+v_lyOfZXKDU - Load all shots
+v_lyOfZXKDU - Filter on brightness: 89.7 pct of shots passed (26/29), 6.9 too bright, 3.4 too dark
+v_lyOfZXKDU - Filter on frame difference: 96.2 pct of shots passed (25/26), 3.8 too static, 0.0 too dynamic
+v_lyOfZXKDU - Filter results: 86.2 pct of shots passed tests (25 / 29 )
+v_lyOfZXKDU - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+DE7hNdkNmsI - cheapfilter video to discard bad shots
+DE7hNdkNmsI - Opening selector for DE7hNdkNmsI
+DE7hNdkNmsI - Frames are 32x42
+DE7hNdkNmsI - Apply filters
+DE7hNdkNmsI - Filter on shotlength: 98.4 pct of shots passed (368/374, nogo=0)
+DE7hNdkNmsI - Load all shots
+DE7hNdkNmsI - Filter on brightness: 88.6 pct of shots passed (326/368), 1.9 too bright, 9.5 too dark
+DE7hNdkNmsI - Filter on frame difference: 99.7 pct of shots passed (325/326), 0.3 too static, 0.0 too dynamic
+DE7hNdkNmsI - Filter results: 86.9 pct of shots passed tests (325 / 374 )
+DE7hNdkNmsI - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+qQbSUO6HGEQ - cheapfilter video to discard bad shots
+qQbSUO6HGEQ - Opening selector for qQbSUO6HGEQ
+qQbSUO6HGEQ - Frames are 32x57
+qQbSUO6HGEQ - Apply filters
+qQbSUO6HGEQ - Filter on shotlength: 100.0 pct of shots passed (384/384, nogo=0)
+qQbSUO6HGEQ - Load all shots
+qQbSUO6HGEQ - Filter on brightness: 91.1 pct of shots passed (350/384), 0.5 too bright, 8.3 too dark
+qQbSUO6HGEQ - Filter on frame difference: 93.7 pct of shots passed (328/350), 6.3 too static, 0.0 too dynamic
+qQbSUO6HGEQ - Filter results: 85.4 pct of shots passed tests (328 / 384 )
+qQbSUO6HGEQ - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+7HwEp3dTnfE - cheapfilter video to discard bad shots
+7HwEp3dTnfE - Opening selector for 7HwEp3dTnfE
+7HwEp3dTnfE - Frames are 32x45
+7HwEp3dTnfE - Apply filters
+7HwEp3dTnfE - Filter on shotlength: 87.9 pct of shots passed (399/454, nogo=0)
+7HwEp3dTnfE - Load all shots
+7HwEp3dTnfE - Filter on brightness: 82.7 pct of shots passed (330/399), 0.5 too bright, 16.8 too dark
+7HwEp3dTnfE - Filter on frame difference: 100.0 pct of shots passed (330/330), 0.0 too static, 0.0 too dynamic
+7HwEp3dTnfE - Filter results: 72.7 pct of shots passed tests (330 / 454 )
+7HwEp3dTnfE - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+F1VhNWb-Opw - cheapfilter video to discard bad shots
+F1VhNWb-Opw - Opening selector for F1VhNWb-Opw
+F1VhNWb-Opw - Frames are 32x57
+F1VhNWb-Opw - Apply filters
+F1VhNWb-Opw - Filter on shotlength: 78.6 pct of shots passed (81/103, nogo=0)
+F1VhNWb-Opw - Load all shots
+F1VhNWb-Opw - Filter on brightness: 64.2 pct of shots passed (52/81), 0.0 too bright, 35.8 too dark
+F1VhNWb-Opw - Filter on frame difference: 100.0 pct of shots passed (52/52), 0.0 too static, 0.0 too dynamic
+F1VhNWb-Opw - Filter results: 50.5 pct of shots passed tests (52 / 103 )
+F1VhNWb-Opw - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+yzwX77PTvZs - cheapfilter video to discard bad shots
+yzwX77PTvZs - Opening selector for yzwX77PTvZs
+yzwX77PTvZs - Frames are 32x57
+yzwX77PTvZs - Apply filters
+yzwX77PTvZs - Filter on shotlength: 89.4 pct of shots passed (313/350, nogo=0)
+yzwX77PTvZs - Load all shots
+yzwX77PTvZs - Filter on brightness: 79.6 pct of shots passed (249/313), 4.8 too bright, 15.7 too dark
+yzwX77PTvZs - Filter on frame difference: 97.2 pct of shots passed (242/249), 2.8 too static, 0.0 too dynamic
+yzwX77PTvZs - Filter results: 69.1 pct of shots passed tests (242 / 350 )
+yzwX77PTvZs - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+Ex_ka8KhWHU - cheapfilter video to discard bad shots
+Ex_ka8KhWHU - Opening selector for Ex_ka8KhWHU
+Ex_ka8KhWHU - Frames are 32x57
+Ex_ka8KhWHU - Apply filters
+Ex_ka8KhWHU - Filter on shotlength: 53.8 pct of shots passed (687/1277, nogo=0)
+Ex_ka8KhWHU - Load all shots
+Ex_ka8KhWHU - Filter on brightness: 92.7 pct of shots passed (637/687), 1.2 too bright, 6.1 too dark
+Ex_ka8KhWHU - Filter on frame difference: 99.4 pct of shots passed (633/637), 0.6 too static, 0.0 too dynamic
+Ex_ka8KhWHU - Filter results: 49.6 pct of shots passed tests (633 / 1277 )
+Ex_ka8KhWHU - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+DR3hJ1kKi4Q - cheapfilter video to discard bad shots
+DR3hJ1kKi4Q - Opening selector for DR3hJ1kKi4Q
+DR3hJ1kKi4Q - Frames are 32x57
+DR3hJ1kKi4Q - Apply filters
+DR3hJ1kKi4Q - Filter on shotlength: 70.5 pct of shots passed (711/1008, nogo=0)
+DR3hJ1kKi4Q - Load all shots
+DR3hJ1kKi4Q - Filter on brightness: 86.5 pct of shots passed (615/711), 7.2 too bright, 6.3 too dark
+DR3hJ1kKi4Q - Filter on frame difference: 96.6 pct of shots passed (594/615), 3.4 too static, 0.0 too dynamic
+DR3hJ1kKi4Q - Filter results: 58.9 pct of shots passed tests (594 / 1008 )
+DR3hJ1kKi4Q - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+oL-xDhEvD30 - cheapfilter video to discard bad shots
+oL-xDhEvD30 - Opening selector for oL-xDhEvD30
+oL-xDhEvD30 - Frames are 32x57
+oL-xDhEvD30 - Apply filters
+oL-xDhEvD30 - Filter on shotlength: 99.2 pct of shots passed (493/497, nogo=0)
+oL-xDhEvD30 - Load all shots
+oL-xDhEvD30 - Filter on brightness: 91.5 pct of shots passed (451/493), 5.1 too bright, 3.4 too dark
+oL-xDhEvD30 - Filter on frame difference: 89.8 pct of shots passed (405/451), 10.2 too static, 0.0 too dynamic
+oL-xDhEvD30 - Filter results: 81.5 pct of shots passed tests (405 / 497 )
+oL-xDhEvD30 - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+XX5h0a9YiOo - cheapfilter video to discard bad shots
+XX5h0a9YiOo - Opening selector for XX5h0a9YiOo
+XX5h0a9YiOo - Frames are 32x43
+XX5h0a9YiOo - Apply filters
+XX5h0a9YiOo - Filter on shotlength: 100.0 pct of shots passed (45/45, nogo=0)
+XX5h0a9YiOo - Load all shots
+XX5h0a9YiOo - Filter on brightness: 84.4 pct of shots passed (38/45), 0.0 too bright, 15.6 too dark
+XX5h0a9YiOo - Filter on frame difference: 100.0 pct of shots passed (38/38), 0.0 too static, 0.0 too dynamic
+XX5h0a9YiOo - Filter results: 84.4 pct of shots passed tests (38 / 45 )
+XX5h0a9YiOo - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+e7nWRCZL25Y - cheapfilter video to discard bad shots
+e7nWRCZL25Y - Opening selector for e7nWRCZL25Y
+e7nWRCZL25Y - Frames are 32x57
+e7nWRCZL25Y - Apply filters
+e7nWRCZL25Y - Filter on shotlength: 99.2 pct of shots passed (492/496, nogo=0)
+e7nWRCZL25Y - Load all shots
+e7nWRCZL25Y - Filter on brightness: 91.9 pct of shots passed (452/492), 4.9 too bright, 3.3 too dark
+e7nWRCZL25Y - Filter on frame difference: 89.8 pct of shots passed (406/452), 10.2 too static, 0.0 too dynamic
+e7nWRCZL25Y - Filter results: 81.9 pct of shots passed tests (406 / 496 )
+e7nWRCZL25Y - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+g1LqYXq_iJA - No infofile found, skipping video
+qi-kdEgjCkc - cheapfilter video to discard bad shots
+qi-kdEgjCkc - Opening selector for qi-kdEgjCkc
+qi-kdEgjCkc - Frames are 32x40
+qi-kdEgjCkc - Apply filters
+qi-kdEgjCkc - Filter on shotlength: 94.9 pct of shots passed (428/451, nogo=0)
+qi-kdEgjCkc - Load all shots
+qi-kdEgjCkc - Filter on brightness: 79.4 pct of shots passed (340/428), 0.5 too bright, 20.1 too dark
+qi-kdEgjCkc - Filter on frame difference: 99.4 pct of shots passed (338/340), 0.6 too static, 0.0 too dynamic
+qi-kdEgjCkc - Filter results: 74.9 pct of shots passed tests (338 / 451 )
+qi-kdEgjCkc - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+HFWj0jEaJ5w - cheapfilter video to discard bad shots
+HFWj0jEaJ5w - Opening selector for HFWj0jEaJ5w
+HFWj0jEaJ5w - Frames are 32x57
+HFWj0jEaJ5w - Apply filters
+HFWj0jEaJ5w - Filter on shotlength: 100.0 pct of shots passed (121/121, nogo=0)
+HFWj0jEaJ5w - Load all shots
+HFWj0jEaJ5w - Filter on brightness: 83.5 pct of shots passed (101/121), 0.0 too bright, 16.5 too dark
+HFWj0jEaJ5w - Filter on frame difference: 99.0 pct of shots passed (100/101), 1.0 too static, 0.0 too dynamic
+HFWj0jEaJ5w - Filter results: 82.6 pct of shots passed tests (100 / 121 )
+HFWj0jEaJ5w - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+nI97ca94w8k - cheapfilter video to discard bad shots
+nI97ca94w8k - Opening selector for nI97ca94w8k
+nI97ca94w8k - Frames are 32x57
+nI97ca94w8k - Apply filters
+nI97ca94w8k - Filter on shotlength: 90.8 pct of shots passed (584/643, nogo=0)
+nI97ca94w8k - Load all shots
+nI97ca94w8k - Filter on brightness: 90.1 pct of shots passed (526/584), 0.3 too bright, 9.6 too dark
+nI97ca94w8k - Filter on frame difference: 99.0 pct of shots passed (521/526), 1.0 too static, 0.0 too dynamic
+nI97ca94w8k - Filter results: 81.0 pct of shots passed tests (521 / 643 )
+nI97ca94w8k - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+I_zWYPr7pBI - cheapfilter video to discard bad shots
+I_zWYPr7pBI - Opening selector for I_zWYPr7pBI
+I_zWYPr7pBI - Frames are 32x43
+I_zWYPr7pBI - Apply filters
+I_zWYPr7pBI - Filter on shotlength: 96.5 pct of shots passed (249/258, nogo=0)
+I_zWYPr7pBI - Load all shots
+I_zWYPr7pBI - Filter on brightness: 94.0 pct of shots passed (234/249), 1.2 too bright, 4.8 too dark
+I_zWYPr7pBI - Filter on frame difference: 96.2 pct of shots passed (225/234), 3.8 too static, 0.0 too dynamic
+I_zWYPr7pBI - Filter results: 87.2 pct of shots passed tests (225 / 258 )
+I_zWYPr7pBI - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+Enter directory /scratch/sercu/thumbs/dog with 21 videos
+N9aLY4AJaSs - cheapfilter video to discard bad shots
+N9aLY4AJaSs - Opening selector for N9aLY4AJaSs
+N9aLY4AJaSs - Frames are 32x57
+N9aLY4AJaSs - Apply filters
+N9aLY4AJaSs - Filter on shotlength: 78.0 pct of shots passed (71/91, nogo=0)
+N9aLY4AJaSs - Load all shots
+N9aLY4AJaSs - Filter on brightness: 91.5 pct of shots passed (65/71), 1.4 too bright, 7.0 too dark
+N9aLY4AJaSs - Filter on frame difference: 98.5 pct of shots passed (64/65), 1.5 too static, 0.0 too dynamic
+N9aLY4AJaSs - Filter results: 70.3 pct of shots passed tests (64 / 91 )
+N9aLY4AJaSs - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+OMWshXDmQ2M - cheapfilter video to discard bad shots
+OMWshXDmQ2M - Opening selector for OMWshXDmQ2M
+OMWshXDmQ2M - Frames are 32x57
+OMWshXDmQ2M - Apply filters
+OMWshXDmQ2M - Filter on shotlength: 89.8 pct of shots passed (132/147, nogo=0)
+OMWshXDmQ2M - Load all shots
+OMWshXDmQ2M - Filter on brightness: 78.8 pct of shots passed (104/132), 0.0 too bright, 21.2 too dark
+OMWshXDmQ2M - Filter on frame difference: 97.1 pct of shots passed (101/104), 2.9 too static, 0.0 too dynamic
+OMWshXDmQ2M - Filter results: 68.7 pct of shots passed tests (101 / 147 )
+OMWshXDmQ2M - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+y2dlHNOJkpA - cheapfilter video to discard bad shots
+y2dlHNOJkpA - Opening selector for y2dlHNOJkpA
+y2dlHNOJkpA - Frames are 32x57
+y2dlHNOJkpA - Apply filters
+y2dlHNOJkpA - Filter on shotlength: 64.7 pct of shots passed (392/606, nogo=0)
+y2dlHNOJkpA - Load all shots
+y2dlHNOJkpA - Filter on brightness: 82.1 pct of shots passed (322/392), 1.8 too bright, 16.1 too dark
+y2dlHNOJkpA - Filter on frame difference: 98.8 pct of shots passed (318/322), 1.2 too static, 0.0 too dynamic
+y2dlHNOJkpA - Filter results: 52.5 pct of shots passed tests (318 / 606 )
+y2dlHNOJkpA - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+Nj5aK3wPk28 - cheapfilter video to discard bad shots
+Nj5aK3wPk28 - Opening selector for Nj5aK3wPk28
+Nj5aK3wPk28 - Frames are 32x57
+Nj5aK3wPk28 - Apply filters
+Nj5aK3wPk28 - Filter on shotlength: 77.5 pct of shots passed (31/40, nogo=0)
+Nj5aK3wPk28 - Load all shots
+Nj5aK3wPk28 - Filter on brightness: 87.1 pct of shots passed (27/31), 0.0 too bright, 12.9 too dark
+Nj5aK3wPk28 - Filter on frame difference: 96.3 pct of shots passed (26/27), 3.7 too static, 0.0 too dynamic
+Nj5aK3wPk28 - Filter results: 65.0 pct of shots passed tests (26 / 40 )
+Nj5aK3wPk28 - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+OI-CKiX1uZc - cheapfilter video to discard bad shots
+OI-CKiX1uZc - Opening selector for OI-CKiX1uZc
+OI-CKiX1uZc - Frames are 32x57
+OI-CKiX1uZc - Apply filters
+OI-CKiX1uZc - Filter on shotlength: 66.1 pct of shots passed (199/301, nogo=0)
+OI-CKiX1uZc - Load all shots
+OI-CKiX1uZc - Filter on brightness: 77.4 pct of shots passed (154/199), 2.5 too bright, 20.1 too dark
+OI-CKiX1uZc - Filter on frame difference: 100.0 pct of shots passed (154/154), 0.0 too static, 0.0 too dynamic
+OI-CKiX1uZc - Filter results: 51.2 pct of shots passed tests (154 / 301 )
+OI-CKiX1uZc - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+N913VOemqt8 - cheapfilter video to discard bad shots
+N913VOemqt8 - Opening selector for N913VOemqt8
+N913VOemqt8 - Frames are 32x43
+N913VOemqt8 - Apply filters
+N913VOemqt8 - Filter on shotlength: 89.7 pct of shots passed (201/224, nogo=0)
+N913VOemqt8 - Load all shots
+N913VOemqt8 - Filter on brightness: 74.6 pct of shots passed (150/201), 0.0 too bright, 25.4 too dark
+N913VOemqt8 - Filter on frame difference: 100.0 pct of shots passed (150/150), 0.0 too static, 0.0 too dynamic
+N913VOemqt8 - Filter results: 67.0 pct of shots passed tests (150 / 224 )
+N913VOemqt8 - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+yDyvRayFvJw - cheapfilter video to discard bad shots
+yDyvRayFvJw - Opening selector for yDyvRayFvJw
+yDyvRayFvJw - Frames are 32x57
+yDyvRayFvJw - Apply filters
+yDyvRayFvJw - Filter on shotlength: 85.7 pct of shots passed (12/14, nogo=0)
+yDyvRayFvJw - Load all shots
+yDyvRayFvJw - Filter on brightness: 41.7 pct of shots passed (5/12), 16.7 too bright, 41.7 too dark
+yDyvRayFvJw - Filter on frame difference: 100.0 pct of shots passed (5/5), 0.0 too static, 0.0 too dynamic
+yDyvRayFvJw - Filter results: 35.7 pct of shots passed tests (5 / 14 )
+yDyvRayFvJw - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+LrbcbP7am-0 - cheapfilter video to discard bad shots
+LrbcbP7am-0 - Opening selector for LrbcbP7am-0
+LrbcbP7am-0 - Frames are 32x43
+LrbcbP7am-0 - Apply filters
+LrbcbP7am-0 - Filter on shotlength: 100.0 pct of shots passed (84/84, nogo=0)
+LrbcbP7am-0 - Load all shots
+LrbcbP7am-0 - Filter on brightness: 54.8 pct of shots passed (46/84), 0.0 too bright, 45.2 too dark
+LrbcbP7am-0 - Filter on frame difference: 89.1 pct of shots passed (41/46), 10.9 too static, 0.0 too dynamic
+LrbcbP7am-0 - Filter results: 48.8 pct of shots passed tests (41 / 84 )
+LrbcbP7am-0 - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+omUIhrCcGqI - cheapfilter video to discard bad shots
+omUIhrCcGqI - Opening selector for omUIhrCcGqI
+omUIhrCcGqI - Frames are 32x57
+omUIhrCcGqI - Apply filters
+omUIhrCcGqI - Filter on shotlength: 95.6 pct of shots passed (829/867, nogo=0)
+omUIhrCcGqI - Load all shots
+omUIhrCcGqI - Filter on brightness: 96.4 pct of shots passed (799/829), 1.9 too bright, 1.7 too dark
+omUIhrCcGqI - Filter on frame difference: 99.2 pct of shots passed (793/799), 0.8 too static, 0.0 too dynamic
+omUIhrCcGqI - Filter results: 91.5 pct of shots passed tests (793 / 867 )
+omUIhrCcGqI - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+c6k58220hJ4 - cheapfilter video to discard bad shots
+c6k58220hJ4 - Opening selector for c6k58220hJ4
+c6k58220hJ4 - Frames are 32x57
+c6k58220hJ4 - Apply filters
+c6k58220hJ4 - Filter on shotlength: 70.8 pct of shots passed (165/233, nogo=0)
+c6k58220hJ4 - Load all shots
+c6k58220hJ4 - Filter on brightness: 83.0 pct of shots passed (137/165), 3.6 too bright, 13.3 too dark
+c6k58220hJ4 - Filter on frame difference: 100.0 pct of shots passed (137/137), 0.0 too static, 0.0 too dynamic
+c6k58220hJ4 - Filter results: 58.8 pct of shots passed tests (137 / 233 )
+c6k58220hJ4 - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+ZtDXyn3sV8U - cheapfilter video to discard bad shots
+ZtDXyn3sV8U - Opening selector for ZtDXyn3sV8U
+ZtDXyn3sV8U - Frames are 32x43
+ZtDXyn3sV8U - Apply filters
+ZtDXyn3sV8U - Filter on shotlength: 98.8 pct of shots passed (165/167, nogo=0)
+ZtDXyn3sV8U - Load all shots
+ZtDXyn3sV8U - Filter on brightness: 88.5 pct of shots passed (146/165), 0.6 too bright, 10.9 too dark
+ZtDXyn3sV8U - Filter on frame difference: 100.0 pct of shots passed (146/146), 0.0 too static, 0.0 too dynamic
+ZtDXyn3sV8U - Filter results: 87.4 pct of shots passed tests (146 / 167 )
+ZtDXyn3sV8U - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+yKHznwVTxYg - cheapfilter video to discard bad shots
+yKHznwVTxYg - Opening selector for yKHznwVTxYg
+yKHznwVTxYg - Frames are 32x57
+yKHznwVTxYg - Apply filters
+yKHznwVTxYg - Filter on shotlength: 89.5 pct of shots passed (612/684, nogo=0)
+yKHznwVTxYg - Load all shots
+yKHznwVTxYg - Filter on brightness: 93.3 pct of shots passed (571/612), 1.3 too bright, 5.4 too dark
+yKHznwVTxYg - Filter on frame difference: 99.1 pct of shots passed (566/571), 0.9 too static, 0.0 too dynamic
+yKHznwVTxYg - Filter results: 82.7 pct of shots passed tests (566 / 684 )
+yKHznwVTxYg - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+eWBcVp-3cmc - cheapfilter video to discard bad shots
+eWBcVp-3cmc - Opening selector for eWBcVp-3cmc
+eWBcVp-3cmc - Frames are 32x48
+eWBcVp-3cmc - Apply filters
+eWBcVp-3cmc - Filter on shotlength: 82.0 pct of shots passed (609/743, nogo=0)
+eWBcVp-3cmc - Load all shots
+eWBcVp-3cmc - Filter on brightness: 89.8 pct of shots passed (547/609), 0.0 too bright, 10.2 too dark
+eWBcVp-3cmc - Filter on frame difference: 99.5 pct of shots passed (544/547), 0.5 too static, 0.0 too dynamic
+eWBcVp-3cmc - Filter results: 73.2 pct of shots passed tests (544 / 743 )
+eWBcVp-3cmc - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+gAnVS27WODg - cheapfilter video to discard bad shots
+gAnVS27WODg - Opening selector for gAnVS27WODg
+gAnVS27WODg - Frames are 32x58
+gAnVS27WODg - Apply filters
+gAnVS27WODg - Filter on shotlength: 90.5 pct of shots passed (794/877, nogo=0)
+gAnVS27WODg - Load all shots
+gAnVS27WODg - Filter on brightness: 89.3 pct of shots passed (709/794), 0.9 too bright, 9.8 too dark
+gAnVS27WODg - Filter on frame difference: 97.6 pct of shots passed (692/709), 2.4 too static, 0.0 too dynamic
+gAnVS27WODg - Filter results: 78.9 pct of shots passed tests (692 / 877 )
+gAnVS27WODg - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+s9t2RKYCBvE - cheapfilter video to discard bad shots
+s9t2RKYCBvE - Opening selector for s9t2RKYCBvE
+s9t2RKYCBvE - Frames are 32x57
+s9t2RKYCBvE - Apply filters
+s9t2RKYCBvE - Filter on shotlength: 84.5 pct of shots passed (687/813, nogo=0)
+s9t2RKYCBvE - Load all shots
+s9t2RKYCBvE - Filter on brightness: 74.2 pct of shots passed (510/687), 2.6 too bright, 23.1 too dark
+s9t2RKYCBvE - Filter on frame difference: 98.8 pct of shots passed (504/510), 1.2 too static, 0.0 too dynamic
+s9t2RKYCBvE - Filter results: 62.0 pct of shots passed tests (504 / 813 )
+s9t2RKYCBvE - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+DE1nQwUvhGg - cheapfilter video to discard bad shots
+DE1nQwUvhGg - Opening selector for DE1nQwUvhGg
+DE1nQwUvhGg - Frames are 32x43
+DE1nQwUvhGg - Apply filters
+DE1nQwUvhGg - Filter on shotlength: 100.0 pct of shots passed (29/29, nogo=0)
+DE1nQwUvhGg - Load all shots
+DE1nQwUvhGg - Filter on brightness: 51.7 pct of shots passed (15/29), 0.0 too bright, 48.3 too dark
+DE1nQwUvhGg - Filter on frame difference: 100.0 pct of shots passed (15/15), 0.0 too static, 0.0 too dynamic
+DE1nQwUvhGg - Filter results: 51.7 pct of shots passed tests (15 / 29 )
+DE1nQwUvhGg - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+VGdTKjWQnAo - cheapfilter video to discard bad shots
+VGdTKjWQnAo - Opening selector for VGdTKjWQnAo
+VGdTKjWQnAo - Frames are 32x57
+VGdTKjWQnAo - Apply filters
+VGdTKjWQnAo - Filter on shotlength: 99.1 pct of shots passed (109/110, nogo=0)
+VGdTKjWQnAo - Load all shots
+VGdTKjWQnAo - Filter on brightness: 73.4 pct of shots passed (80/109), 0.0 too bright, 26.6 too dark
+VGdTKjWQnAo - Filter on frame difference: 91.2 pct of shots passed (73/80), 8.8 too static, 0.0 too dynamic
+VGdTKjWQnAo - Filter results: 66.4 pct of shots passed tests (73 / 110 )
+VGdTKjWQnAo - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+OFhRtPrfXr4 - cheapfilter video to discard bad shots
+OFhRtPrfXr4 - Opening selector for OFhRtPrfXr4
+OFhRtPrfXr4 - Frames are 32x57
+OFhRtPrfXr4 - Apply filters
+OFhRtPrfXr4 - Filter on shotlength: 86.9 pct of shots passed (769/885, nogo=0)
+OFhRtPrfXr4 - Load all shots
+OFhRtPrfXr4 - Filter on brightness: 75.3 pct of shots passed (579/769), 12.9 too bright, 11.8 too dark
+OFhRtPrfXr4 - Filter on frame difference: 97.4 pct of shots passed (564/579), 2.6 too static, 0.0 too dynamic
+OFhRtPrfXr4 - Filter results: 63.7 pct of shots passed tests (564 / 885 )
+OFhRtPrfXr4 - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+16IxqJ7_M8Q - cheapfilter video to discard bad shots
+16IxqJ7_M8Q - Opening selector for 16IxqJ7_M8Q
+16IxqJ7_M8Q - Frames are 32x57
+16IxqJ7_M8Q - Apply filters
+16IxqJ7_M8Q - Filter on shotlength: 95.0 pct of shots passed (556/585, nogo=0)
+16IxqJ7_M8Q - Load all shots
+16IxqJ7_M8Q - Filter on brightness: 84.7 pct of shots passed (471/556), 5.9 too bright, 9.4 too dark
+16IxqJ7_M8Q - Filter on frame difference: 98.7 pct of shots passed (465/471), 1.3 too static, 0.0 too dynamic
+16IxqJ7_M8Q - Filter results: 79.5 pct of shots passed tests (465 / 585 )
+16IxqJ7_M8Q - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+HNtBphqE_LA - cheapfilter video to discard bad shots
+HNtBphqE_LA - Opening selector for HNtBphqE_LA
+HNtBphqE_LA - Frames are 32x57
+HNtBphqE_LA - Apply filters
+HNtBphqE_LA - Filter on shotlength: 79.0 pct of shots passed (132/167, nogo=0)
+HNtBphqE_LA - Load all shots
+HNtBphqE_LA - Filter on brightness: 87.1 pct of shots passed (115/132), 1.5 too bright, 11.4 too dark
+HNtBphqE_LA - Filter on frame difference: 98.3 pct of shots passed (113/115), 1.7 too static, 0.0 too dynamic
+HNtBphqE_LA - Filter results: 67.7 pct of shots passed tests (113 / 167 )
+HNtBphqE_LA - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+IFUHcROix0s - cheapfilter video to discard bad shots
+IFUHcROix0s - Opening selector for IFUHcROix0s
+IFUHcROix0s - Frames are 32x43
+IFUHcROix0s - Apply filters
+IFUHcROix0s - Filter on shotlength: 52.0 pct of shots passed (284/546, nogo=0)
+IFUHcROix0s - Load all shots
+IFUHcROix0s - Filter on brightness: 88.4 pct of shots passed (251/284), 1.8 too bright, 9.9 too dark
+IFUHcROix0s - Filter on frame difference: 100.0 pct of shots passed (251/251), 0.0 too static, 0.0 too dynamic
+IFUHcROix0s - Filter results: 46.0 pct of shots passed tests (251 / 546 )
+IFUHcROix0s - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+Enter directory /scratch/sercu/thumbs/frog with 17 videos
+5K_LVkcVq-g - cheapfilter video to discard bad shots
+5K_LVkcVq-g - Opening selector for 5K_LVkcVq-g
+5K_LVkcVq-g - Frames are 32x57
+5K_LVkcVq-g - Apply filters
+5K_LVkcVq-g - Filter on shotlength: 65.0 pct of shots passed (26/40, nogo=0)
+5K_LVkcVq-g - Load all shots
+5K_LVkcVq-g - Filter on brightness: 46.2 pct of shots passed (12/26), 0.0 too bright, 53.8 too dark
+5K_LVkcVq-g - Filter on frame difference: 91.7 pct of shots passed (11/12), 8.3 too static, 0.0 too dynamic
+5K_LVkcVq-g - Filter results: 27.5 pct of shots passed tests (11 / 40 )
+5K_LVkcVq-g - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+ulSS4K2xc8M - cheapfilter video to discard bad shots
+ulSS4K2xc8M - Opening selector for ulSS4K2xc8M
+ulSS4K2xc8M - Frames are 32x57
+ulSS4K2xc8M - Apply filters
+ulSS4K2xc8M - Filter on shotlength: 66.7 pct of shots passed (4/6, nogo=0)
+ulSS4K2xc8M - Load all shots
+ulSS4K2xc8M - Filter on brightness: 0.0 pct of shots passed (0/4), 0.0 too bright, 100.0 too dark
+Traceback (most recent call last):
+  File "select_cheap.py", line 433, in <module>
+    sel.apply_filters_write()
+  File "select_cheap.py", line 395, in apply_filters_write
+    self.filter_framediff()
+  File "select_cheap.py", line 343, in filter_framediff
+    (self.vidid, 100.0*passed/Nproc, passed,Nproc, 100.0*toostatic/Nproc, 100.0*toodynamic/Nproc)
+ZeroDivisionError: float division by zero
+> /home/ts2387/Xtrac/select_cheap.py(440)<module>()
+-> print "%s - filtering failed with error:" % vidid
+(Pdb) ulSS4K2xc8M - filtering failed with error:
+float division by zero
+gti_knh9O50 - cheapfilter video to discard bad shots
+gti_knh9O50 - Opening selector for gti_knh9O50
+gti_knh9O50 - Frames are 32x57
+gti_knh9O50 - Apply filters
+gti_knh9O50 - Filter on shotlength: 61.2 pct of shots passed (282/461, nogo=0)
+gti_knh9O50 - Load all shots
+gti_knh9O50 - Filter on brightness: 55.7 pct of shots passed (157/282), 2.1 too bright, 42.2 too dark
+gti_knh9O50 - Filter on frame difference: 100.0 pct of shots passed (157/157), 0.0 too static, 0.0 too dynamic
+gti_knh9O50 - Filter results: 34.1 pct of shots passed tests (157 / 461 )
+gti_knh9O50 - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+10OVZHEpaDc - cheapfilter video to discard bad shots
+10OVZHEpaDc - Opening selector for 10OVZHEpaDc
+10OVZHEpaDc - Frames are 32x43
+10OVZHEpaDc - Apply filters
+10OVZHEpaDc - Filter on shotlength: 13.9 pct of shots passed (461/3311, nogo=0)
+10OVZHEpaDc - Load all shots
+10OVZHEpaDc - Filter on brightness: 79.2 pct of shots passed (365/461), 0.4 too bright, 20.4 too dark
+10OVZHEpaDc - Filter on frame difference: 100.0 pct of shots passed (365/365), 0.0 too static, 0.0 too dynamic
+10OVZHEpaDc - Filter results: 11.0 pct of shots passed tests (365 / 3311 )
+10OVZHEpaDc - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+hQcBV6k_27I - cheapfilter video to discard bad shots
+hQcBV6k_27I - Opening selector for hQcBV6k_27I
+hQcBV6k_27I - Frames are 32x57
+hQcBV6k_27I - Apply filters
+hQcBV6k_27I - Filter on shotlength: 100.0 pct of shots passed (2/2, nogo=0)
+hQcBV6k_27I - Load all shots
+hQcBV6k_27I - Filter on brightness: 50.0 pct of shots passed (1/2), 0.0 too bright, 50.0 too dark
+hQcBV6k_27I - Filter on frame difference: 0.0 pct of shots passed (0/1), 100.0 too static, 0.0 too dynamic
+hQcBV6k_27I - Filter results: 0.0 pct of shots passed tests (0 / 2 )
+hQcBV6k_27I - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+ONw9pafpr7U - cheapfilter video to discard bad shots
+ONw9pafpr7U - Opening selector for ONw9pafpr7U
+ONw9pafpr7U - Frames are 32x50
+ONw9pafpr7U - Apply filters
+ONw9pafpr7U - Filter on shotlength: 74.4 pct of shots passed (323/434, nogo=0)
+ONw9pafpr7U - Load all shots
+ONw9pafpr7U - Filter on brightness: 87.0 pct of shots passed (281/323), 4.0 too bright, 9.0 too dark
+ONw9pafpr7U - Filter on frame difference: 98.6 pct of shots passed (277/281), 1.4 too static, 0.0 too dynamic
+ONw9pafpr7U - Filter results: 63.8 pct of shots passed tests (277 / 434 )
+ONw9pafpr7U - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+C3Yd7M3JNlw - cheapfilter video to discard bad shots
+C3Yd7M3JNlw - Opening selector for C3Yd7M3JNlw
+C3Yd7M3JNlw - Frames are 32x57
+C3Yd7M3JNlw - Apply filters
+C3Yd7M3JNlw - Filter on shotlength: 78.9 pct of shots passed (209/265, nogo=0)
+C3Yd7M3JNlw - Load all shots
+C3Yd7M3JNlw - Filter on brightness: 82.8 pct of shots passed (173/209), 1.9 too bright, 15.3 too dark
+C3Yd7M3JNlw - Filter on frame difference: 97.7 pct of shots passed (169/173), 2.3 too static, 0.0 too dynamic
+C3Yd7M3JNlw - Filter results: 63.8 pct of shots passed tests (169 / 265 )
+C3Yd7M3JNlw - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+bHwAguHqYnU - cheapfilter video to discard bad shots
+bHwAguHqYnU - Opening selector for bHwAguHqYnU
+bHwAguHqYnU - Frames are 32x57
+bHwAguHqYnU - Apply filters
+bHwAguHqYnU - Filter on shotlength: 83.7 pct of shots passed (108/129, nogo=0)
+bHwAguHqYnU - Load all shots
+bHwAguHqYnU - Filter on brightness: 71.3 pct of shots passed (77/108), 1.9 too bright, 26.9 too dark
+bHwAguHqYnU - Filter on frame difference: 90.9 pct of shots passed (70/77), 9.1 too static, 0.0 too dynamic
+bHwAguHqYnU - Filter results: 54.3 pct of shots passed tests (70 / 129 )
+bHwAguHqYnU - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+Ush1__TO0fQ - cheapfilter video to discard bad shots
+Ush1__TO0fQ - Opening selector for Ush1__TO0fQ
+Ush1__TO0fQ - Frames are 32x57
+Ush1__TO0fQ - Apply filters
+Ush1__TO0fQ - Filter on shotlength: 99.4 pct of shots passed (318/320, nogo=0)
+Ush1__TO0fQ - Load all shots
+Ush1__TO0fQ - Filter on brightness: 87.4 pct of shots passed (278/318), 0.3 too bright, 12.3 too dark
+Ush1__TO0fQ - Filter on frame difference: 90.3 pct of shots passed (251/278), 9.7 too static, 0.0 too dynamic
+Ush1__TO0fQ - Filter results: 78.4 pct of shots passed tests (251 / 320 )
+Ush1__TO0fQ - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+uXWYCm2eLw8 - cheapfilter video to discard bad shots
+uXWYCm2eLw8 - Opening selector for uXWYCm2eLw8
+uXWYCm2eLw8 - Frames are 32x57
+uXWYCm2eLw8 - Apply filters
+uXWYCm2eLw8 - Filter on shotlength: 94.4 pct of shots passed (303/321, nogo=0)
+uXWYCm2eLw8 - Load all shots
+uXWYCm2eLw8 - Filter on brightness: 94.4 pct of shots passed (286/303), 2.3 too bright, 3.3 too dark
+uXWYCm2eLw8 - Filter on frame difference: 95.1 pct of shots passed (272/286), 4.9 too static, 0.0 too dynamic
+uXWYCm2eLw8 - Filter results: 84.7 pct of shots passed tests (272 / 321 )
+uXWYCm2eLw8 - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+eX54klzOJpY - cheapfilter video to discard bad shots
+eX54klzOJpY - Opening selector for eX54klzOJpY
+eX54klzOJpY - Frames are 32x42
+eX54klzOJpY - Apply filters
+eX54klzOJpY - Filter on shotlength: 66.6 pct of shots passed (382/574, nogo=0)
+eX54klzOJpY - Load all shots
+eX54klzOJpY - Filter on brightness: 67.8 pct of shots passed (259/382), 1.3 too bright, 30.9 too dark
+eX54klzOJpY - Filter on frame difference: 98.1 pct of shots passed (254/259), 1.9 too static, 0.0 too dynamic
+eX54klzOJpY - Filter results: 44.3 pct of shots passed tests (254 / 574 )
+eX54klzOJpY - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+EQZjNBPfNNA - cheapfilter video to discard bad shots
+EQZjNBPfNNA - Opening selector for EQZjNBPfNNA
+EQZjNBPfNNA - Frames are 32x57
+EQZjNBPfNNA - Apply filters
+EQZjNBPfNNA - Filter on shotlength: 96.6 pct of shots passed (281/291, nogo=0)
+EQZjNBPfNNA - Load all shots
+EQZjNBPfNNA - Filter on brightness: 42.0 pct of shots passed (118/281), 0.0 too bright, 58.0 too dark
+EQZjNBPfNNA - Filter on frame difference: 82.2 pct of shots passed (97/118), 17.8 too static, 0.0 too dynamic
+EQZjNBPfNNA - Filter results: 33.3 pct of shots passed tests (97 / 291 )
+EQZjNBPfNNA - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+dwvyniKeDsY - cheapfilter video to discard bad shots
+dwvyniKeDsY - Opening selector for dwvyniKeDsY
+dwvyniKeDsY - Frames are 32x57
+dwvyniKeDsY - Apply filters
+dwvyniKeDsY - Filter on shotlength: 91.7 pct of shots passed (55/60, nogo=0)
+dwvyniKeDsY - Load all shots
+dwvyniKeDsY - Filter on brightness: 98.2 pct of shots passed (54/55), 0.0 too bright, 1.8 too dark
+dwvyniKeDsY - Filter on frame difference: 100.0 pct of shots passed (54/54), 0.0 too static, 0.0 too dynamic
+dwvyniKeDsY - Filter results: 90.0 pct of shots passed tests (54 / 60 )
+dwvyniKeDsY - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+XbzcJ0NGNSI - cheapfilter video to discard bad shots
+XbzcJ0NGNSI - Opening selector for XbzcJ0NGNSI
+XbzcJ0NGNSI - Frames are 32x43
+XbzcJ0NGNSI - Apply filters
+XbzcJ0NGNSI - Filter on shotlength: 100.0 pct of shots passed (12/12, nogo=0)
+XbzcJ0NGNSI - Load all shots
+XbzcJ0NGNSI - Filter on brightness: 50.0 pct of shots passed (6/12), 0.0 too bright, 50.0 too dark
+XbzcJ0NGNSI - Filter on frame difference: 100.0 pct of shots passed (6/6), 0.0 too static, 0.0 too dynamic
+XbzcJ0NGNSI - Filter results: 50.0 pct of shots passed tests (6 / 12 )
+XbzcJ0NGNSI - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+sCcFXdiODf0 - cheapfilter video to discard bad shots
+sCcFXdiODf0 - Opening selector for sCcFXdiODf0
+sCcFXdiODf0 - Frames are 32x57
+sCcFXdiODf0 - Apply filters
+sCcFXdiODf0 - Filter on shotlength: 50.0 pct of shots passed (4/8, nogo=0)
+sCcFXdiODf0 - Load all shots
+sCcFXdiODf0 - Filter on brightness: 50.0 pct of shots passed (2/4), 0.0 too bright, 50.0 too dark
+sCcFXdiODf0 - Filter on frame difference: 50.0 pct of shots passed (1/2), 50.0 too static, 0.0 too dynamic
+sCcFXdiODf0 - Filter results: 12.5 pct of shots passed tests (1 / 8 )
+sCcFXdiODf0 - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+8Y6VyrGITG4 - cheapfilter video to discard bad shots
+8Y6VyrGITG4 - Opening selector for 8Y6VyrGITG4
+8Y6VyrGITG4 - Frames are 32x57
+8Y6VyrGITG4 - Apply filters
+8Y6VyrGITG4 - Filter on shotlength: 91.0 pct of shots passed (464/510, nogo=0)
+8Y6VyrGITG4 - Load all shots
+8Y6VyrGITG4 - Filter on brightness: 98.3 pct of shots passed (456/464), 0.0 too bright, 1.7 too dark
+8Y6VyrGITG4 - Filter on frame difference: 96.5 pct of shots passed (440/456), 3.5 too static, 0.0 too dynamic
+8Y6VyrGITG4 - Filter results: 86.3 pct of shots passed tests (440 / 510 )
+8Y6VyrGITG4 - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+qrZBxlN62DU - cheapfilter video to discard bad shots
+qrZBxlN62DU - Opening selector for qrZBxlN62DU
+qrZBxlN62DU - Frames are 32x43
+qrZBxlN62DU - Apply filters
+qrZBxlN62DU - Filter on shotlength: 91.7 pct of shots passed (11/12, nogo=0)
+qrZBxlN62DU - Load all shots
+qrZBxlN62DU - Filter on brightness: 36.4 pct of shots passed (4/11), 0.0 too bright, 63.6 too dark
+qrZBxlN62DU - Filter on frame difference: 100.0 pct of shots passed (4/4), 0.0 too static, 0.0 too dynamic
+qrZBxlN62DU - Filter results: 33.3 pct of shots passed tests (4 / 12 )
+qrZBxlN62DU - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+Enter directory /scratch/sercu/thumbs/automobile with 23 videos
+3DV-UaCQmpc - cheapfilter video to discard bad shots
+3DV-UaCQmpc - Opening selector for 3DV-UaCQmpc
+3DV-UaCQmpc - Frames are 32x57
+3DV-UaCQmpc - Apply filters
+3DV-UaCQmpc - Filter on shotlength: 52.5 pct of shots passed (21/40, nogo=0)
+3DV-UaCQmpc - Load all shots
+3DV-UaCQmpc - Filter on brightness: 85.7 pct of shots passed (18/21), 4.8 too bright, 9.5 too dark
+3DV-UaCQmpc - Filter on frame difference: 100.0 pct of shots passed (18/18), 0.0 too static, 0.0 too dynamic
+3DV-UaCQmpc - Filter results: 45.0 pct of shots passed tests (18 / 40 )
+3DV-UaCQmpc - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+hiVmGBD6udQ - cheapfilter video to discard bad shots
+hiVmGBD6udQ - Opening selector for hiVmGBD6udQ
+hiVmGBD6udQ - Frames are 32x57
+hiVmGBD6udQ - Apply filters
+hiVmGBD6udQ - Filter on shotlength: 98.8 pct of shots passed (418/423, nogo=0)
+hiVmGBD6udQ - Load all shots
+hiVmGBD6udQ - Filter on brightness: 97.8 pct of shots passed (409/418), 0.0 too bright, 2.2 too dark
+hiVmGBD6udQ - Filter on frame difference: 95.8 pct of shots passed (392/409), 4.2 too static, 0.0 too dynamic
+hiVmGBD6udQ - Filter results: 92.7 pct of shots passed tests (392 / 423 )
+hiVmGBD6udQ - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+672HAOq5678 - cheapfilter video to discard bad shots
+672HAOq5678 - Opening selector for 672HAOq5678
+672HAOq5678 - Frames are 32x57
+672HAOq5678 - Apply filters
+672HAOq5678 - Filter on shotlength: 99.3 pct of shots passed (299/301, nogo=0)
+672HAOq5678 - Load all shots
+672HAOq5678 - Filter on brightness: 95.0 pct of shots passed (284/299), 1.0 too bright, 4.0 too dark
+672HAOq5678 - Filter on frame difference: 96.5 pct of shots passed (274/284), 3.5 too static, 0.0 too dynamic
+672HAOq5678 - Filter results: 91.0 pct of shots passed tests (274 / 301 )
+672HAOq5678 - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+7KftVUFVSMM - No infofile found, skipping video
+GiBR2o70pTo - cheapfilter video to discard bad shots
+GiBR2o70pTo - Opening selector for GiBR2o70pTo
+GiBR2o70pTo - Frames are 32x43
+GiBR2o70pTo - Apply filters
+GiBR2o70pTo - Filter on shotlength: 97.5 pct of shots passed (153/157, nogo=0)
+GiBR2o70pTo - Load all shots
+GiBR2o70pTo - Filter on brightness: 84.3 pct of shots passed (129/153), 1.3 too bright, 14.4 too dark
+GiBR2o70pTo - Filter on frame difference: 96.9 pct of shots passed (125/129), 3.1 too static, 0.0 too dynamic
+GiBR2o70pTo - Filter results: 79.6 pct of shots passed tests (125 / 157 )
+GiBR2o70pTo - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+7EYaD6Z8Z24 - cheapfilter video to discard bad shots
+7EYaD6Z8Z24 - Opening selector for 7EYaD6Z8Z24
+7EYaD6Z8Z24 - Frames are 32x57
+7EYaD6Z8Z24 - Apply filters
+7EYaD6Z8Z24 - Filter on shotlength: 81.9 pct of shots passed (727/888, nogo=0)
+7EYaD6Z8Z24 - Load all shots
+7EYaD6Z8Z24 - Filter on brightness: 82.0 pct of shots passed (596/727), 1.8 too bright, 16.2 too dark
+7EYaD6Z8Z24 - Filter on frame difference: 99.2 pct of shots passed (591/596), 0.8 too static, 0.0 too dynamic
+7EYaD6Z8Z24 - Filter results: 66.6 pct of shots passed tests (591 / 888 )
+7EYaD6Z8Z24 - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+WWDI6pXa9i4 - cheapfilter video to discard bad shots
+WWDI6pXa9i4 - Opening selector for WWDI6pXa9i4
+WWDI6pXa9i4 - Frames are 32x57
+WWDI6pXa9i4 - Apply filters
+WWDI6pXa9i4 - Filter on shotlength: 100.0 pct of shots passed (3/3, nogo=0)
+WWDI6pXa9i4 - Load all shots
+WWDI6pXa9i4 - Filter on brightness: 33.3 pct of shots passed (1/3), 0.0 too bright, 66.7 too dark
+WWDI6pXa9i4 - Filter on frame difference: 100.0 pct of shots passed (1/1), 0.0 too static, 0.0 too dynamic
+WWDI6pXa9i4 - Filter results: 33.3 pct of shots passed tests (1 / 3 )
+WWDI6pXa9i4 - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+3lYwP0hzCXg - cheapfilter video to discard bad shots
+3lYwP0hzCXg - Opening selector for 3lYwP0hzCXg
+3lYwP0hzCXg - Frames are 32x57
+3lYwP0hzCXg - Apply filters
+3lYwP0hzCXg - Filter on shotlength: 68.8 pct of shots passed (702/1021, nogo=0)
+3lYwP0hzCXg - Load all shots
+3lYwP0hzCXg - Filter on brightness: 88.0 pct of shots passed (618/702), 0.9 too bright, 11.1 too dark
+3lYwP0hzCXg - Filter on frame difference: 98.9 pct of shots passed (611/618), 1.1 too static, 0.0 too dynamic
+3lYwP0hzCXg - Filter results: 59.8 pct of shots passed tests (611 / 1021 )
+3lYwP0hzCXg - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+Uup7jVqEIss - cheapfilter video to discard bad shots
+Uup7jVqEIss - Opening selector for Uup7jVqEIss
+Uup7jVqEIss - Frames are 32x57
+Uup7jVqEIss - Apply filters
+Uup7jVqEIss - Filter on shotlength: 77.3 pct of shots passed (477/617, nogo=0)
+Uup7jVqEIss - Load all shots
+Uup7jVqEIss - Filter on brightness: 86.2 pct of shots passed (411/477), 0.8 too bright, 13.0 too dark
+Uup7jVqEIss - Filter on frame difference: 96.8 pct of shots passed (398/411), 3.2 too static, 0.0 too dynamic
+Uup7jVqEIss - Filter results: 64.5 pct of shots passed tests (398 / 617 )
+Uup7jVqEIss - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+8bT6txm4RpA - cheapfilter video to discard bad shots
+8bT6txm4RpA - Opening selector for 8bT6txm4RpA
+8bT6txm4RpA - Frames are 32x48
+8bT6txm4RpA - Apply filters
+8bT6txm4RpA - Filter on shotlength: 81.3 pct of shots passed (174/214, nogo=0)
+8bT6txm4RpA - Load all shots
+8bT6txm4RpA - Filter on brightness: 55.2 pct of shots passed (96/174), 0.0 too bright, 44.8 too dark
+8bT6txm4RpA - Filter on frame difference: 100.0 pct of shots passed (96/96), 0.0 too static, 0.0 too dynamic
+8bT6txm4RpA - Filter results: 44.9 pct of shots passed tests (96 / 214 )
+8bT6txm4RpA - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+6pwsiBVpBE0 - No infofile found, skipping video
+Sb102PUYf84 - cheapfilter video to discard bad shots
+Sb102PUYf84 - Opening selector for Sb102PUYf84
+Sb102PUYf84 - Frames are 32x57
+Sb102PUYf84 - Apply filters
+Sb102PUYf84 - Filter on shotlength: 70.8 pct of shots passed (359/507, nogo=0)
+Sb102PUYf84 - Load all shots
+Sb102PUYf84 - Filter on brightness: 87.2 pct of shots passed (313/359), 1.9 too bright, 10.9 too dark
+Sb102PUYf84 - Filter on frame difference: 94.2 pct of shots passed (295/313), 5.8 too static, 0.0 too dynamic
+Sb102PUYf84 - Filter results: 58.2 pct of shots passed tests (295 / 507 )
+Sb102PUYf84 - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+n4slFq1iNaY - cheapfilter video to discard bad shots
+n4slFq1iNaY - Opening selector for n4slFq1iNaY
+n4slFq1iNaY - Frames are 32x57
+n4slFq1iNaY - Apply filters
+n4slFq1iNaY - Filter on shotlength: 53.1 pct of shots passed (383/721, nogo=0)
+n4slFq1iNaY - Load all shots
+n4slFq1iNaY - Filter on brightness: 21.7 pct of shots passed (83/383), 0.0 too bright, 78.3 too dark
+n4slFq1iNaY - Filter on frame difference: 100.0 pct of shots passed (83/83), 0.0 too static, 0.0 too dynamic
+n4slFq1iNaY - Filter results: 11.5 pct of shots passed tests (83 / 721 )
+n4slFq1iNaY - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+jMNoQSdOMNM - cheapfilter video to discard bad shots
+jMNoQSdOMNM - Opening selector for jMNoQSdOMNM
+jMNoQSdOMNM - Frames are 32x58
+jMNoQSdOMNM - Apply filters
+jMNoQSdOMNM - Filter on shotlength: 89.3 pct of shots passed (986/1104, nogo=0)
+jMNoQSdOMNM - Load all shots
+jMNoQSdOMNM - Filter on brightness: 73.1 pct of shots passed (721/986), 0.2 too bright, 26.7 too dark
+jMNoQSdOMNM - Filter on frame difference: 97.6 pct of shots passed (704/721), 2.4 too static, 0.0 too dynamic
+jMNoQSdOMNM - Filter results: 63.8 pct of shots passed tests (704 / 1104 )
+jMNoQSdOMNM - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+ZT5nLjM6FcU - cheapfilter video to discard bad shots
+ZT5nLjM6FcU - Opening selector for ZT5nLjM6FcU
+ZT5nLjM6FcU - Frames are 32x57
+ZT5nLjM6FcU - Apply filters
+ZT5nLjM6FcU - Filter on shotlength: 100.0 pct of shots passed (10/10, nogo=0)
+ZT5nLjM6FcU - Load all shots
+ZT5nLjM6FcU - Filter on brightness: 10.0 pct of shots passed (1/10), 0.0 too bright, 90.0 too dark
+ZT5nLjM6FcU - Filter on frame difference: 100.0 pct of shots passed (1/1), 0.0 too static, 0.0 too dynamic
+ZT5nLjM6FcU - Filter results: 10.0 pct of shots passed tests (1 / 10 )
+ZT5nLjM6FcU - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+oouOTsFcISE - cheapfilter video to discard bad shots
+oouOTsFcISE - Opening selector for oouOTsFcISE
+oouOTsFcISE - Frames are 32x43
+oouOTsFcISE - Apply filters
+oouOTsFcISE - Filter on shotlength: 94.2 pct of shots passed (260/276, nogo=0)
+oouOTsFcISE - Load all shots
+oouOTsFcISE - Filter on brightness: 83.1 pct of shots passed (216/260), 0.8 too bright, 16.2 too dark
+oouOTsFcISE - Filter on frame difference: 96.3 pct of shots passed (208/216), 3.7 too static, 0.0 too dynamic
+oouOTsFcISE - Filter results: 75.4 pct of shots passed tests (208 / 276 )
+oouOTsFcISE - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+_M7R3GYHki8 - cheapfilter video to discard bad shots
+_M7R3GYHki8 - Opening selector for _M7R3GYHki8
+_M7R3GYHki8 - Frames are 32x57
+_M7R3GYHki8 - Apply filters
+_M7R3GYHki8 - Filter on shotlength: 86.3 pct of shots passed (600/695, nogo=0)
+_M7R3GYHki8 - Load all shots
+_M7R3GYHki8 - Filter on brightness: 69.5 pct of shots passed (417/600), 0.2 too bright, 30.3 too dark
+_M7R3GYHki8 - Filter on frame difference: 100.0 pct of shots passed (417/417), 0.0 too static, 0.0 too dynamic
+_M7R3GYHki8 - Filter results: 60.0 pct of shots passed tests (417 / 695 )
+_M7R3GYHki8 - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+qPyKVkSDLbU - cheapfilter video to discard bad shots
+qPyKVkSDLbU - Opening selector for qPyKVkSDLbU
+qPyKVkSDLbU - Frames are 32x57
+qPyKVkSDLbU - Apply filters
+qPyKVkSDLbU - Filter on shotlength: 91.3 pct of shots passed (116/127, nogo=0)
+qPyKVkSDLbU - Load all shots
+qPyKVkSDLbU - Filter on brightness: 88.8 pct of shots passed (103/116), 0.9 too bright, 10.3 too dark
+qPyKVkSDLbU - Filter on frame difference: 100.0 pct of shots passed (103/103), 0.0 too static, 0.0 too dynamic
+qPyKVkSDLbU - Filter results: 81.1 pct of shots passed tests (103 / 127 )
+qPyKVkSDLbU - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+iSodQMghf6Y - No infofile found, skipping video
+j2zsuO1rBB0 - cheapfilter video to discard bad shots
+j2zsuO1rBB0 - Opening selector for j2zsuO1rBB0
+j2zsuO1rBB0 - Frames are 32x50
+j2zsuO1rBB0 - Apply filters
+j2zsuO1rBB0 - Filter on shotlength: 80.7 pct of shots passed (791/980, nogo=0)
+j2zsuO1rBB0 - Load all shots
+j2zsuO1rBB0 - Filter on brightness: 69.5 pct of shots passed (550/791), 0.6 too bright, 29.8 too dark
+j2zsuO1rBB0 - Filter on frame difference: 98.4 pct of shots passed (541/550), 1.6 too static, 0.0 too dynamic
+j2zsuO1rBB0 - Filter results: 55.2 pct of shots passed tests (541 / 980 )
+j2zsuO1rBB0 - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+gt1k3BLN7pw - cheapfilter video to discard bad shots
+gt1k3BLN7pw - Opening selector for gt1k3BLN7pw
+gt1k3BLN7pw - Frames are 32x57
+gt1k3BLN7pw - Apply filters
+gt1k3BLN7pw - Filter on shotlength: 79.3 pct of shots passed (142/179, nogo=0)
+gt1k3BLN7pw - Load all shots
+gt1k3BLN7pw - Filter on brightness: 93.7 pct of shots passed (133/142), 1.4 too bright, 4.9 too dark
+gt1k3BLN7pw - Filter on frame difference: 99.2 pct of shots passed (132/133), 0.8 too static, 0.0 too dynamic
+gt1k3BLN7pw - Filter results: 73.7 pct of shots passed tests (132 / 179 )
+gt1k3BLN7pw - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+wwK5K1c2kG0 - cheapfilter video to discard bad shots
+wwK5K1c2kG0 - Opening selector for wwK5K1c2kG0
+wwK5K1c2kG0 - Frames are 32x57
+wwK5K1c2kG0 - Apply filters
+wwK5K1c2kG0 - Filter on shotlength: 97.8 pct of shots passed (45/46, nogo=0)
+wwK5K1c2kG0 - Load all shots
+wwK5K1c2kG0 - Filter on brightness: 6.7 pct of shots passed (3/45), 2.2 too bright, 91.1 too dark
+wwK5K1c2kG0 - Filter on frame difference: 66.7 pct of shots passed (2/3), 33.3 too static, 0.0 too dynamic
+wwK5K1c2kG0 - Filter results: 4.3 pct of shots passed tests (2 / 46 )
+wwK5K1c2kG0 - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+KJCWxn1y12o - cheapfilter video to discard bad shots
+KJCWxn1y12o - Opening selector for KJCWxn1y12o
+KJCWxn1y12o - Frames are 32x57
+KJCWxn1y12o - Apply filters
+KJCWxn1y12o - Filter on shotlength: 81.3 pct of shots passed (1716/2110, nogo=0)
+KJCWxn1y12o - Load all shots
+KJCWxn1y12o - Filter on brightness: 89.7 pct of shots passed (1540/1716), 0.2 too bright, 10.1 too dark
+KJCWxn1y12o - Filter on frame difference: 98.5 pct of shots passed (1517/1540), 1.5 too static, 0.0 too dynamic
+KJCWxn1y12o - Filter results: 71.9 pct of shots passed tests (1517 / 2110 )
+KJCWxn1y12o - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+Enter directory /scratch/sercu/thumbs/ship with 22 videos
+hJF0-D_LGtc - cheapfilter video to discard bad shots
+hJF0-D_LGtc - Opening selector for hJF0-D_LGtc
+hJF0-D_LGtc - Frames are 32x54
+hJF0-D_LGtc - Apply filters
+hJF0-D_LGtc - Filter on shotlength: 75.2 pct of shots passed (541/719, nogo=0)
+hJF0-D_LGtc - Load all shots
+hJF0-D_LGtc - Filter on brightness: 78.6 pct of shots passed (425/541), 0.7 too bright, 20.7 too dark
+hJF0-D_LGtc - Filter on frame difference: 100.0 pct of shots passed (425/425), 0.0 too static, 0.0 too dynamic
+hJF0-D_LGtc - Filter results: 59.1 pct of shots passed tests (425 / 719 )
+hJF0-D_LGtc - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+zm_k3TlbCVM - cheapfilter video to discard bad shots
+zm_k3TlbCVM - Opening selector for zm_k3TlbCVM
+zm_k3TlbCVM - Frames are 32x57
+zm_k3TlbCVM - Apply filters
+zm_k3TlbCVM - Filter on shotlength: 81.5 pct of shots passed (716/879, nogo=0)
+zm_k3TlbCVM - Load all shots
+zm_k3TlbCVM - Filter on brightness: 79.7 pct of shots passed (571/716), 3.1 too bright, 17.2 too dark
+zm_k3TlbCVM - Filter on frame difference: 93.7 pct of shots passed (535/571), 6.3 too static, 0.0 too dynamic
+zm_k3TlbCVM - Filter results: 60.9 pct of shots passed tests (535 / 879 )
+zm_k3TlbCVM - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+jv2qfGymXTc - cheapfilter video to discard bad shots
+jv2qfGymXTc - Opening selector for jv2qfGymXTc
+jv2qfGymXTc - Frames are 32x57
+jv2qfGymXTc - Apply filters
+jv2qfGymXTc - Filter on shotlength: 64.5 pct of shots passed (624/967, nogo=0)
+jv2qfGymXTc - Load all shots
+jv2qfGymXTc - Filter on brightness: 84.1 pct of shots passed (525/624), 1.3 too bright, 14.6 too dark
+jv2qfGymXTc - Filter on frame difference: 95.0 pct of shots passed (499/525), 5.0 too static, 0.0 too dynamic
+jv2qfGymXTc - Filter results: 51.6 pct of shots passed tests (499 / 967 )
+jv2qfGymXTc - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+-LFzHhU-Rro - cheapfilter video to discard bad shots
+-LFzHhU-Rro - Opening selector for -LFzHhU-Rro
+-LFzHhU-Rro - Frames are 32x57
+-LFzHhU-Rro - Apply filters
+-LFzHhU-Rro - Filter on shotlength: 86.3 pct of shots passed (1969/2281, nogo=0)
+-LFzHhU-Rro - Load all shots
+-LFzHhU-Rro - Filter on brightness: 86.0 pct of shots passed (1693/1969), 1.7 too bright, 12.3 too dark
+-LFzHhU-Rro - Filter on frame difference: 98.3 pct of shots passed (1664/1693), 1.7 too static, 0.0 too dynamic
+-LFzHhU-Rro - Filter results: 73.0 pct of shots passed tests (1664 / 2281 )
+-LFzHhU-Rro - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+xg0AzXDcFsc - cheapfilter video to discard bad shots
+xg0AzXDcFsc - Opening selector for xg0AzXDcFsc
+xg0AzXDcFsc - Frames are 32x55
+xg0AzXDcFsc - Apply filters
+xg0AzXDcFsc - Filter on shotlength: 96.6 pct of shots passed (309/320, nogo=0)
+xg0AzXDcFsc - Load all shots
+xg0AzXDcFsc - Filter on brightness: 74.4 pct of shots passed (230/309), 1.9 too bright, 23.6 too dark
+xg0AzXDcFsc - Filter on frame difference: 95.2 pct of shots passed (219/230), 4.8 too static, 0.0 too dynamic
+xg0AzXDcFsc - Filter results: 68.4 pct of shots passed tests (219 / 320 )
+xg0AzXDcFsc - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+FRaGlxriFDI - cheapfilter video to discard bad shots
+FRaGlxriFDI - Opening selector for FRaGlxriFDI
+FRaGlxriFDI - Frames are 32x43
+FRaGlxriFDI - Apply filters
+FRaGlxriFDI - Filter on shotlength: 67.1 pct of shots passed (835/1245, nogo=0)
+FRaGlxriFDI - Load all shots
+FRaGlxriFDI - Filter on brightness: 59.5 pct of shots passed (497/835), 4.6 too bright, 35.9 too dark
+FRaGlxriFDI - Filter on frame difference: 100.0 pct of shots passed (497/497), 0.0 too static, 0.0 too dynamic
+FRaGlxriFDI - Filter results: 39.9 pct of shots passed tests (497 / 1245 )
+FRaGlxriFDI - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+6Z706ccqrx4 - cheapfilter video to discard bad shots
+6Z706ccqrx4 - Opening selector for 6Z706ccqrx4
+6Z706ccqrx4 - Frames are 32x57
+6Z706ccqrx4 - Apply filters
+6Z706ccqrx4 - Filter on shotlength: 96.1 pct of shots passed (837/871, nogo=0)
+6Z706ccqrx4 - Load all shots
+6Z706ccqrx4 - Filter on brightness: 78.0 pct of shots passed (653/837), 2.5 too bright, 19.5 too dark
+6Z706ccqrx4 - Filter on frame difference: 99.8 pct of shots passed (652/653), 0.2 too static, 0.0 too dynamic
+6Z706ccqrx4 - Filter results: 74.9 pct of shots passed tests (652 / 871 )
+6Z706ccqrx4 - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+Q8V00b_OstU - cheapfilter video to discard bad shots
+Q8V00b_OstU - Opening selector for Q8V00b_OstU
+Q8V00b_OstU - Frames are 32x57
+Q8V00b_OstU - Apply filters
+Q8V00b_OstU - Filter on shotlength: 64.4 pct of shots passed (624/969, nogo=0)
+Q8V00b_OstU - Load all shots
+Q8V00b_OstU - Filter on brightness: 84.1 pct of shots passed (525/624), 1.3 too bright, 14.6 too dark
+Q8V00b_OstU - Filter on frame difference: 95.0 pct of shots passed (499/525), 5.0 too static, 0.0 too dynamic
+Q8V00b_OstU - Filter results: 51.5 pct of shots passed tests (499 / 969 )
+Q8V00b_OstU - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+xo_jxJPjKzw - cheapfilter video to discard bad shots
+xo_jxJPjKzw - Opening selector for xo_jxJPjKzw
+xo_jxJPjKzw - Frames are 32x57
+xo_jxJPjKzw - Apply filters
+xo_jxJPjKzw - Filter on shotlength: 78.8 pct of shots passed (441/560, nogo=0)
+xo_jxJPjKzw - Load all shots
+xo_jxJPjKzw - Filter on brightness: 66.7 pct of shots passed (294/441), 0.0 too bright, 33.3 too dark
+xo_jxJPjKzw - Filter on frame difference: 100.0 pct of shots passed (294/294), 0.0 too static, 0.0 too dynamic
+xo_jxJPjKzw - Filter results: 52.5 pct of shots passed tests (294 / 560 )
+xo_jxJPjKzw - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+m1ZSNHqpeYI - cheapfilter video to discard bad shots
+m1ZSNHqpeYI - Opening selector for m1ZSNHqpeYI
+m1ZSNHqpeYI - Frames are 32x57
+m1ZSNHqpeYI - Apply filters
+m1ZSNHqpeYI - Filter on shotlength: 96.5 pct of shots passed (468/485, nogo=0)
+m1ZSNHqpeYI - Load all shots
+m1ZSNHqpeYI - Filter on brightness: 90.2 pct of shots passed (422/468), 0.2 too bright, 9.6 too dark
+m1ZSNHqpeYI - Filter on frame difference: 98.1 pct of shots passed (414/422), 1.9 too static, 0.0 too dynamic
+m1ZSNHqpeYI - Filter results: 85.4 pct of shots passed tests (414 / 485 )
+m1ZSNHqpeYI - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+0l_6vJzq21Y - cheapfilter video to discard bad shots
+0l_6vJzq21Y - Opening selector for 0l_6vJzq21Y
+0l_6vJzq21Y - Frames are 32x57
+0l_6vJzq21Y - Apply filters
+0l_6vJzq21Y - Filter on shotlength: 90.1 pct of shots passed (720/799, nogo=0)
+0l_6vJzq21Y - Load all shots
+0l_6vJzq21Y - Filter on brightness: 84.6 pct of shots passed (609/720), 0.3 too bright, 15.1 too dark
+0l_6vJzq21Y - Filter on frame difference: 98.4 pct of shots passed (599/609), 1.6 too static, 0.0 too dynamic
+0l_6vJzq21Y - Filter results: 75.0 pct of shots passed tests (599 / 799 )
+0l_6vJzq21Y - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+skjA6OfoR2E - cheapfilter video to discard bad shots
+skjA6OfoR2E - Opening selector for skjA6OfoR2E
+skjA6OfoR2E - Frames are 32x57
+skjA6OfoR2E - Apply filters
+skjA6OfoR2E - Filter on shotlength: 19.4 pct of shots passed (242/1248, nogo=0)
+skjA6OfoR2E - Load all shots
+skjA6OfoR2E - Filter on brightness: 88.0 pct of shots passed (213/242), 5.8 too bright, 6.2 too dark
+skjA6OfoR2E - Filter on frame difference: 100.0 pct of shots passed (213/213), 0.0 too static, 0.0 too dynamic
+skjA6OfoR2E - Filter results: 17.1 pct of shots passed tests (213 / 1248 )
+skjA6OfoR2E - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+Zwz00XLTrxo - cheapfilter video to discard bad shots
+Zwz00XLTrxo - Opening selector for Zwz00XLTrxo
+Zwz00XLTrxo - Frames are 32x57
+Zwz00XLTrxo - Apply filters
+Zwz00XLTrxo - Filter on shotlength: 68.8 pct of shots passed (349/507, nogo=0)
+Zwz00XLTrxo - Load all shots
+Zwz00XLTrxo - Filter on brightness: 75.1 pct of shots passed (262/349), 2.9 too bright, 22.1 too dark
+Zwz00XLTrxo - Filter on frame difference: 100.0 pct of shots passed (262/262), 0.0 too static, 0.0 too dynamic
+Zwz00XLTrxo - Filter results: 51.7 pct of shots passed tests (262 / 507 )
+Zwz00XLTrxo - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+-PN9bcSdKyY - cheapfilter video to discard bad shots
+-PN9bcSdKyY - Opening selector for -PN9bcSdKyY
+-PN9bcSdKyY - Frames are 32x57
+-PN9bcSdKyY - Apply filters
+-PN9bcSdKyY - Filter on shotlength: 98.8 pct of shots passed (330/334, nogo=0)
+-PN9bcSdKyY - Load all shots
+-PN9bcSdKyY - Filter on brightness: 93.0 pct of shots passed (307/330), 0.6 too bright, 6.4 too dark
+-PN9bcSdKyY - Filter on frame difference: 97.7 pct of shots passed (300/307), 2.3 too static, 0.0 too dynamic
+-PN9bcSdKyY - Filter results: 89.8 pct of shots passed tests (300 / 334 )
+-PN9bcSdKyY - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+d20_kMOFR2E - cheapfilter video to discard bad shots
+d20_kMOFR2E - Opening selector for d20_kMOFR2E
+d20_kMOFR2E - Frames are 32x57
+d20_kMOFR2E - Apply filters
+d20_kMOFR2E - Filter on shotlength: 68.1 pct of shots passed (867/1273, nogo=0)
+d20_kMOFR2E - Load all shots
+d20_kMOFR2E - Filter on brightness: 87.0 pct of shots passed (754/867), 0.5 too bright, 12.6 too dark
+d20_kMOFR2E - Filter on frame difference: 97.6 pct of shots passed (736/754), 2.4 too static, 0.0 too dynamic
+d20_kMOFR2E - Filter results: 57.8 pct of shots passed tests (736 / 1273 )
+d20_kMOFR2E - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+NADWGNRYOLU - cheapfilter video to discard bad shots
+NADWGNRYOLU - Opening selector for NADWGNRYOLU
+NADWGNRYOLU - Frames are 32x43
+NADWGNRYOLU - Apply filters
+NADWGNRYOLU - Filter on shotlength: 77.1 pct of shots passed (280/363, nogo=0)
+NADWGNRYOLU - Load all shots
+NADWGNRYOLU - Filter on brightness: 65.4 pct of shots passed (183/280), 14.6 too bright, 20.0 too dark
+NADWGNRYOLU - Filter on frame difference: 98.9 pct of shots passed (181/183), 1.1 too static, 0.0 too dynamic
+NADWGNRYOLU - Filter results: 49.9 pct of shots passed tests (181 / 363 )
+NADWGNRYOLU - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+lzJZ6U5kkbo - cheapfilter video to discard bad shots
+lzJZ6U5kkbo - Opening selector for lzJZ6U5kkbo
+lzJZ6U5kkbo - Frames are 32x57
+lzJZ6U5kkbo - Apply filters
+lzJZ6U5kkbo - Filter on shotlength: 88.3 pct of shots passed (453/513, nogo=0)
+lzJZ6U5kkbo - Load all shots
+lzJZ6U5kkbo - Filter on brightness: 87.0 pct of shots passed (394/453), 10.2 too bright, 2.9 too dark
+lzJZ6U5kkbo - Filter on frame difference: 97.7 pct of shots passed (385/394), 2.3 too static, 0.0 too dynamic
+lzJZ6U5kkbo - Filter results: 75.0 pct of shots passed tests (385 / 513 )
+lzJZ6U5kkbo - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+MBjX7-P5eC0 - cheapfilter video to discard bad shots
+MBjX7-P5eC0 - Opening selector for MBjX7-P5eC0
+MBjX7-P5eC0 - Frames are 32x57
+MBjX7-P5eC0 - Apply filters
+MBjX7-P5eC0 - Filter on shotlength: 97.3 pct of shots passed (252/259, nogo=0)
+MBjX7-P5eC0 - Load all shots
+MBjX7-P5eC0 - Filter on brightness: 57.5 pct of shots passed (145/252), 0.4 too bright, 42.1 too dark
+MBjX7-P5eC0 - Filter on frame difference: 99.3 pct of shots passed (144/145), 0.7 too static, 0.0 too dynamic
+MBjX7-P5eC0 - Filter results: 55.6 pct of shots passed tests (144 / 259 )
+MBjX7-P5eC0 - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+rPHPqNh1fd0 - cheapfilter video to discard bad shots
+rPHPqNh1fd0 - Opening selector for rPHPqNh1fd0
+rPHPqNh1fd0 - Frames are 32x43
+rPHPqNh1fd0 - Apply filters
+rPHPqNh1fd0 - Filter on shotlength: 89.2 pct of shots passed (323/362, nogo=0)
+rPHPqNh1fd0 - Load all shots
+rPHPqNh1fd0 - Filter on brightness: 86.1 pct of shots passed (278/323), 0.6 too bright, 13.3 too dark
+rPHPqNh1fd0 - Filter on frame difference: 100.0 pct of shots passed (278/278), 0.0 too static, 0.0 too dynamic
+rPHPqNh1fd0 - Filter results: 76.8 pct of shots passed tests (278 / 362 )
+rPHPqNh1fd0 - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+osBfZOItcZU - No infofile found, skipping video
+oWaBCCZtOBQ - cheapfilter video to discard bad shots
+oWaBCCZtOBQ - Opening selector for oWaBCCZtOBQ
+oWaBCCZtOBQ - Frames are 32x43
+oWaBCCZtOBQ - Apply filters
+oWaBCCZtOBQ - Filter on shotlength: 68.0 pct of shots passed (872/1282, nogo=0)
+oWaBCCZtOBQ - Load all shots
+oWaBCCZtOBQ - Filter on brightness: 86.6 pct of shots passed (755/872), 0.5 too bright, 13.0 too dark
+oWaBCCZtOBQ - Filter on frame difference: 97.6 pct of shots passed (737/755), 2.4 too static, 0.0 too dynamic
+oWaBCCZtOBQ - Filter results: 57.5 pct of shots passed tests (737 / 1282 )
+oWaBCCZtOBQ - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+OYFIO4qmUz8 - cheapfilter video to discard bad shots
+OYFIO4qmUz8 - Opening selector for OYFIO4qmUz8
+OYFIO4qmUz8 - Frames are 32x57
+OYFIO4qmUz8 - Apply filters
+OYFIO4qmUz8 - Filter on shotlength: 67.6 pct of shots passed (872/1289, nogo=0)
+OYFIO4qmUz8 - Load all shots
+OYFIO4qmUz8 - Filter on brightness: 86.6 pct of shots passed (755/872), 0.5 too bright, 13.0 too dark
+OYFIO4qmUz8 - Filter on frame difference: 97.6 pct of shots passed (737/755), 2.4 too static, 0.0 too dynamic
+OYFIO4qmUz8 - Filter results: 57.2 pct of shots passed tests (737 / 1289 )
+OYFIO4qmUz8 - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+Enter directory /scratch/sercu/thumbs/cat with 18 videos
+iW1wWE6Ughk - cheapfilter video to discard bad shots
+iW1wWE6Ughk - Opening selector for iW1wWE6Ughk
+iW1wWE6Ughk - Frames are 32x57
+iW1wWE6Ughk - Apply filters
+iW1wWE6Ughk - Filter on shotlength: 76.3 pct of shots passed (71/93, nogo=0)
+iW1wWE6Ughk - Load all shots
+iW1wWE6Ughk - Filter on brightness: 91.5 pct of shots passed (65/71), 1.4 too bright, 7.0 too dark
+iW1wWE6Ughk - Filter on frame difference: 98.5 pct of shots passed (64/65), 1.5 too static, 0.0 too dynamic
+iW1wWE6Ughk - Filter results: 68.8 pct of shots passed tests (64 / 93 )
+iW1wWE6Ughk - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+G-vLgkO4XIc - cheapfilter video to discard bad shots
+G-vLgkO4XIc - Opening selector for G-vLgkO4XIc
+G-vLgkO4XIc - Frames are 32x57
+G-vLgkO4XIc - Apply filters
+G-vLgkO4XIc - Filter on shotlength: 78.0 pct of shots passed (394/505, nogo=0)
+G-vLgkO4XIc - Load all shots
+G-vLgkO4XIc - Filter on brightness: 86.8 pct of shots passed (342/394), 0.5 too bright, 12.7 too dark
+G-vLgkO4XIc - Filter on frame difference: 98.8 pct of shots passed (338/342), 1.2 too static, 0.0 too dynamic
+G-vLgkO4XIc - Filter results: 66.9 pct of shots passed tests (338 / 505 )
+G-vLgkO4XIc - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+ZBAGEeOms-8 - cheapfilter video to discard bad shots
+ZBAGEeOms-8 - Opening selector for ZBAGEeOms-8
+ZBAGEeOms-8 - Frames are 32x57
+ZBAGEeOms-8 - Apply filters
+ZBAGEeOms-8 - Filter on shotlength: 77.7 pct of shots passed (393/506, nogo=0)
+ZBAGEeOms-8 - Load all shots
+ZBAGEeOms-8 - Filter on brightness: 86.8 pct of shots passed (341/393), 0.5 too bright, 12.7 too dark
+ZBAGEeOms-8 - Filter on frame difference: 98.8 pct of shots passed (337/341), 1.2 too static, 0.0 too dynamic
+ZBAGEeOms-8 - Filter results: 66.6 pct of shots passed tests (337 / 506 )
+ZBAGEeOms-8 - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+fF8uJWufF8c - cheapfilter video to discard bad shots
+fF8uJWufF8c - Opening selector for fF8uJWufF8c
+fF8uJWufF8c - Frames are 32x43
+fF8uJWufF8c - Apply filters
+fF8uJWufF8c - Filter on shotlength: 60.5 pct of shots passed (52/86, nogo=0)
+fF8uJWufF8c - Load all shots
+fF8uJWufF8c - Filter on brightness: 34.6 pct of shots passed (18/52), 0.0 too bright, 65.4 too dark
+fF8uJWufF8c - Filter on frame difference: 100.0 pct of shots passed (18/18), 0.0 too static, 0.0 too dynamic
+fF8uJWufF8c - Filter results: 20.9 pct of shots passed tests (18 / 86 )
+fF8uJWufF8c - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+SVgzWmqC_rg - No infofile found, skipping video
+A42U5njyx6c - cheapfilter video to discard bad shots
+A42U5njyx6c - Opening selector for A42U5njyx6c
+A42U5njyx6c - Frames are 32x57
+A42U5njyx6c - Apply filters
+A42U5njyx6c - Filter on shotlength: 82.2 pct of shots passed (560/681, nogo=0)
+A42U5njyx6c - Load all shots
+A42U5njyx6c - Filter on brightness: 81.1 pct of shots passed (454/560), 2.3 too bright, 16.6 too dark
+A42U5njyx6c - Filter on frame difference: 99.3 pct of shots passed (451/454), 0.7 too static, 0.0 too dynamic
+A42U5njyx6c - Filter results: 66.2 pct of shots passed tests (451 / 681 )
+A42U5njyx6c - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+u6qvMAyI44A - cheapfilter video to discard bad shots
+u6qvMAyI44A - Opening selector for u6qvMAyI44A
+u6qvMAyI44A - Frames are 32x44
+u6qvMAyI44A - Apply filters
+u6qvMAyI44A - Filter on shotlength: 91.2 pct of shots passed (665/729, nogo=0)
+u6qvMAyI44A - Load all shots
+u6qvMAyI44A - Filter on brightness: 82.4 pct of shots passed (548/665), 5.3 too bright, 12.3 too dark
+u6qvMAyI44A - Filter on frame difference: 98.7 pct of shots passed (541/548), 1.3 too static, 0.0 too dynamic
+u6qvMAyI44A - Filter results: 74.2 pct of shots passed tests (541 / 729 )
+u6qvMAyI44A - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+Kdgt1ZHkvnM - cheapfilter video to discard bad shots
+Kdgt1ZHkvnM - Opening selector for Kdgt1ZHkvnM
+Kdgt1ZHkvnM - Frames are 32x57
+Kdgt1ZHkvnM - Apply filters
+Kdgt1ZHkvnM - Filter on shotlength: 76.3 pct of shots passed (71/93, nogo=0)
+Kdgt1ZHkvnM - Load all shots
+Kdgt1ZHkvnM - Filter on brightness: 91.5 pct of shots passed (65/71), 1.4 too bright, 7.0 too dark
+Kdgt1ZHkvnM - Filter on frame difference: 98.5 pct of shots passed (64/65), 1.5 too static, 0.0 too dynamic
+Kdgt1ZHkvnM - Filter results: 68.8 pct of shots passed tests (64 / 93 )
+Kdgt1ZHkvnM - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+tNMxLvY9jv8 - cheapfilter video to discard bad shots
+tNMxLvY9jv8 - Opening selector for tNMxLvY9jv8
+tNMxLvY9jv8 - Frames are 32x57
+tNMxLvY9jv8 - Apply filters
+tNMxLvY9jv8 - Filter on shotlength: 82.4 pct of shots passed (14/17, nogo=0)
+tNMxLvY9jv8 - Load all shots
+tNMxLvY9jv8 - Filter on brightness: 28.6 pct of shots passed (4/14), 7.1 too bright, 64.3 too dark
+tNMxLvY9jv8 - Filter on frame difference: 75.0 pct of shots passed (3/4), 25.0 too static, 0.0 too dynamic
+tNMxLvY9jv8 - Filter results: 17.6 pct of shots passed tests (3 / 17 )
+tNMxLvY9jv8 - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+0GN0rNzojTY - cheapfilter video to discard bad shots
+0GN0rNzojTY - Opening selector for 0GN0rNzojTY
+0GN0rNzojTY - Frames are 32x57
+0GN0rNzojTY - Apply filters
+0GN0rNzojTY - Filter on shotlength: 77.8 pct of shots passed (70/90, nogo=0)
+0GN0rNzojTY - Load all shots
+0GN0rNzojTY - Filter on brightness: 91.4 pct of shots passed (64/70), 1.4 too bright, 7.1 too dark
+0GN0rNzojTY - Filter on frame difference: 98.4 pct of shots passed (63/64), 1.6 too static, 0.0 too dynamic
+0GN0rNzojTY - Filter results: 70.0 pct of shots passed tests (63 / 90 )
+0GN0rNzojTY - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+x-ZN4qtVqR8 - cheapfilter video to discard bad shots
+x-ZN4qtVqR8 - Opening selector for x-ZN4qtVqR8
+x-ZN4qtVqR8 - Frames are 32x57
+x-ZN4qtVqR8 - Apply filters
+x-ZN4qtVqR8 - Filter on shotlength: 89.9 pct of shots passed (340/378, nogo=0)
+x-ZN4qtVqR8 - Load all shots
+x-ZN4qtVqR8 - Filter on brightness: 86.5 pct of shots passed (294/340), 1.2 too bright, 12.4 too dark
+x-ZN4qtVqR8 - Filter on frame difference: 97.6 pct of shots passed (287/294), 2.4 too static, 0.0 too dynamic
+x-ZN4qtVqR8 - Filter results: 75.9 pct of shots passed tests (287 / 378 )
+x-ZN4qtVqR8 - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+uuQRcP2V2kc - cheapfilter video to discard bad shots
+uuQRcP2V2kc - Opening selector for uuQRcP2V2kc
+uuQRcP2V2kc - Frames are 32x57
+uuQRcP2V2kc - Apply filters
+uuQRcP2V2kc - Filter on shotlength: 96.1 pct of shots passed (499/519, nogo=0)
+uuQRcP2V2kc - Load all shots
+uuQRcP2V2kc - Filter on brightness: 96.0 pct of shots passed (479/499), 1.2 too bright, 2.8 too dark
+uuQRcP2V2kc - Filter on frame difference: 91.2 pct of shots passed (437/479), 8.8 too static, 0.0 too dynamic
+uuQRcP2V2kc - Filter results: 84.2 pct of shots passed tests (437 / 519 )
+uuQRcP2V2kc - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+vWjOEINtX_8 - cheapfilter video to discard bad shots
+vWjOEINtX_8 - Opening selector for vWjOEINtX_8
+vWjOEINtX_8 - Frames are 32x57
+vWjOEINtX_8 - Apply filters
+vWjOEINtX_8 - Filter on shotlength: 78.7 pct of shots passed (395/502, nogo=0)
+vWjOEINtX_8 - Load all shots
+vWjOEINtX_8 - Filter on brightness: 86.6 pct of shots passed (342/395), 0.5 too bright, 12.9 too dark
+vWjOEINtX_8 - Filter on frame difference: 98.8 pct of shots passed (338/342), 1.2 too static, 0.0 too dynamic
+vWjOEINtX_8 - Filter results: 67.3 pct of shots passed tests (338 / 502 )
+vWjOEINtX_8 - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+4tzhyfWHdLo - cheapfilter video to discard bad shots
+4tzhyfWHdLo - Opening selector for 4tzhyfWHdLo
+4tzhyfWHdLo - Frames are 32x57
+4tzhyfWHdLo - Apply filters
+4tzhyfWHdLo - Filter on shotlength: 87.3 pct of shots passed (289/331, nogo=0)
+4tzhyfWHdLo - Load all shots
+4tzhyfWHdLo - Filter on brightness: 99.7 pct of shots passed (288/289), 0.0 too bright, 0.3 too dark
+4tzhyfWHdLo - Filter on frame difference: 98.3 pct of shots passed (283/288), 1.7 too static, 0.0 too dynamic
+4tzhyfWHdLo - Filter results: 85.5 pct of shots passed tests (283 / 331 )
+4tzhyfWHdLo - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+Osmzms9ANnE - cheapfilter video to discard bad shots
+Osmzms9ANnE - Opening selector for Osmzms9ANnE
+Osmzms9ANnE - Frames are 32x57
+Osmzms9ANnE - Apply filters
+Osmzms9ANnE - Filter on shotlength: 56.8 pct of shots passed (71/125, nogo=0)
+Osmzms9ANnE - Load all shots
+Osmzms9ANnE - Filter on brightness: 59.2 pct of shots passed (42/71), 0.0 too bright, 40.8 too dark
+Osmzms9ANnE - Filter on frame difference: 97.6 pct of shots passed (41/42), 2.4 too static, 0.0 too dynamic
+Osmzms9ANnE - Filter results: 32.8 pct of shots passed tests (41 / 125 )
+Osmzms9ANnE - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+TH6dTSbmTt0 - cheapfilter video to discard bad shots
+TH6dTSbmTt0 - Opening selector for TH6dTSbmTt0
+TH6dTSbmTt0 - Frames are 32x57
+TH6dTSbmTt0 - Apply filters
+TH6dTSbmTt0 - Filter on shotlength: 85.9 pct of shots passed (415/483, nogo=0)
+TH6dTSbmTt0 - Load all shots
+TH6dTSbmTt0 - Filter on brightness: 81.0 pct of shots passed (336/415), 5.1 too bright, 14.0 too dark
+TH6dTSbmTt0 - Filter on frame difference: 92.6 pct of shots passed (311/336), 7.4 too static, 0.0 too dynamic
+TH6dTSbmTt0 - Filter results: 64.4 pct of shots passed tests (311 / 483 )
+TH6dTSbmTt0 - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+izqCgnEEKwc - cheapfilter video to discard bad shots
+izqCgnEEKwc - Opening selector for izqCgnEEKwc
+izqCgnEEKwc - Frames are 32x57
+izqCgnEEKwc - Apply filters
+izqCgnEEKwc - Filter on shotlength: 98.0 pct of shots passed (1015/1036, nogo=0)
+izqCgnEEKwc - Load all shots
+izqCgnEEKwc - Filter on brightness: 78.2 pct of shots passed (794/1015), 0.8 too bright, 21.0 too dark
+izqCgnEEKwc - Filter on frame difference: 96.5 pct of shots passed (766/794), 3.5 too static, 0.0 too dynamic
+izqCgnEEKwc - Filter results: 73.9 pct of shots passed tests (766 / 1036 )
+izqCgnEEKwc - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+gkWuLoHdF2s - cheapfilter video to discard bad shots
+gkWuLoHdF2s - Opening selector for gkWuLoHdF2s
+gkWuLoHdF2s - Frames are 32x43
+gkWuLoHdF2s - Apply filters
+gkWuLoHdF2s - Filter on shotlength: 79.0 pct of shots passed (526/666, nogo=0)
+gkWuLoHdF2s - Load all shots
+gkWuLoHdF2s - Filter on brightness: 75.5 pct of shots passed (397/526), 0.2 too bright, 24.3 too dark
+gkWuLoHdF2s - Filter on frame difference: 99.5 pct of shots passed (395/397), 0.5 too static, 0.0 too dynamic
+gkWuLoHdF2s - Filter results: 59.3 pct of shots passed tests (395 / 666 )
+gkWuLoHdF2s - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+Enter directory /scratch/sercu/thumbs/truck with 21 videos
+81IAMEZshrU - cheapfilter video to discard bad shots
+81IAMEZshrU - Opening selector for 81IAMEZshrU
+81IAMEZshrU - Frames are 32x43
+81IAMEZshrU - Apply filters
+81IAMEZshrU - Filter on shotlength: 98.1 pct of shots passed (1381/1408, nogo=0)
+81IAMEZshrU - Load all shots
+81IAMEZshrU - Filter on brightness: 56.3 pct of shots passed (777/1381), 0.0 too bright, 43.7 too dark
+81IAMEZshrU - Filter on frame difference: 99.2 pct of shots passed (771/777), 0.8 too static, 0.0 too dynamic
+81IAMEZshrU - Filter results: 54.8 pct of shots passed tests (771 / 1408 )
+81IAMEZshrU - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+OOdHc9RrAKM - cheapfilter video to discard bad shots
+OOdHc9RrAKM - Opening selector for OOdHc9RrAKM
+OOdHc9RrAKM - Frames are 32x43
+OOdHc9RrAKM - Apply filters
+OOdHc9RrAKM - Filter on shotlength: 87.3 pct of shots passed (89/102, nogo=0)
+OOdHc9RrAKM - Load all shots
+OOdHc9RrAKM - Filter on brightness: 84.3 pct of shots passed (75/89), 1.1 too bright, 14.6 too dark
+OOdHc9RrAKM - Filter on frame difference: 100.0 pct of shots passed (75/75), 0.0 too static, 0.0 too dynamic
+OOdHc9RrAKM - Filter results: 73.5 pct of shots passed tests (75 / 102 )
+OOdHc9RrAKM - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+uvJJUMLe6ik - cheapfilter video to discard bad shots
+uvJJUMLe6ik - Opening selector for uvJJUMLe6ik
+uvJJUMLe6ik - Frames are 32x57
+uvJJUMLe6ik - Apply filters
+uvJJUMLe6ik - Filter on shotlength: 90.9 pct of shots passed (10/11, nogo=0)
+uvJJUMLe6ik - Load all shots
+uvJJUMLe6ik - Filter on brightness: 0.0 pct of shots passed (0/10), 0.0 too bright, 100.0 too dark
+Traceback (most recent call last):
+  File "select_cheap.py", line 440, in <module>
+    print "%s - filtering failed with error:" % vidid
+  File "select_cheap.py", line 395, in apply_filters_write
+    self.filter_framediff()
+  File "select_cheap.py", line 343, in filter_framediff
+    (self.vidid, 100.0*passed/Nproc, passed,Nproc, 100.0*toostatic/Nproc, 100.0*toodynamic/Nproc)
+ZeroDivisionError: float division by zero
+> /home/ts2387/Xtrac/select_cheap.py(439)<module>()
+-> pdb.set_trace()
+(Pdb) Traceback (most recent call last):
+  File "select_cheap.py", line 439, in <module>
+    random.shuffle(stack)
+  File "select_cheap.py", line 439, in <module>
+    random.shuffle(stack)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/bdb.py", line 48, in trace_dispatch
+    return self.dispatch_line(frame)
+  File "/usr/local/pkg/python/2.7/lib/python2.7/bdb.py", line 67, in dispatch_line
+    if self.quitting: raise BdbQuit
+bdb.BdbQuit

@@ -10,4 +10,4 @@
 *.*~
 opencv_samples
 *.png
-*.test
+*test*
