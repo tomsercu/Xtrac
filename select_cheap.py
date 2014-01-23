@@ -265,7 +265,7 @@ class Selector:
             plt.savefig(fn)
         else:
             plt.show()
-        plt.close('all')
+        plt.close(fig)
 
     def show_filter_sample(self,filt='pass', fn = None, tile=(16,20),frames_per_shot=5 ):
         """Show a grid of shots with frames that have been filtered out
