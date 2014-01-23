@@ -26,5 +26,17 @@ def run_mfile(mfile, silent=True):
         return (code, None, None)
 
 
-mfile = join(conf.path.track, 'test_from_python(%s,%s)') % (10, 20)
-retcode, stdo, stde = run_mfile(mfile, False)
+#mfile = join(conf.path.track, 'test_from_python(%s,%s)') % (10, 20)
+# function call: xtrac_segment(input_fn, output_dir, shot_num, nstart, nstop)
+#mfile = join(conf.path.track, 'xtrac_segment(%s,%s,%d,%d,%d)')
+#shotnum = 16
+#nstart = 1750
+#nstop  = 1950
+#input_fn = '/home/tom/frames/deer/v_lyOfZXKDU/v_lyOfZXKDU_00016_%8d.jpg'
+#output_dir = '/home/tom/segment/deer/v_lyOfZXKDU'
+#mfile = mfile % (input_fn, output_dir, shotnum, nstart, nstop)
+
+#WRITE launcher.m FILE
+#======================
+
+retcode, stdo, stde = run_mfile('launcher', False)

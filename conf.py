@@ -5,10 +5,10 @@ import datetime
 ### PATHS
 class path:
     video = expanduser('~/youtube')
-    #thumbs = expanduser('~/thumbs')   # sparse small thumbs -- small part of frames
-    #frames = expanduser('~/frames')   # frames for tracking -- all frames
-    thumbs = expanduser('/scratch/sercu/thumbs')   # sparse small thumbs -- small part of frames
-    frames = expanduser('/scratch/sercu/frames')   # frames for tracking -- all frames
+    thumbs = expanduser('~/thumbs')   # sparse small thumbs -- small part of frames
+    frames = expanduser('~/frames')   # frames for tracking -- all frames
+    #thumbs = expanduser('/scratch/sercu/thumbs')   # sparse small thumbs -- small part of frames
+    #frames = expanduser('/scratch/sercu/frames')   # frames for tracking -- all frames
     track  = '../region_proposals'
     output = expanduser('~/cifar32')  # actual selections
 
@@ -50,7 +50,7 @@ class filt:
 class frames:
     w = -1
     h = 100
-    fn = '{vidid}_{shot:05d}-%08d.jpg'
+    fn = '{vidid}_%08d.jpg'
 
 ### TRACKING
 matlab = 'optirun /usr/local/bin/matlab -nodesktop -nosplash'

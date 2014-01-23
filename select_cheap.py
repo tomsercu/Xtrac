@@ -2,6 +2,7 @@ import numpy as np
 import os
 from os import listdir,mkdir
 from os.path import isfile,isdir,join, expanduser, split
+import random
 import sys
 import shutil
 import scipy.io
@@ -17,6 +18,7 @@ import Image
 import datetime
 import simplejson as json
 import glob
+import time
 from util import full_extent
 import  conf
 import subprocess
@@ -79,6 +81,7 @@ class Selector:
         #else:
         global filter_ids
         self.shots_pass=np.ones((self.Nshots))
+        self.Npass = 0
         self.filter_ids=filter_ids
 
     def pr(self, msg):
@@ -138,39 +141,51 @@ class Selector:
         vidpath = join(conf.path.video, self.subj, self.vidid+'.mp4')
         if not isfile(vidpath): vidpath = join(conf.path.video, self.subj, self.vidid+'.flv')
         cmd  = ('ffmpeg -i "{vidpath}" '
-                '-vf select=\'gte(n\,{nstart})*lte(n\,{nstop})\','
+                #'-vf select=\'gte(n\,{nstart})*lte(n\,{nstop})\','
+                '-vf select=\'{filt}\','
                 'scale={w}:{h} -vsync \'vfr\' '
                 '-f image2 "%s"')
         cmd = cmd % join(self.outpath, conf.frames.fn)
-        print cmd
+        #print cmd
         shotinfo = [(None, None) for shot in xrange(self.Nshots)]
-        Nfails = 0
+        Nframes = 0
+        filt = []
         for shot in xrange(self.Nshots):
             if not self.shots_pass[shot]==1:
                 continue
             nstart = self.shots_info[shot][0]['n']
-            try: nstop  = self.shots_info[shot+1][0]['n']
+            try: nstop  = self.shots_info[shot+1][0]['n'] - 1
             except: nstop = self.shots_info[shot][-1]['n'] # last shot
-            w = conf.frames.w
-            h = conf.frames.h
-            cmd_now = cmd.format(**locals())
-            # RUN FFMPEG, in SILENCE
-            result = subprocess.call(cmd_now, shell=True, stdout = open(os.devnull, 'wb'), stderr = open(os.devnull, 'wb'))
-            if (result==0):
-                self.pr("shot %d - %d frames extracted from %d to %d."\
-                        % (shot, nstop-nstart, nstart, nstop))
-                shotinfo[shot] = (nstart, nstop)
-            else:
-                self.pr("ffmpeg returned unsuccesful: shot %d frames from %d to %d." % (shot, nstart, nstop))
-                self.pr("return code = %d"%result)
-                with open(join(self.outpath,'%05d_command.log' % shot),'w') as fh:
-                    fh.write(cmd_now + '\n')
-                print "%s - Wrote failing command to %s."%(vidid,join(self.outpath,'%05d_command.log' % shot))
-                Nfails +=1
+            delta = nstop - nstart +1
+            filt.append('gte(n\,{nstart})*lte(n\,{nstop})'.format(**locals()))
+            shotinfo[shot] = (Nframes + 1, Nframes + delta)
+            Nframes += delta
+        filt = '+'.join(filt)
+        w = conf.frames.w
+        h = conf.frames.h
+        cmd_now = cmd.format(**locals())
+        # RUN FFMPEG, in SILENCE
+        tic = time.time()
+        result = subprocess.call(cmd_now, shell=True, stdout = open(os.devnull, 'wb'), stderr = open(os.devnull, 'wb'))
+        tac = time.time()
+        if (result==0):
+            #self.pr("shot %d - %d frames extracted from %d to %d. Elapsed time %.2f sec"\
+                    #% (shot, nstop-nstart, nstart, nstop, tac-tic))
+            #shotinfo[shot] = (nstart, nstop)
+            self.pr('Succesfully extracted %d shots into %d frames. Elapsed time %.2f sec'\
+                    % (self.Npass, Nframes, tac-tic))
+        else:
+            #self.pr("ffmpeg returned unsuccesful: shot %d frames from %d to %d." % (shot, nstart, nstop))
+            self.pr("ffmpeg returned unsuccesful")
+            self.pr("return code = %d"%result)
+        with open(join(self.outpath,'command.log'),'w') as fh:
+            fh.write(cmd_now + '\n')
+        print "%s - Wrote command to %s."%(vidid,join(self.outpath,'command.log'))
+            #Nfails +=1
         # Write overview json file, with nstart and nstop in original video
         with open( join(self.outpath, conf.fn.shots), 'w') as fh:
             json.dump(shotinfo, fh)
-        return Nfails
+        return result
 
     def showimg(self,i,j):
         plt.imshow(self.shots[i][j])
@@ -250,6 +265,7 @@ class Selector:
             plt.savefig(fn)
         else:
             plt.show()
+        plt.close('all')
 
     def show_filter_sample(self,filt='pass', fn = None, tile=(16,20),frames_per_shot=5 ):
         """Show a grid of shots with frames that have been filtered out
@@ -397,14 +413,16 @@ class Selector:
         self.filter_faces()
         ## SET filtered parameter and print info
         self.filtered=True
-        Npass=np.sum(sel.shots_pass==1)
-        print "%s - Filter results: %.1f pct of shots passed tests (%d / %d )" % (vidid, 100.*Npass/self.Nshots, Npass, self.Nshots)
+        self.Npass=np.sum(sel.shots_pass==1)
+        print "%s - Filter results: %.1f pct of shots passed tests (%d / %d )" \
+                % (vidid, 100.*self.Npass/self.Nshots, self.Npass, self.Nshots)
 
 
 
 if __name__=="__main__" and len(sys.argv)==1:
     # Go through full directory structure and apply cheap filter
     inpath = conf.path.thumbs
+    stack = []
     for subj in listdir(inpath):
         Sinpath=join(inpath,subj)
         if not isdir(Sinpath):
@@ -417,28 +435,32 @@ if __name__=="__main__" and len(sys.argv)==1:
         for vidid in vidlist:
             Vinpath = join(Sinpath,vidid)
             Voutpath= join(conf.path.frames, subj, vidid)
-            if not isfile(join(Vinpath, conf.fn.shots)):
-                print "%s - No infofile found, skipping video"%vidid
-                continue
-            # check if frame path exist -- if this processing is done.
-            if not isdir(Voutpath):
-                mkdir(Voutpath)
-            elif isfile(join(Voutpath, conf.fn.shots)) or isfile(join(Voutpath,'started_filtering')):
-                print "%s - Movie is processed or busy, Skipping video"%vidid
-                continue
-            open(join(Voutpath,'started_filtering'),'wb').close()
-            print "%s - cheapfilter video to discard bad shots"%vidid
-            try:
-                sel=Selector(subj, vidid)
-                sel.apply_filters_write()
-                sel.save_results()
-                sel.ffmpeg()
-                os.remove(join(Voutpath,'started_filtering')) # Will only be removed if ended nicely
-            except Exception as e:
-                traceback.print_exc()
-                pdb.set_trace()
-                print "%s - filtering failed with error:" % vidid
-                print e
+            stack.append((subj, vidid, Vinpath, Voutpath))
+    random.shuffle(stack)
+    for subj,vidid,Vinpath,Voutpath in stack:
+        if not isfile(join(Vinpath, conf.fn.shots)):
+            print "%s - No infofile found, skipping video"%vidid
+            continue
+        # check if frame path exist -- if this processing is done.
+        if not isdir(Voutpath):
+            mkdir(Voutpath)
+        elif isfile(join(Voutpath, conf.fn.shots)) or isfile(join(Voutpath,'started_filtering')):
+            print "%s - Movie is processed or busy, Skipping video"%vidid
+            continue
+
+        open(join(Voutpath,'started_filtering'),'wb').close()
+        print "%s - subj: %s START FILTERING"%(vidid, subj)
+        try:
+            sel=Selector(subj, vidid)
+            sel.apply_filters_write()
+            sel.save_results()
+            sel.ffmpeg()
+            os.remove(join(Voutpath,'started_filtering')) # Will only be removed if ended nicely
+        except Exception as e:
+            traceback.print_exc()
+            pdb.set_trace()
+            print "%s - filtering failed with error:" % vidid
+            print e
 
 
 if __name__=="__main__" and len(sys.argv)==2:
