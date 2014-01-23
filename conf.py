@@ -43,9 +43,11 @@ class filt:
     min_rel_diff_frames = 0.02
     max_rel_diff_frames = 0.9
     min_brightness = 60
-    max_bright_area = 0.75
-    max_brightness = 170
-    max_dark_area  = 0.75 # 25% need to be light
+    max_brightness = 195
+    max_bright_area = 0.80
+    max_dark_area  = 0.80 # 20% of pixels need to be light
+    max_bright_thumbs = 0.2 # 20% of thumbs in one shot can be bright/dark
+    max_dark_thumbs = 0.2
 
 class frames:
     w = -1
