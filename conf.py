@@ -51,7 +51,7 @@ class filt:
 
 class frames:
     w = -1
-    h = 100
+    h = 200
     fn = '{vidid}_%08d.jpg'
 
 ### TRACKING
