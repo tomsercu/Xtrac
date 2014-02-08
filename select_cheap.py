@@ -466,4 +466,4 @@ if __name__=="__main__" and len(sys.argv)==2:
     sel=Selector(subj, vidid)
     sel.apply_filters_write()
     sel.save_results()
-    #sel.ffmpeg()
+    sel.ffmpeg()

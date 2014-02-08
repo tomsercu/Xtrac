@@ -10,6 +10,7 @@ class path:
     #thumbs = expanduser('/scratch/sercu/thumbs')   # sparse small thumbs -- small part of frames
     #frames = expanduser('/scratch/sercu/frames')   # frames for tracking -- all frames
     track  = '../region_proposals'
+    segment = expanduser('~/segment')
     output = expanduser('~/cifar32')  # actual selections
 
 class fn:
@@ -51,7 +52,7 @@ class filt:
 
 class frames:
     w = -1
-    h = 100
+    h = 200
     fn = '{vidid}_%08d.jpg'
 
 ### TRACKING
