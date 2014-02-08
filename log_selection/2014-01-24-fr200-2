@@ -1,0 +1,1018 @@
+Enter directory /home/ts2387/thumbs/bird with 22 videos
+Enter directory /home/ts2387/thumbs/deer with 16 videos
+Enter directory /home/ts2387/thumbs/dog with 21 videos
+Enter directory /home/ts2387/thumbs/frog with 17 videos
+Enter directory /home/ts2387/thumbs/automobile with 23 videos
+Enter directory /home/ts2387/thumbs/ship with 22 videos
+Enter directory /home/ts2387/thumbs/cat with 18 videos
+Enter directory /home/ts2387/thumbs/truck with 21 videos
+Enter directory /home/ts2387/thumbs/airplane with 22 videos
+Enter directory /home/ts2387/thumbs/horse with 21 videos
+uvJJUMLe6ik - subj: truck START FILTERING
+uvJJUMLe6ik - Opening selector for uvJJUMLe6ik
+uvJJUMLe6ik - Frames are 32x57
+uvJJUMLe6ik - Apply filters
+uvJJUMLe6ik - Filter on shotlength: 90.9 pct of shots passed (10/11, nogo=0)
+uvJJUMLe6ik - Load all shots
+uvJJUMLe6ik - Filter on brightness: 100.0 pct of shots passed (10/10), 0.0 too bright, 0.0 too dark
+uvJJUMLe6ik - Filter on frame difference: 90.0 pct of shots passed (9/10), 10.0 too static, 0.0 too dynamic
+uvJJUMLe6ik - Filter results: 81.8 pct of shots passed tests (9 / 11 )
+uvJJUMLe6ik - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+uvJJUMLe6ik - Succesfully extracted 9 shots into 121179 frames. Elapsed time 433.50 sec
+uvJJUMLe6ik - Wrote command to /home/ts2387/frames/truck/uvJJUMLe6ik/command.log.
+Q8V00b_OstU - subj: ship START FILTERING
+Q8V00b_OstU - Opening selector for Q8V00b_OstU
+Q8V00b_OstU - Frames are 32x57
+Q8V00b_OstU - Apply filters
+Q8V00b_OstU - Filter on shotlength: 64.4 pct of shots passed (624/969, nogo=0)
+Q8V00b_OstU - Load all shots
+Q8V00b_OstU - Filter on brightness: 90.7 pct of shots passed (566/624), 0.2 too bright, 9.1 too dark
+Q8V00b_OstU - Filter on frame difference: 95.4 pct of shots passed (540/566), 4.6 too static, 0.0 too dynamic
+Q8V00b_OstU - Filter results: 55.7 pct of shots passed tests (540 / 969 )
+Q8V00b_OstU - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+Q8V00b_OstU - Succesfully extracted 540 shots into 52236 frames. Elapsed time 194.14 sec
+Q8V00b_OstU - Wrote command to /home/ts2387/frames/ship/Q8V00b_OstU/command.log.
+TaO7ZTdF75s - subj: truck START FILTERING
+TaO7ZTdF75s - Opening selector for TaO7ZTdF75s
+TaO7ZTdF75s - Frames are 32x44
+TaO7ZTdF75s - Apply filters
+TaO7ZTdF75s - Filter on shotlength: 95.2 pct of shots passed (572/601, nogo=0)
+TaO7ZTdF75s - Load all shots
+TaO7ZTdF75s - Filter on brightness: 92.5 pct of shots passed (529/572), 0.0 too bright, 7.5 too dark
+TaO7ZTdF75s - Filter on frame difference: 99.6 pct of shots passed (527/529), 0.4 too static, 0.0 too dynamic
+TaO7ZTdF75s - Filter results: 87.7 pct of shots passed tests (527 / 601 )
+TaO7ZTdF75s - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+TaO7ZTdF75s - Succesfully extracted 527 shots into 73267 frames. Elapsed time 86.55 sec
+TaO7ZTdF75s - Wrote command to /home/ts2387/frames/truck/TaO7ZTdF75s/command.log.
+6pwsiBVpBE0 - No infofile found, skipping video
+tZc6xWQALt8 - subj: airplane START FILTERING
+tZc6xWQALt8 - Opening selector for tZc6xWQALt8
+tZc6xWQALt8 - Frames are 32x57
+tZc6xWQALt8 - Apply filters
+tZc6xWQALt8 - Filter on shotlength: 30.0 pct of shots passed (3/10, nogo=0)
+tZc6xWQALt8 - Load all shots
+tZc6xWQALt8 - Filter on brightness: 66.7 pct of shots passed (2/3), 0.0 too bright, 33.3 too dark
+tZc6xWQALt8 - Filter on frame difference: 100.0 pct of shots passed (2/2), 0.0 too static, 0.0 too dynamic
+tZc6xWQALt8 - Filter results: 20.0 pct of shots passed tests (2 / 10 )
+tZc6xWQALt8 - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+tZc6xWQALt8 - Succesfully extracted 2 shots into 46555 frames. Elapsed time 60.27 sec
+tZc6xWQALt8 - Wrote command to /home/ts2387/frames/airplane/tZc6xWQALt8/command.log.
+uuQRcP2V2kc - subj: cat START FILTERING
+uuQRcP2V2kc - Opening selector for uuQRcP2V2kc
+uuQRcP2V2kc - Frames are 32x57
+uuQRcP2V2kc - Apply filters
+uuQRcP2V2kc - Filter on shotlength: 96.1 pct of shots passed (499/519, nogo=0)
+uuQRcP2V2kc - Load all shots
+uuQRcP2V2kc - Filter on brightness: 99.0 pct of shots passed (494/499), 0.2 too bright, 0.8 too dark
+uuQRcP2V2kc - Filter on frame difference: 91.3 pct of shots passed (451/494), 8.7 too static, 0.0 too dynamic
+uuQRcP2V2kc - Filter results: 86.9 pct of shots passed tests (451 / 519 )
+uuQRcP2V2kc - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+uuQRcP2V2kc - Succesfully extracted 451 shots into 64548 frames. Elapsed time 217.64 sec
+uuQRcP2V2kc - Wrote command to /home/ts2387/frames/cat/uuQRcP2V2kc/command.log.
+sCcFXdiODf0 - subj: frog START FILTERING
+sCcFXdiODf0 - Opening selector for sCcFXdiODf0
+sCcFXdiODf0 - Frames are 32x57
+sCcFXdiODf0 - Apply filters
+sCcFXdiODf0 - Filter on shotlength: 50.0 pct of shots passed (4/8, nogo=0)
+sCcFXdiODf0 - Load all shots
+sCcFXdiODf0 - Filter on brightness: 75.0 pct of shots passed (3/4), 0.0 too bright, 25.0 too dark
+sCcFXdiODf0 - Filter on frame difference: 66.7 pct of shots passed (2/3), 33.3 too static, 0.0 too dynamic
+sCcFXdiODf0 - Filter results: 25.0 pct of shots passed tests (2 / 8 )
+sCcFXdiODf0 - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+sCcFXdiODf0 - Succesfully extracted 2 shots into 29606 frames. Elapsed time 98.43 sec
+sCcFXdiODf0 - Wrote command to /home/ts2387/frames/frog/sCcFXdiODf0/command.log.
+7EYaD6Z8Z24 - subj: automobile START FILTERING
+7EYaD6Z8Z24 - Opening selector for 7EYaD6Z8Z24
+7EYaD6Z8Z24 - Frames are 32x57
+7EYaD6Z8Z24 - Apply filters
+7EYaD6Z8Z24 - Filter on shotlength: 81.9 pct of shots passed (727/888, nogo=0)
+7EYaD6Z8Z24 - Load all shots
+7EYaD6Z8Z24 - Filter on brightness: 91.7 pct of shots passed (667/727), 0.0 too bright, 8.3 too dark
+7EYaD6Z8Z24 - Filter on frame difference: 99.3 pct of shots passed (662/667), 0.7 too static, 0.0 too dynamic
+7EYaD6Z8Z24 - Filter results: 74.5 pct of shots passed tests (662 / 888 )
+7EYaD6Z8Z24 - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+7EYaD6Z8Z24 - Succesfully extracted 662 shots into 70490 frames. Elapsed time 243.81 sec
+7EYaD6Z8Z24 - Wrote command to /home/ts2387/frames/automobile/7EYaD6Z8Z24/command.log.
+8k7bSsYgVFA - subj: bird START FILTERING
+8k7bSsYgVFA - Opening selector for 8k7bSsYgVFA
+8k7bSsYgVFA - Frames are 32x42
+8k7bSsYgVFA - Apply filters
+8k7bSsYgVFA - Filter on shotlength: 95.3 pct of shots passed (384/403, nogo=0)
+8k7bSsYgVFA - Load all shots
+8k7bSsYgVFA - Filter on brightness: 96.1 pct of shots passed (369/384), 0.3 too bright, 3.6 too dark
+8k7bSsYgVFA - Filter on frame difference: 99.7 pct of shots passed (368/369), 0.3 too static, 0.0 too dynamic
+8k7bSsYgVFA - Filter results: 91.3 pct of shots passed tests (368 / 403 )
+8k7bSsYgVFA - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+8k7bSsYgVFA - Succesfully extracted 368 shots into 71602 frames. Elapsed time 82.98 sec
+8k7bSsYgVFA - Wrote command to /home/ts2387/frames/bird/8k7bSsYgVFA/command.log.
+e4_VABp4n6U - subj: horse START FILTERING
+e4_VABp4n6U - Opening selector for e4_VABp4n6U
+e4_VABp4n6U - Frames are 32x42
+e4_VABp4n6U - Apply filters
+e4_VABp4n6U - Filter on shotlength: 95.7 pct of shots passed (381/398, nogo=0)
+e4_VABp4n6U - Load all shots
+e4_VABp4n6U - Filter on brightness: 95.5 pct of shots passed (364/381), 0.3 too bright, 4.2 too dark
+e4_VABp4n6U - Filter on frame difference: 98.4 pct of shots passed (358/364), 1.6 too static, 0.0 too dynamic
+e4_VABp4n6U - Filter results: 89.9 pct of shots passed tests (358 / 398 )
+e4_VABp4n6U - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+e4_VABp4n6U - Succesfully extracted 358 shots into 54415 frames. Elapsed time 66.50 sec
+e4_VABp4n6U - Wrote command to /home/ts2387/frames/horse/e4_VABp4n6U/command.log.
+tNMxLvY9jv8 - subj: cat START FILTERING
+tNMxLvY9jv8 - Opening selector for tNMxLvY9jv8
+tNMxLvY9jv8 - Frames are 32x57
+tNMxLvY9jv8 - Apply filters
+tNMxLvY9jv8 - Filter on shotlength: 82.4 pct of shots passed (14/17, nogo=0)
+tNMxLvY9jv8 - Load all shots
+tNMxLvY9jv8 - Filter on brightness: 85.7 pct of shots passed (12/14), 0.0 too bright, 14.3 too dark
+select_cheap.py:390: RuntimeWarning: invalid value encountered in divide
+  self.reldiffs[shotid] /= maxbr
+tNMxLvY9jv8 - Filter on frame difference: 91.7 pct of shots passed (11/12), 8.3 too static, 0.0 too dynamic
+tNMxLvY9jv8 - Filter results: 64.7 pct of shots passed tests (11 / 17 )
+tNMxLvY9jv8 - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+tNMxLvY9jv8 - Succesfully extracted 11 shots into 35089 frames. Elapsed time 106.31 sec
+tNMxLvY9jv8 - Wrote command to /home/ts2387/frames/cat/tNMxLvY9jv8/command.log.
+yzwX77PTvZs - subj: deer START FILTERING
+yzwX77PTvZs - Opening selector for yzwX77PTvZs
+yzwX77PTvZs - Frames are 32x57
+yzwX77PTvZs - Apply filters
+yzwX77PTvZs - Filter on shotlength: 89.4 pct of shots passed (313/350, nogo=0)
+yzwX77PTvZs - Load all shots
+yzwX77PTvZs - Filter on brightness: 92.7 pct of shots passed (290/313), 0.3 too bright, 7.0 too dark
+yzwX77PTvZs - Filter on frame difference: 96.9 pct of shots passed (281/290), 3.1 too static, 0.0 too dynamic
+yzwX77PTvZs - Filter results: 80.3 pct of shots passed tests (281 / 350 )
+yzwX77PTvZs - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+yzwX77PTvZs - Succesfully extracted 281 shots into 71832 frames. Elapsed time 120.63 sec
+yzwX77PTvZs - Wrote command to /home/ts2387/frames/deer/yzwX77PTvZs/command.log.
+OcCP4_R8QBw - subj: bird START FILTERING
+OcCP4_R8QBw - Opening selector for OcCP4_R8QBw
+OcCP4_R8QBw - Frames are 32x57
+OcCP4_R8QBw - Apply filters
+OcCP4_R8QBw - Filter on shotlength: 88.6 pct of shots passed (62/70, nogo=0)
+OcCP4_R8QBw - Load all shots
+OcCP4_R8QBw - Filter on brightness: 83.9 pct of shots passed (52/62), 1.6 too bright, 14.5 too dark
+OcCP4_R8QBw - Filter on frame difference: 100.0 pct of shots passed (52/52), 0.0 too static, 0.0 too dynamic
+OcCP4_R8QBw - Filter results: 74.3 pct of shots passed tests (52 / 70 )
+OcCP4_R8QBw - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+OcCP4_R8QBw - Succesfully extracted 52 shots into 43458 frames. Elapsed time 151.89 sec
+OcCP4_R8QBw - Wrote command to /home/ts2387/frames/bird/OcCP4_R8QBw/command.log.
+m8d6br7r4LM - subj: truck START FILTERING
+m8d6br7r4LM - Opening selector for m8d6br7r4LM
+m8d6br7r4LM - Frames are 32x57
+m8d6br7r4LM - Apply filters
+m8d6br7r4LM - Filter on shotlength: 100.0 pct of shots passed (17/17, nogo=0)
+m8d6br7r4LM - Load all shots
+m8d6br7r4LM - Filter on brightness: 94.1 pct of shots passed (16/17), 5.9 too bright, 0.0 too dark
+m8d6br7r4LM - Filter on frame difference: 100.0 pct of shots passed (16/16), 0.0 too static, 0.0 too dynamic
+m8d6br7r4LM - Filter results: 94.1 pct of shots passed tests (16 / 17 )
+m8d6br7r4LM - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+m8d6br7r4LM - Succesfully extracted 16 shots into 56453 frames. Elapsed time 202.50 sec
+m8d6br7r4LM - Wrote command to /home/ts2387/frames/truck/m8d6br7r4LM/command.log.
+c6k58220hJ4 - subj: dog START FILTERING
+c6k58220hJ4 - Opening selector for c6k58220hJ4
+c6k58220hJ4 - Frames are 32x57
+c6k58220hJ4 - Apply filters
+c6k58220hJ4 - Filter on shotlength: 70.8 pct of shots passed (165/233, nogo=0)
+c6k58220hJ4 - Load all shots
+c6k58220hJ4 - Filter on brightness: 93.9 pct of shots passed (155/165), 1.2 too bright, 4.8 too dark
+c6k58220hJ4 - Filter on frame difference: 100.0 pct of shots passed (155/155), 0.0 too static, 0.0 too dynamic
+c6k58220hJ4 - Filter results: 66.5 pct of shots passed tests (155 / 233 )
+c6k58220hJ4 - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+c6k58220hJ4 - Succesfully extracted 155 shots into 35539 frames. Elapsed time 47.79 sec
+c6k58220hJ4 - Wrote command to /home/ts2387/frames/dog/c6k58220hJ4/command.log.
+D8kZRMpP8cw - Movie is processed or busy, Skipping video
+LrbcbP7am-0 - subj: dog START FILTERING
+LrbcbP7am-0 - Opening selector for LrbcbP7am-0
+LrbcbP7am-0 - Frames are 32x43
+LrbcbP7am-0 - Apply filters
+LrbcbP7am-0 - Filter on shotlength: 100.0 pct of shots passed (84/84, nogo=0)
+LrbcbP7am-0 - Load all shots
+LrbcbP7am-0 - Filter on brightness: 54.8 pct of shots passed (46/84), 0.0 too bright, 45.2 too dark
+LrbcbP7am-0 - Filter on frame difference: 89.1 pct of shots passed (41/46), 10.9 too static, 0.0 too dynamic
+LrbcbP7am-0 - Filter results: 48.8 pct of shots passed tests (41 / 84 )
+LrbcbP7am-0 - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+LrbcbP7am-0 - Succesfully extracted 41 shots into 55417 frames. Elapsed time 65.55 sec
+LrbcbP7am-0 - Wrote command to /home/ts2387/frames/dog/LrbcbP7am-0/command.log.
+gti_knh9O50 - subj: frog START FILTERING
+gti_knh9O50 - Opening selector for gti_knh9O50
+gti_knh9O50 - Frames are 32x57
+gti_knh9O50 - Apply filters
+gti_knh9O50 - Filter on shotlength: 61.2 pct of shots passed (282/461, nogo=0)
+gti_knh9O50 - Load all shots
+gti_knh9O50 - Filter on brightness: 81.6 pct of shots passed (230/282), 0.0 too bright, 18.4 too dark
+gti_knh9O50 - Filter on frame difference: 100.0 pct of shots passed (230/230), 0.0 too static, 0.0 too dynamic
+gti_knh9O50 - Filter results: 49.9 pct of shots passed tests (230 / 461 )
+gti_knh9O50 - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+gti_knh9O50 - Succesfully extracted 230 shots into 108132 frames. Elapsed time 235.03 sec
+gti_knh9O50 - Wrote command to /home/ts2387/frames/frog/gti_knh9O50/command.log.
+KJCWxn1y12o - subj: automobile START FILTERING
+KJCWxn1y12o - Opening selector for KJCWxn1y12o
+KJCWxn1y12o - Frames are 32x57
+KJCWxn1y12o - Apply filters
+KJCWxn1y12o - Filter on shotlength: 81.3 pct of shots passed (1716/2110, nogo=0)
+KJCWxn1y12o - Load all shots
+KJCWxn1y12o - Filter on brightness: 95.0 pct of shots passed (1631/1716), 0.0 too bright, 5.0 too dark
+KJCWxn1y12o - Filter on frame difference: 98.6 pct of shots passed (1608/1631), 1.4 too static, 0.0 too dynamic
+KJCWxn1y12o - Filter results: 76.2 pct of shots passed tests (1608 / 2110 )
+KJCWxn1y12o - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+KJCWxn1y12o - Succesfully extracted 1608 shots into 113078 frames. Elapsed time 407.45 sec
+KJCWxn1y12o - Wrote command to /home/ts2387/frames/automobile/KJCWxn1y12o/command.log.
+LNCfLAPXL9E - Movie is processed or busy, Skipping video
+oWaBCCZtOBQ - Movie is processed or busy, Skipping video
+0Q6lmXHfwQE - subj: airplane START FILTERING
+0Q6lmXHfwQE - Opening selector for 0Q6lmXHfwQE
+0Q6lmXHfwQE - Frames are 32x57
+0Q6lmXHfwQE - Apply filters
+0Q6lmXHfwQE - Filter on shotlength: 77.8 pct of shots passed (305/392, nogo=0)
+0Q6lmXHfwQE - Load all shots
+0Q6lmXHfwQE - Filter on brightness: 77.0 pct of shots passed (235/305), 0.0 too bright, 23.0 too dark
+0Q6lmXHfwQE - Filter on frame difference: 99.6 pct of shots passed (234/235), 0.4 too static, 0.0 too dynamic
+0Q6lmXHfwQE - Filter results: 59.7 pct of shots passed tests (234 / 392 )
+0Q6lmXHfwQE - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+0Q6lmXHfwQE - Succesfully extracted 234 shots into 46655 frames. Elapsed time 180.50 sec
+0Q6lmXHfwQE - Wrote command to /home/ts2387/frames/airplane/0Q6lmXHfwQE/command.log.
+QsvS6gEBJuE - subj: horse START FILTERING
+QsvS6gEBJuE - Opening selector for QsvS6gEBJuE
+QsvS6gEBJuE - Frames are 32x57
+QsvS6gEBJuE - Apply filters
+QsvS6gEBJuE - Filter on shotlength: 88.3 pct of shots passed (635/719, nogo=0)
+QsvS6gEBJuE - Load all shots
+QsvS6gEBJuE - Filter on brightness: 97.8 pct of shots passed (621/635), 0.0 too bright, 2.2 too dark
+QsvS6gEBJuE - Filter on frame difference: 99.0 pct of shots passed (615/621), 1.0 too static, 0.0 too dynamic
+QsvS6gEBJuE - Filter results: 85.5 pct of shots passed tests (615 / 719 )
+QsvS6gEBJuE - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+QsvS6gEBJuE - Succesfully extracted 615 shots into 64390 frames. Elapsed time 70.60 sec
+QsvS6gEBJuE - Wrote command to /home/ts2387/frames/horse/QsvS6gEBJuE/command.log.
+e7nWRCZL25Y - Movie is processed or busy, Skipping video
+o8hDWSg16o0 - subj: airplane START FILTERING
+o8hDWSg16o0 - Opening selector for o8hDWSg16o0
+o8hDWSg16o0 - Frames are 32x59
+o8hDWSg16o0 - Apply filters
+o8hDWSg16o0 - Filter on shotlength: 81.5 pct of shots passed (779/956, nogo=0)
+o8hDWSg16o0 - Load all shots
+o8hDWSg16o0 - Filter on brightness: 96.5 pct of shots passed (752/779), 1.2 too bright, 2.3 too dark
+o8hDWSg16o0 - Filter on frame difference: 98.4 pct of shots passed (740/752), 1.6 too static, 0.0 too dynamic
+o8hDWSg16o0 - Filter results: 77.4 pct of shots passed tests (740 / 956 )
+o8hDWSg16o0 - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+o8hDWSg16o0 - Succesfully extracted 740 shots into 54869 frames. Elapsed time 87.23 sec
+o8hDWSg16o0 - Wrote command to /home/ts2387/frames/airplane/o8hDWSg16o0/command.log.
+jv2qfGymXTc - Movie is processed or busy, Skipping video
+Ex_ka8KhWHU - subj: deer START FILTERING
+Ex_ka8KhWHU - Opening selector for Ex_ka8KhWHU
+Ex_ka8KhWHU - Frames are 32x57
+Ex_ka8KhWHU - Apply filters
+Ex_ka8KhWHU - Filter on shotlength: 53.8 pct of shots passed (687/1277, nogo=0)
+Ex_ka8KhWHU - Load all shots
+Ex_ka8KhWHU - Filter on brightness: 95.8 pct of shots passed (658/687), 0.6 too bright, 3.6 too dark
+Ex_ka8KhWHU - Filter on frame difference: 99.4 pct of shots passed (654/658), 0.6 too static, 0.0 too dynamic
+Ex_ka8KhWHU - Filter results: 51.2 pct of shots passed tests (654 / 1277 )
+Ex_ka8KhWHU - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+Ex_ka8KhWHU - Succesfully extracted 654 shots into 71695 frames. Elapsed time 263.84 sec
+Ex_ka8KhWHU - Wrote command to /home/ts2387/frames/deer/Ex_ka8KhWHU/command.log.
+OFhRtPrfXr4 - subj: dog START FILTERING
+OFhRtPrfXr4 - Opening selector for OFhRtPrfXr4
+OFhRtPrfXr4 - Frames are 32x57
+OFhRtPrfXr4 - Apply filters
+OFhRtPrfXr4 - Filter on shotlength: 86.9 pct of shots passed (769/885, nogo=0)
+OFhRtPrfXr4 - Load all shots
+OFhRtPrfXr4 - Filter on brightness: 90.8 pct of shots passed (698/769), 5.2 too bright, 4.0 too dark
+OFhRtPrfXr4 - Filter on frame difference: 97.0 pct of shots passed (677/698), 3.0 too static, 0.0 too dynamic
+OFhRtPrfXr4 - Filter results: 76.5 pct of shots passed tests (677 / 885 )
+OFhRtPrfXr4 - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+OFhRtPrfXr4 - Succesfully extracted 677 shots into 58898 frames. Elapsed time 86.18 sec
+OFhRtPrfXr4 - Wrote command to /home/ts2387/frames/dog/OFhRtPrfXr4/command.log.
+Z3cQjuWXGlU - subj: truck START FILTERING
+Z3cQjuWXGlU - Opening selector for Z3cQjuWXGlU
+Z3cQjuWXGlU - Frames are 32x42
+Z3cQjuWXGlU - Apply filters
+Z3cQjuWXGlU - Filter on shotlength: 82.4 pct of shots passed (28/34, nogo=0)
+Z3cQjuWXGlU - Load all shots
+Z3cQjuWXGlU - Filter on brightness: 96.4 pct of shots passed (27/28), 0.0 too bright, 3.6 too dark
+Z3cQjuWXGlU - Filter on frame difference: 100.0 pct of shots passed (27/27), 0.0 too static, 0.0 too dynamic
+Z3cQjuWXGlU - Filter results: 79.4 pct of shots passed tests (27 / 34 )
+Z3cQjuWXGlU - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+Z3cQjuWXGlU - Succesfully extracted 27 shots into 31672 frames. Elapsed time 33.21 sec
+Z3cQjuWXGlU - Wrote command to /home/ts2387/frames/truck/Z3cQjuWXGlU/command.log.
+E6PdCEj_b1s - subj: bird START FILTERING
+E6PdCEj_b1s - Opening selector for E6PdCEj_b1s
+E6PdCEj_b1s - Frames are 32x57
+E6PdCEj_b1s - Apply filters
+E6PdCEj_b1s - Filter on shotlength: 80.5 pct of shots passed (762/946, nogo=0)
+E6PdCEj_b1s - Load all shots
+E6PdCEj_b1s - Filter on brightness: 89.9 pct of shots passed (685/762), 2.0 too bright, 8.1 too dark
+E6PdCEj_b1s - Filter on frame difference: 98.0 pct of shots passed (671/685), 2.0 too static, 0.0 too dynamic
+E6PdCEj_b1s - Filter results: 70.9 pct of shots passed tests (671 / 946 )
+E6PdCEj_b1s - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+E6PdCEj_b1s - Succesfully extracted 671 shots into 81705 frames. Elapsed time 287.40 sec
+E6PdCEj_b1s - Wrote command to /home/ts2387/frames/bird/E6PdCEj_b1s/command.log.
+Zwz00XLTrxo - subj: ship START FILTERING
+Zwz00XLTrxo - Opening selector for Zwz00XLTrxo
+Zwz00XLTrxo - Frames are 32x57
+Zwz00XLTrxo - Apply filters
+Zwz00XLTrxo - Filter on shotlength: 68.8 pct of shots passed (349/507, nogo=0)
+Zwz00XLTrxo - Load all shots
+Zwz00XLTrxo - Filter on brightness: 92.8 pct of shots passed (324/349), 0.0 too bright, 7.2 too dark
+Zwz00XLTrxo - Filter on frame difference: 100.0 pct of shots passed (324/324), 0.0 too static, 0.0 too dynamic
+Zwz00XLTrxo - Filter results: 63.9 pct of shots passed tests (324 / 507 )
+Zwz00XLTrxo - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+Zwz00XLTrxo - Succesfully extracted 324 shots into 174676 frames. Elapsed time 581.51 sec
+Zwz00XLTrxo - Wrote command to /home/ts2387/frames/ship/Zwz00XLTrxo/command.log.
+DeMCDprlMmI - subj: bird START FILTERING
+DeMCDprlMmI - Opening selector for DeMCDprlMmI
+DeMCDprlMmI - Frames are 32x55
+DeMCDprlMmI - Apply filters
+DeMCDprlMmI - Filter on shotlength: 97.0 pct of shots passed (617/636, nogo=0)
+DeMCDprlMmI - Load all shots
+DeMCDprlMmI - Filter on brightness: 96.8 pct of shots passed (597/617), 1.1 too bright, 2.1 too dark
+DeMCDprlMmI - Filter on frame difference: 94.0 pct of shots passed (561/597), 6.0 too static, 0.0 too dynamic
+DeMCDprlMmI - Filter results: 88.2 pct of shots passed tests (561 / 636 )
+DeMCDprlMmI - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+DeMCDprlMmI - Succesfully extracted 561 shots into 66473 frames. Elapsed time 107.76 sec
+DeMCDprlMmI - Wrote command to /home/ts2387/frames/bird/DeMCDprlMmI/command.log.
+nd2z8Imi77w - subj: horse START FILTERING
+nd2z8Imi77w - Opening selector for nd2z8Imi77w
+nd2z8Imi77w - Frames are 32x43
+nd2z8Imi77w - Apply filters
+nd2z8Imi77w - Filter on shotlength: 100.0 pct of shots passed (1/1, nogo=0)
+nd2z8Imi77w - Load all shots
+nd2z8Imi77w - Filter on brightness: 100.0 pct of shots passed (1/1), 0.0 too bright, 0.0 too dark
+nd2z8Imi77w - Filter on frame difference: 0.0 pct of shots passed (0/1), 100.0 too static, 0.0 too dynamic
+nd2z8Imi77w - Filter results: 0.0 pct of shots passed tests (0 / 1 )
+nd2z8Imi77w - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+nd2z8Imi77w - Succesfully extracted 0 shots into 0 frames. Elapsed time 110.70 sec
+nd2z8Imi77w - Wrote command to /home/ts2387/frames/horse/nd2z8Imi77w/command.log.
+FO_mJbJn-04 - subj: airplane START FILTERING
+FO_mJbJn-04 - Opening selector for FO_mJbJn-04
+FO_mJbJn-04 - Frames are 32x57
+FO_mJbJn-04 - Apply filters
+FO_mJbJn-04 - Filter on shotlength: 64.1 pct of shots passed (435/679, nogo=0)
+FO_mJbJn-04 - Load all shots
+FO_mJbJn-04 - Filter on brightness: 93.3 pct of shots passed (406/435), 2.3 too bright, 4.4 too dark
+FO_mJbJn-04 - Filter on frame difference: 94.8 pct of shots passed (385/406), 5.2 too static, 0.0 too dynamic
+FO_mJbJn-04 - Filter results: 56.7 pct of shots passed tests (385 / 679 )
+FO_mJbJn-04 - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+FO_mJbJn-04 - Succesfully extracted 385 shots into 56369 frames. Elapsed time 77.21 sec
+FO_mJbJn-04 - Wrote command to /home/ts2387/frames/airplane/FO_mJbJn-04/command.log.
+FRaGlxriFDI - Movie is processed or busy, Skipping video
+OY_xSsW5eOU - subj: horse START FILTERING
+OY_xSsW5eOU - Opening selector for OY_xSsW5eOU
+OY_xSsW5eOU - Frames are 32x42
+OY_xSsW5eOU - Apply filters
+OY_xSsW5eOU - Filter on shotlength: 97.9 pct of shots passed (320/327, nogo=0)
+OY_xSsW5eOU - Load all shots
+OY_xSsW5eOU - Filter on brightness: 97.2 pct of shots passed (311/320), 1.6 too bright, 1.2 too dark
+OY_xSsW5eOU - Filter on frame difference: 100.0 pct of shots passed (311/311), 0.0 too static, 0.0 too dynamic
+OY_xSsW5eOU - Filter results: 95.1 pct of shots passed tests (311 / 327 )
+OY_xSsW5eOU - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+OY_xSsW5eOU - Succesfully extracted 311 shots into 80533 frames. Elapsed time 88.18 sec
+OY_xSsW5eOU - Wrote command to /home/ts2387/frames/horse/OY_xSsW5eOU/command.log.
+OOdHc9RrAKM - Movie is processed or busy, Skipping video
+Osmzms9ANnE - subj: cat START FILTERING
+Osmzms9ANnE - Opening selector for Osmzms9ANnE
+Osmzms9ANnE - Frames are 32x57
+Osmzms9ANnE - Apply filters
+Osmzms9ANnE - Filter on shotlength: 56.8 pct of shots passed (71/125, nogo=0)
+Osmzms9ANnE - Load all shots
+Osmzms9ANnE - Filter on brightness: 98.6 pct of shots passed (70/71), 0.0 too bright, 1.4 too dark
+Osmzms9ANnE - Filter on frame difference: 98.6 pct of shots passed (69/70), 1.4 too static, 0.0 too dynamic
+Osmzms9ANnE - Filter results: 55.2 pct of shots passed tests (69 / 125 )
+Osmzms9ANnE - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+Osmzms9ANnE - Succesfully extracted 69 shots into 37596 frames. Elapsed time 117.04 sec
+Osmzms9ANnE - Wrote command to /home/ts2387/frames/cat/Osmzms9ANnE/command.log.
+oouOTsFcISE - subj: automobile START FILTERING
+oouOTsFcISE - Opening selector for oouOTsFcISE
+oouOTsFcISE - Frames are 32x43
+oouOTsFcISE - Apply filters
+oouOTsFcISE - Filter on shotlength: 94.2 pct of shots passed (260/276, nogo=0)
+oouOTsFcISE - Load all shots
+oouOTsFcISE - Filter on brightness: 95.0 pct of shots passed (247/260), 0.0 too bright, 5.0 too dark
+oouOTsFcISE - Filter on frame difference: 96.8 pct of shots passed (239/247), 3.2 too static, 0.0 too dynamic
+oouOTsFcISE - Filter results: 86.6 pct of shots passed tests (239 / 276 )
+oouOTsFcISE - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+oouOTsFcISE - Succesfully extracted 239 shots into 72143 frames. Elapsed time 83.28 sec
+oouOTsFcISE - Wrote command to /home/ts2387/frames/automobile/oouOTsFcISE/command.log.
+_M7R3GYHki8 - subj: automobile START FILTERING
+_M7R3GYHki8 - Opening selector for _M7R3GYHki8
+_M7R3GYHki8 - Frames are 32x57
+_M7R3GYHki8 - Apply filters
+_M7R3GYHki8 - Filter on shotlength: 86.3 pct of shots passed (600/695, nogo=0)
+_M7R3GYHki8 - Load all shots
+_M7R3GYHki8 - Filter on brightness: 81.8 pct of shots passed (491/600), 0.0 too bright, 18.2 too dark
+_M7R3GYHki8 - Filter on frame difference: 100.0 pct of shots passed (491/491), 0.0 too static, 0.0 too dynamic
+_M7R3GYHki8 - Filter results: 70.6 pct of shots passed tests (491 / 695 )
+_M7R3GYHki8 - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+_M7R3GYHki8 - Succesfully extracted 491 shots into 47510 frames. Elapsed time 71.65 sec
+_M7R3GYHki8 - Wrote command to /home/ts2387/frames/automobile/_M7R3GYHki8/command.log.
+672HAOq5678 - subj: automobile START FILTERING
+672HAOq5678 - Opening selector for 672HAOq5678
+672HAOq5678 - Frames are 32x57
+672HAOq5678 - Apply filters
+672HAOq5678 - Filter on shotlength: 99.3 pct of shots passed (299/301, nogo=0)
+672HAOq5678 - Load all shots
+672HAOq5678 - Filter on brightness: 97.3 pct of shots passed (291/299), 0.0 too bright, 2.7 too dark
+672HAOq5678 - Filter on frame difference: 96.2 pct of shots passed (280/291), 3.8 too static, 0.0 too dynamic
+672HAOq5678 - Filter results: 93.0 pct of shots passed tests (280 / 301 )
+672HAOq5678 - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+672HAOq5678 - Succesfully extracted 280 shots into 29899 frames. Elapsed time 95.85 sec
+672HAOq5678 - Wrote command to /home/ts2387/frames/automobile/672HAOq5678/command.log.
+i36SKJOoFoo - subj: bird START FILTERING
+i36SKJOoFoo - Opening selector for i36SKJOoFoo
+i36SKJOoFoo - Frames are 32x43
+i36SKJOoFoo - Apply filters
+i36SKJOoFoo - Filter on shotlength: 99.5 pct of shots passed (195/196, nogo=0)
+i36SKJOoFoo - Load all shots
+i36SKJOoFoo - Filter on brightness: 99.0 pct of shots passed (193/195), 0.0 too bright, 1.0 too dark
+i36SKJOoFoo - Filter on frame difference: 99.5 pct of shots passed (192/193), 0.5 too static, 0.0 too dynamic
+i36SKJOoFoo - Filter results: 98.0 pct of shots passed tests (192 / 196 )
+i36SKJOoFoo - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+i36SKJOoFoo - Succesfully extracted 192 shots into 36594 frames. Elapsed time 43.78 sec
+i36SKJOoFoo - Wrote command to /home/ts2387/frames/bird/i36SKJOoFoo/command.log.
+g1LqYXq_iJA - No infofile found, skipping video
+yKHznwVTxYg - subj: dog START FILTERING
+yKHznwVTxYg - Opening selector for yKHznwVTxYg
+yKHznwVTxYg - Frames are 32x57
+yKHznwVTxYg - Apply filters
+yKHznwVTxYg - Filter on shotlength: 89.5 pct of shots passed (612/684, nogo=0)
+yKHznwVTxYg - Load all shots
+yKHznwVTxYg - Filter on brightness: 98.7 pct of shots passed (604/612), 0.2 too bright, 1.1 too dark
+yKHznwVTxYg - Filter on frame difference: 99.2 pct of shots passed (599/604), 0.8 too static, 0.0 too dynamic
+yKHznwVTxYg - Filter results: 87.6 pct of shots passed tests (599 / 684 )
+yKHznwVTxYg - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+yKHznwVTxYg - Succesfully extracted 599 shots into 79726 frames. Elapsed time 273.11 sec
+yKHznwVTxYg - Wrote command to /home/ts2387/frames/dog/yKHznwVTxYg/command.log.
+59DMHhQcy7A - Movie is processed or busy, Skipping video
+86XGhbhwTwo - Movie is processed or busy, Skipping video
+iJxPm-avGeI - subj: truck START FILTERING
+iJxPm-avGeI - Opening selector for iJxPm-avGeI
+iJxPm-avGeI - Frames are 32x57
+iJxPm-avGeI - Apply filters
+iJxPm-avGeI - Filter on shotlength: 37.9 pct of shots passed (355/937, nogo=0)
+iJxPm-avGeI - Load all shots
+iJxPm-avGeI - Filter on brightness: 76.3 pct of shots passed (271/355), 0.3 too bright, 23.4 too dark
+iJxPm-avGeI - Filter on frame difference: 98.5 pct of shots passed (267/271), 1.5 too static, 0.0 too dynamic
+iJxPm-avGeI - Filter results: 28.5 pct of shots passed tests (267 / 937 )
+iJxPm-avGeI - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+iJxPm-avGeI - Succesfully extracted 267 shots into 19236 frames. Elapsed time 31.30 sec
+iJxPm-avGeI - Wrote command to /home/ts2387/frames/truck/iJxPm-avGeI/command.log.
+j2zsuO1rBB0 - subj: automobile START FILTERING
+j2zsuO1rBB0 - Opening selector for j2zsuO1rBB0
+j2zsuO1rBB0 - Frames are 32x50
+j2zsuO1rBB0 - Apply filters
+j2zsuO1rBB0 - Filter on shotlength: 80.7 pct of shots passed (791/980, nogo=0)
+j2zsuO1rBB0 - Load all shots
+j2zsuO1rBB0 - Filter on brightness: 84.5 pct of shots passed (668/791), 0.3 too bright, 15.3 too dark
+j2zsuO1rBB0 - Filter on frame difference: 98.7 pct of shots passed (659/668), 1.3 too static, 0.0 too dynamic
+j2zsuO1rBB0 - Filter results: 67.2 pct of shots passed tests (659 / 980 )
+j2zsuO1rBB0 - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+j2zsuO1rBB0 - Succesfully extracted 659 shots into 61827 frames. Elapsed time 84.58 sec
+j2zsuO1rBB0 - Wrote command to /home/ts2387/frames/automobile/j2zsuO1rBB0/command.log.
+dfIHhj4xbYw - subj: horse START FILTERING
+dfIHhj4xbYw - Opening selector for dfIHhj4xbYw
+dfIHhj4xbYw - Frames are 32x57
+dfIHhj4xbYw - Apply filters
+dfIHhj4xbYw - Filter on shotlength: 97.4 pct of shots passed (266/273, nogo=0)
+dfIHhj4xbYw - Load all shots
+dfIHhj4xbYw - Filter on brightness: 95.1 pct of shots passed (253/266), 0.0 too bright, 4.9 too dark
+dfIHhj4xbYw - Filter on frame difference: 99.2 pct of shots passed (251/253), 0.8 too static, 0.0 too dynamic
+dfIHhj4xbYw - Filter results: 91.9 pct of shots passed tests (251 / 273 )
+dfIHhj4xbYw - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+dfIHhj4xbYw - Succesfully extracted 251 shots into 60707 frames. Elapsed time 86.65 sec
+dfIHhj4xbYw - Wrote command to /home/ts2387/frames/horse/dfIHhj4xbYw/command.log.
+n4slFq1iNaY - subj: automobile START FILTERING
+n4slFq1iNaY - Opening selector for n4slFq1iNaY
+n4slFq1iNaY - Frames are 32x57
+n4slFq1iNaY - Apply filters
+n4slFq1iNaY - Filter on shotlength: 53.1 pct of shots passed (383/721, nogo=0)
+n4slFq1iNaY - Load all shots
+n4slFq1iNaY - Filter on brightness: 34.7 pct of shots passed (133/383), 0.0 too bright, 65.3 too dark
+n4slFq1iNaY - Filter on frame difference: 100.0 pct of shots passed (133/133), 0.0 too static, 0.0 too dynamic
+n4slFq1iNaY - Filter results: 18.4 pct of shots passed tests (133 / 721 )
+n4slFq1iNaY - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+n4slFq1iNaY - Succesfully extracted 133 shots into 8524 frames. Elapsed time 28.69 sec
+n4slFq1iNaY - Wrote command to /home/ts2387/frames/automobile/n4slFq1iNaY/command.log.
+MBjX7-P5eC0 - Movie is processed or busy, Skipping video
+ysHj77HeuFo - Movie is processed or busy, Skipping video
+0Ub0W-fDchA - subj: bird START FILTERING
+0Ub0W-fDchA - Opening selector for 0Ub0W-fDchA
+0Ub0W-fDchA - Frames are 32x57
+0Ub0W-fDchA - Apply filters
+0Ub0W-fDchA - Filter on shotlength: 93.9 pct of shots passed (428/456, nogo=0)
+0Ub0W-fDchA - Load all shots
+0Ub0W-fDchA - Filter on brightness: 92.8 pct of shots passed (397/428), 1.6 too bright, 5.6 too dark
+0Ub0W-fDchA - Filter on frame difference: 92.9 pct of shots passed (369/397), 7.1 too static, 0.0 too dynamic
+0Ub0W-fDchA - Filter results: 80.9 pct of shots passed tests (369 / 456 )
+0Ub0W-fDchA - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+0Ub0W-fDchA - Succesfully extracted 369 shots into 64969 frames. Elapsed time 92.30 sec
+0Ub0W-fDchA - Wrote command to /home/ts2387/frames/bird/0Ub0W-fDchA/command.log.
+uXWYCm2eLw8 - Movie is processed or busy, Skipping video
+F1VhNWb-Opw - Movie is processed or busy, Skipping video
+Rx179XNR2ak - subj: airplane START FILTERING
+Rx179XNR2ak - Opening selector for Rx179XNR2ak
+Rx179XNR2ak - Frames are 32x57
+Rx179XNR2ak - Apply filters
+Rx179XNR2ak - Filter on shotlength: 100.0 pct of shots passed (1/1, nogo=0)
+Rx179XNR2ak - Load all shots
+Rx179XNR2ak - Filter on brightness: 100.0 pct of shots passed (1/1), 0.0 too bright, 0.0 too dark
+Rx179XNR2ak - Filter on frame difference: 100.0 pct of shots passed (1/1), 0.0 too static, 0.0 too dynamic
+Rx179XNR2ak - Filter results: 100.0 pct of shots passed tests (1 / 1 )
+Rx179XNR2ak - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+Rx179XNR2ak - Succesfully extracted 1 shots into 28771 frames. Elapsed time 39.88 sec
+Rx179XNR2ak - Wrote command to /home/ts2387/frames/airplane/Rx179XNR2ak/command.log.
+mJBN-pPHezA - subj: airplane START FILTERING
+mJBN-pPHezA - Opening selector for mJBN-pPHezA
+mJBN-pPHezA - Frames are 32x42
+mJBN-pPHezA - Apply filters
+mJBN-pPHezA - Filter on shotlength: 42.7 pct of shots passed (503/1178, nogo=0)
+mJBN-pPHezA - Load all shots
+mJBN-pPHezA - Filter on brightness: 82.7 pct of shots passed (416/503), 0.4 too bright, 16.9 too dark
+mJBN-pPHezA - Filter on frame difference: 99.3 pct of shots passed (413/416), 0.7 too static, 0.0 too dynamic
+mJBN-pPHezA - Filter results: 35.1 pct of shots passed tests (413 / 1178 )
+mJBN-pPHezA - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+mJBN-pPHezA - Succesfully extracted 413 shots into 48423 frames. Elapsed time 61.82 sec
+mJBN-pPHezA - Wrote command to /home/ts2387/frames/airplane/mJBN-pPHezA/command.log.
+N9aLY4AJaSs - subj: dog START FILTERING
+N9aLY4AJaSs - Opening selector for N9aLY4AJaSs
+N9aLY4AJaSs - Frames are 32x57
+N9aLY4AJaSs - Apply filters
+N9aLY4AJaSs - Filter on shotlength: 78.0 pct of shots passed (71/91, nogo=0)
+N9aLY4AJaSs - Load all shots
+N9aLY4AJaSs - Filter on brightness: 95.8 pct of shots passed (68/71), 1.4 too bright, 2.8 too dark
+N9aLY4AJaSs - Filter on frame difference: 98.5 pct of shots passed (67/68), 1.5 too static, 0.0 too dynamic
+N9aLY4AJaSs - Filter results: 73.6 pct of shots passed tests (67 / 91 )
+N9aLY4AJaSs - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+N9aLY4AJaSs - Succesfully extracted 67 shots into 34269 frames. Elapsed time 103.12 sec
+N9aLY4AJaSs - Wrote command to /home/ts2387/frames/dog/N9aLY4AJaSs/command.log.
+1spIBy_nUPE - Movie is processed or busy, Skipping video
+izqCgnEEKwc - subj: cat START FILTERING
+izqCgnEEKwc - Opening selector for izqCgnEEKwc
+izqCgnEEKwc - Frames are 32x57
+izqCgnEEKwc - Apply filters
+izqCgnEEKwc - Filter on shotlength: 98.0 pct of shots passed (1015/1036, nogo=0)
+izqCgnEEKwc - Load all shots
+izqCgnEEKwc - Filter on brightness: 85.8 pct of shots passed (871/1015), 0.3 too bright, 13.9 too dark
+izqCgnEEKwc - Filter on frame difference: 96.7 pct of shots passed (842/871), 3.3 too static, 0.0 too dynamic
+izqCgnEEKwc - Filter results: 81.3 pct of shots passed tests (842 / 1036 )
+izqCgnEEKwc - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+izqCgnEEKwc - Succesfully extracted 842 shots into 105793 frames. Elapsed time 381.61 sec
+izqCgnEEKwc - Wrote command to /home/ts2387/frames/cat/izqCgnEEKwc/command.log.
+4tzhyfWHdLo - Movie is processed or busy, Skipping video
+nsbAUwsrW2Q - subj: bird START FILTERING
+nsbAUwsrW2Q - Opening selector for nsbAUwsrW2Q
+nsbAUwsrW2Q - Frames are 32x57
+nsbAUwsrW2Q - Apply filters
+nsbAUwsrW2Q - Filter on shotlength: 53.3 pct of shots passed (1424/2674, nogo=0)
+nsbAUwsrW2Q - Load all shots
+nsbAUwsrW2Q - Filter on brightness: 89.3 pct of shots passed (1272/1424), 1.1 too bright, 9.6 too dark
+nsbAUwsrW2Q - Filter on frame difference: 99.7 pct of shots passed (1268/1272), 0.3 too static, 0.0 too dynamic
+nsbAUwsrW2Q - Filter results: 47.4 pct of shots passed tests (1268 / 2674 )
+nsbAUwsrW2Q - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+nsbAUwsrW2Q - Succesfully extracted 1268 shots into 236020 frames. Elapsed time 392.00 sec
+nsbAUwsrW2Q - Wrote command to /home/ts2387/frames/bird/nsbAUwsrW2Q/command.log.
+qPyKVkSDLbU - subj: automobile START FILTERING
+qPyKVkSDLbU - Opening selector for qPyKVkSDLbU
+qPyKVkSDLbU - Frames are 32x57
+qPyKVkSDLbU - Apply filters
+qPyKVkSDLbU - Filter on shotlength: 91.3 pct of shots passed (116/127, nogo=0)
+qPyKVkSDLbU - Load all shots
+qPyKVkSDLbU - Filter on brightness: 98.3 pct of shots passed (114/116), 0.0 too bright, 1.7 too dark
+qPyKVkSDLbU - Filter on frame difference: 100.0 pct of shots passed (114/114), 0.0 too static, 0.0 too dynamic
+qPyKVkSDLbU - Filter results: 89.8 pct of shots passed tests (114 / 127 )
+qPyKVkSDLbU - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+qPyKVkSDLbU - Succesfully extracted 114 shots into 32068 frames. Elapsed time 101.44 sec
+qPyKVkSDLbU - Wrote command to /home/ts2387/frames/automobile/qPyKVkSDLbU/command.log.
+aQxzU0Lf1mw - subj: horse START FILTERING
+aQxzU0Lf1mw - Opening selector for aQxzU0Lf1mw
+aQxzU0Lf1mw - Frames are 32x44
+aQxzU0Lf1mw - Apply filters
+aQxzU0Lf1mw - Filter on shotlength: 98.4 pct of shots passed (249/253, nogo=0)
+aQxzU0Lf1mw - Load all shots
+aQxzU0Lf1mw - Filter on brightness: 99.2 pct of shots passed (247/249), 0.4 too bright, 0.4 too dark
+aQxzU0Lf1mw - Filter on frame difference: 94.7 pct of shots passed (234/247), 5.3 too static, 0.0 too dynamic
+aQxzU0Lf1mw - Filter results: 92.5 pct of shots passed tests (234 / 253 )
+aQxzU0Lf1mw - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+aQxzU0Lf1mw - Succesfully extracted 234 shots into 89027 frames. Elapsed time 107.62 sec
+aQxzU0Lf1mw - Wrote command to /home/ts2387/frames/horse/aQxzU0Lf1mw/command.log.
+C3Yd7M3JNlw - subj: frog START FILTERING
+C3Yd7M3JNlw - Opening selector for C3Yd7M3JNlw
+C3Yd7M3JNlw - Frames are 32x57
+C3Yd7M3JNlw - Apply filters
+C3Yd7M3JNlw - Filter on shotlength: 78.9 pct of shots passed (209/265, nogo=0)
+C3Yd7M3JNlw - Load all shots
+C3Yd7M3JNlw - Filter on brightness: 88.5 pct of shots passed (185/209), 0.0 too bright, 11.5 too dark
+C3Yd7M3JNlw - Filter on frame difference: 97.8 pct of shots passed (181/185), 2.2 too static, 0.0 too dynamic
+C3Yd7M3JNlw - Filter results: 68.3 pct of shots passed tests (181 / 265 )
+C3Yd7M3JNlw - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+C3Yd7M3JNlw - Succesfully extracted 181 shots into 32988 frames. Elapsed time 124.07 sec
+C3Yd7M3JNlw - Wrote command to /home/ts2387/frames/frog/C3Yd7M3JNlw/command.log.
+3DV-UaCQmpc - subj: automobile START FILTERING
+3DV-UaCQmpc - Opening selector for 3DV-UaCQmpc
+3DV-UaCQmpc - Frames are 32x57
+3DV-UaCQmpc - Apply filters
+3DV-UaCQmpc - Filter on shotlength: 52.5 pct of shots passed (21/40, nogo=0)
+3DV-UaCQmpc - Load all shots
+3DV-UaCQmpc - Filter on brightness: 95.2 pct of shots passed (20/21), 0.0 too bright, 4.8 too dark
+3DV-UaCQmpc - Filter on frame difference: 100.0 pct of shots passed (20/20), 0.0 too static, 0.0 too dynamic
+3DV-UaCQmpc - Filter results: 50.0 pct of shots passed tests (20 / 40 )
+3DV-UaCQmpc - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+3DV-UaCQmpc - Succesfully extracted 20 shots into 27213 frames. Elapsed time 110.10 sec
+3DV-UaCQmpc - Wrote command to /home/ts2387/frames/automobile/3DV-UaCQmpc/command.log.
+WobSrX2wxsw - Movie is processed or busy, Skipping video
+OYFIO4qmUz8 - subj: ship START FILTERING
+OYFIO4qmUz8 - Opening selector for OYFIO4qmUz8
+OYFIO4qmUz8 - Frames are 32x57
+OYFIO4qmUz8 - Apply filters
+OYFIO4qmUz8 - Filter on shotlength: 67.6 pct of shots passed (872/1289, nogo=0)
+OYFIO4qmUz8 - Load all shots
+OYFIO4qmUz8 - Filter on brightness: 91.1 pct of shots passed (794/872), 0.1 too bright, 8.8 too dark
+OYFIO4qmUz8 - Filter on frame difference: 97.7 pct of shots passed (776/794), 2.3 too static, 0.0 too dynamic
+OYFIO4qmUz8 - Filter results: 60.2 pct of shots passed tests (776 / 1289 )
+OYFIO4qmUz8 - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+OYFIO4qmUz8 - Succesfully extracted 776 shots into 69190 frames. Elapsed time 105.38 sec
+OYFIO4qmUz8 - Wrote command to /home/ts2387/frames/ship/OYFIO4qmUz8/command.log.
+wwK5K1c2kG0 - subj: automobile START FILTERING
+wwK5K1c2kG0 - Opening selector for wwK5K1c2kG0
+wwK5K1c2kG0 - Frames are 32x57
+wwK5K1c2kG0 - Apply filters
+wwK5K1c2kG0 - Filter on shotlength: 97.8 pct of shots passed (45/46, nogo=0)
+wwK5K1c2kG0 - Load all shots
+wwK5K1c2kG0 - Filter on brightness: 37.8 pct of shots passed (17/45), 0.0 too bright, 62.2 too dark
+wwK5K1c2kG0 - Filter on frame difference: 94.1 pct of shots passed (16/17), 5.9 too static, 0.0 too dynamic
+wwK5K1c2kG0 - Filter results: 34.8 pct of shots passed tests (16 / 46 )
+wwK5K1c2kG0 - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+wwK5K1c2kG0 - Succesfully extracted 16 shots into 9025 frames. Elapsed time 62.68 sec
+wwK5K1c2kG0 - Wrote command to /home/ts2387/frames/automobile/wwK5K1c2kG0/command.log.
+u6qvMAyI44A - Movie is processed or busy, Skipping video
+OI-CKiX1uZc - subj: dog START FILTERING
+OI-CKiX1uZc - Opening selector for OI-CKiX1uZc
+OI-CKiX1uZc - Frames are 32x57
+OI-CKiX1uZc - Apply filters
+OI-CKiX1uZc - Filter on shotlength: 66.1 pct of shots passed (199/301, nogo=0)
+OI-CKiX1uZc - Load all shots
+OI-CKiX1uZc - Filter on brightness: 87.9 pct of shots passed (175/199), 0.0 too bright, 12.1 too dark
+OI-CKiX1uZc - Filter on frame difference: 99.4 pct of shots passed (174/175), 0.6 too static, 0.0 too dynamic
+OI-CKiX1uZc - Filter results: 57.8 pct of shots passed tests (174 / 301 )
+OI-CKiX1uZc - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+OI-CKiX1uZc - Succesfully extracted 174 shots into 54640 frames. Elapsed time 184.03 sec
+OI-CKiX1uZc - Wrote command to /home/ts2387/frames/dog/OI-CKiX1uZc/command.log.
+RISxGgryX_Y - Movie is processed or busy, Skipping video
+hJF0-D_LGtc - subj: ship START FILTERING
+hJF0-D_LGtc - Opening selector for hJF0-D_LGtc
+hJF0-D_LGtc - Frames are 32x54
+hJF0-D_LGtc - Apply filters
+hJF0-D_LGtc - Filter on shotlength: 75.2 pct of shots passed (541/719, nogo=0)
+hJF0-D_LGtc - Load all shots
+hJF0-D_LGtc - Filter on brightness: 88.5 pct of shots passed (479/541), 0.0 too bright, 11.5 too dark
+hJF0-D_LGtc - Filter on frame difference: 100.0 pct of shots passed (479/479), 0.0 too static, 0.0 too dynamic
+hJF0-D_LGtc - Filter results: 66.6 pct of shots passed tests (479 / 719 )
+hJF0-D_LGtc - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+hJF0-D_LGtc - Succesfully extracted 479 shots into 64195 frames. Elapsed time 79.10 sec
+hJF0-D_LGtc - Wrote command to /home/ts2387/frames/ship/hJF0-D_LGtc/command.log.
+qtX3ir4eWMM - Movie is processed or busy, Skipping video
+Ef98FiDMqVA - Movie is processed or busy, Skipping video
+WWDI6pXa9i4 - subj: automobile START FILTERING
+WWDI6pXa9i4 - Opening selector for WWDI6pXa9i4
+WWDI6pXa9i4 - Frames are 32x57
+WWDI6pXa9i4 - Apply filters
+WWDI6pXa9i4 - Filter on shotlength: 100.0 pct of shots passed (3/3, nogo=0)
+WWDI6pXa9i4 - Load all shots
+WWDI6pXa9i4 - Filter on brightness: 100.0 pct of shots passed (3/3), 0.0 too bright, 0.0 too dark
+WWDI6pXa9i4 - Filter on frame difference: 100.0 pct of shots passed (3/3), 0.0 too static, 0.0 too dynamic
+WWDI6pXa9i4 - Filter results: 100.0 pct of shots passed tests (3 / 3 )
+WWDI6pXa9i4 - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+WWDI6pXa9i4 - Succesfully extracted 3 shots into 18069 frames. Elapsed time 81.66 sec
+WWDI6pXa9i4 - Wrote command to /home/ts2387/frames/automobile/WWDI6pXa9i4/command.log.
+iSodQMghf6Y - No infofile found, skipping video
+Ush1__TO0fQ - subj: frog START FILTERING
+Ush1__TO0fQ - Opening selector for Ush1__TO0fQ
+Ush1__TO0fQ - Frames are 32x57
+Ush1__TO0fQ - Apply filters
+Ush1__TO0fQ - Filter on shotlength: 99.4 pct of shots passed (318/320, nogo=0)
+Ush1__TO0fQ - Load all shots
+Ush1__TO0fQ - Filter on brightness: 93.1 pct of shots passed (296/318), 0.0 too bright, 6.9 too dark
+Ush1__TO0fQ - Filter on frame difference: 90.9 pct of shots passed (269/296), 9.1 too static, 0.0 too dynamic
+Ush1__TO0fQ - Filter results: 84.1 pct of shots passed tests (269 / 320 )
+Ush1__TO0fQ - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+Ush1__TO0fQ - Succesfully extracted 269 shots into 51156 frames. Elapsed time 197.18 sec
+Ush1__TO0fQ - Wrote command to /home/ts2387/frames/frog/Ush1__TO0fQ/command.log.
+nI97ca94w8k - Movie is processed or busy, Skipping video
+x-ZN4qtVqR8 - subj: cat START FILTERING
+x-ZN4qtVqR8 - Opening selector for x-ZN4qtVqR8
+x-ZN4qtVqR8 - Frames are 32x57
+x-ZN4qtVqR8 - Apply filters
+x-ZN4qtVqR8 - Filter on shotlength: 89.9 pct of shots passed (340/378, nogo=0)
+x-ZN4qtVqR8 - Load all shots
+x-ZN4qtVqR8 - Filter on brightness: 93.2 pct of shots passed (317/340), 0.0 too bright, 6.8 too dark
+x-ZN4qtVqR8 - Filter on frame difference: 97.8 pct of shots passed (310/317), 2.2 too static, 0.0 too dynamic
+x-ZN4qtVqR8 - Filter results: 82.0 pct of shots passed tests (310 / 378 )
+x-ZN4qtVqR8 - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+x-ZN4qtVqR8 - Succesfully extracted 310 shots into 62790 frames. Elapsed time 202.57 sec
+x-ZN4qtVqR8 - Wrote command to /home/ts2387/frames/cat/x-ZN4qtVqR8/command.log.
+IFUHcROix0s - Movie is processed or busy, Skipping video
+1c06xOF4uQ8 - Movie is processed or busy, Skipping video
+ZBAGEeOms-8 - Movie is processed or busy, Skipping video
+8bT6txm4RpA - Movie is processed or busy, Skipping video
+bQvdOhJmqEI - Movie is processed or busy, Skipping video
+9wxgEuvWKD8 - Movie is processed or busy, Skipping video
+-PN9bcSdKyY - Movie is processed or busy, Skipping video
+QCSrS7k2lGc - subj: truck START FILTERING
+QCSrS7k2lGc - Opening selector for QCSrS7k2lGc
+QCSrS7k2lGc - Frames are 32x57
+QCSrS7k2lGc - Apply filters
+QCSrS7k2lGc - Filter on shotlength: 64.3 pct of shots passed (153/238, nogo=0)
+QCSrS7k2lGc - Load all shots
+QCSrS7k2lGc - Filter on brightness: 90.8 pct of shots passed (139/153), 0.0 too bright, 9.2 too dark
+QCSrS7k2lGc - Filter on frame difference: 99.3 pct of shots passed (138/139), 0.7 too static, 0.0 too dynamic
+QCSrS7k2lGc - Filter results: 58.0 pct of shots passed tests (138 / 238 )
+QCSrS7k2lGc - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+QCSrS7k2lGc - Succesfully extracted 138 shots into 69713 frames. Elapsed time 229.39 sec
+QCSrS7k2lGc - Wrote command to /home/ts2387/frames/truck/QCSrS7k2lGc/command.log.
+xg0AzXDcFsc - Movie is processed or busy, Skipping video
+s9t2RKYCBvE - Movie is processed or busy, Skipping video
+-s1JGFjzqUo - subj: truck START FILTERING
+-s1JGFjzqUo - Opening selector for -s1JGFjzqUo
+-s1JGFjzqUo - Frames are 32x57
+-s1JGFjzqUo - Apply filters
+-s1JGFjzqUo - Filter on shotlength: 81.9 pct of shots passed (262/320, nogo=0)
+-s1JGFjzqUo - Load all shots
+-s1JGFjzqUo - Filter on brightness: 92.4 pct of shots passed (242/262), 0.4 too bright, 7.3 too dark
+-s1JGFjzqUo - Filter on frame difference: 99.2 pct of shots passed (240/242), 0.8 too static, 0.0 too dynamic
+-s1JGFjzqUo - Filter results: 75.0 pct of shots passed tests (240 / 320 )
+-s1JGFjzqUo - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+-s1JGFjzqUo - Succesfully extracted 240 shots into 48178 frames. Elapsed time 173.37 sec
+-s1JGFjzqUo - Wrote command to /home/ts2387/frames/truck/-s1JGFjzqUo/command.log.
+ssQoJqdZcRw - Movie is processed or busy, Skipping video
+zwOImSrzmCg - Movie is processed or busy, Skipping video
+GiBR2o70pTo - subj: automobile START FILTERING
+GiBR2o70pTo - Opening selector for GiBR2o70pTo
+GiBR2o70pTo - Frames are 32x43
+GiBR2o70pTo - Apply filters
+GiBR2o70pTo - Filter on shotlength: 97.5 pct of shots passed (153/157, nogo=0)
+GiBR2o70pTo - Load all shots
+GiBR2o70pTo - Filter on brightness: 96.1 pct of shots passed (147/153), 0.7 too bright, 3.3 too dark
+GiBR2o70pTo - Filter on frame difference: 97.3 pct of shots passed (143/147), 2.7 too static, 0.0 too dynamic
+GiBR2o70pTo - Filter results: 91.1 pct of shots passed tests (143 / 157 )
+GiBR2o70pTo - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+GiBR2o70pTo - Succesfully extracted 143 shots into 32708 frames. Elapsed time 33.84 sec
+GiBR2o70pTo - Wrote command to /home/ts2387/frames/automobile/GiBR2o70pTo/command.log.
+qi-kdEgjCkc - subj: deer START FILTERING
+qi-kdEgjCkc - Opening selector for qi-kdEgjCkc
+qi-kdEgjCkc - Frames are 32x40
+qi-kdEgjCkc - Apply filters
+qi-kdEgjCkc - Filter on shotlength: 94.9 pct of shots passed (428/451, nogo=0)
+qi-kdEgjCkc - Load all shots
+qi-kdEgjCkc - Filter on brightness: 90.9 pct of shots passed (389/428), 0.0 too bright, 9.1 too dark
+qi-kdEgjCkc - Filter on frame difference: 99.5 pct of shots passed (387/389), 0.5 too static, 0.0 too dynamic
+qi-kdEgjCkc - Filter results: 85.8 pct of shots passed tests (387 / 451 )
+qi-kdEgjCkc - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+qi-kdEgjCkc - Succesfully extracted 387 shots into 60570 frames. Elapsed time 69.49 sec
+qi-kdEgjCkc - Wrote command to /home/ts2387/frames/deer/qi-kdEgjCkc/command.log.
+G837cDBvQe8 - Movie is processed or busy, Skipping video
+Cg2tVKvKp1A - subj: horse START FILTERING
+Cg2tVKvKp1A - Opening selector for Cg2tVKvKp1A
+Cg2tVKvKp1A - Frames are 32x43
+Cg2tVKvKp1A - Apply filters
+Cg2tVKvKp1A - Filter on shotlength: 97.1 pct of shots passed (304/313, nogo=0)
+Cg2tVKvKp1A - Load all shots
+Cg2tVKvKp1A - Filter on brightness: 93.1 pct of shots passed (283/304), 0.0 too bright, 6.9 too dark
+Cg2tVKvKp1A - Filter on frame difference: 91.5 pct of shots passed (259/283), 8.5 too static, 0.0 too dynamic
+Cg2tVKvKp1A - Filter results: 82.7 pct of shots passed tests (259 / 313 )
+Cg2tVKvKp1A - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+Cg2tVKvKp1A - Succesfully extracted 259 shots into 66540 frames. Elapsed time 85.59 sec
+Cg2tVKvKp1A - Wrote command to /home/ts2387/frames/horse/Cg2tVKvKp1A/command.log.
+SVgzWmqC_rg - No infofile found, skipping video
+IJz2iABjaqs - subj: truck START FILTERING
+IJz2iABjaqs - Opening selector for IJz2iABjaqs
+IJz2iABjaqs - Frames are 32x57
+IJz2iABjaqs - Apply filters
+IJz2iABjaqs - Filter on shotlength: 85.5 pct of shots passed (241/282, nogo=0)
+IJz2iABjaqs - Load all shots
+IJz2iABjaqs - Filter on brightness: 96.7 pct of shots passed (233/241), 0.0 too bright, 3.3 too dark
+IJz2iABjaqs - Filter on frame difference: 100.0 pct of shots passed (233/233), 0.0 too static, 0.0 too dynamic
+IJz2iABjaqs - Filter results: 82.6 pct of shots passed tests (233 / 282 )
+IJz2iABjaqs - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+IJz2iABjaqs - Succesfully extracted 233 shots into 76442 frames. Elapsed time 99.07 sec
+IJz2iABjaqs - Wrote command to /home/ts2387/frames/truck/IJz2iABjaqs/command.log.
+eWBcVp-3cmc - Movie is processed or busy, Skipping video
+dwvyniKeDsY - subj: frog START FILTERING
+dwvyniKeDsY - Opening selector for dwvyniKeDsY
+dwvyniKeDsY - Frames are 32x57
+dwvyniKeDsY - Apply filters
+dwvyniKeDsY - Filter on shotlength: 91.7 pct of shots passed (55/60, nogo=0)
+dwvyniKeDsY - Load all shots
+dwvyniKeDsY - Filter on brightness: 100.0 pct of shots passed (55/55), 0.0 too bright, 0.0 too dark
+dwvyniKeDsY - Filter on frame difference: 100.0 pct of shots passed (55/55), 0.0 too static, 0.0 too dynamic
+dwvyniKeDsY - Filter results: 91.7 pct of shots passed tests (55 / 60 )
+dwvyniKeDsY - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+dwvyniKeDsY - Succesfully extracted 55 shots into 38275 frames. Elapsed time 124.28 sec
+dwvyniKeDsY - Wrote command to /home/ts2387/frames/frog/dwvyniKeDsY/command.log.
+lzJZ6U5kkbo - subj: ship START FILTERING
+lzJZ6U5kkbo - Opening selector for lzJZ6U5kkbo
+lzJZ6U5kkbo - Frames are 32x57
+lzJZ6U5kkbo - Apply filters
+lzJZ6U5kkbo - Filter on shotlength: 88.3 pct of shots passed (453/513, nogo=0)
+lzJZ6U5kkbo - Load all shots
+lzJZ6U5kkbo - Filter on brightness: 97.1 pct of shots passed (440/453), 2.2 too bright, 0.7 too dark
+lzJZ6U5kkbo - Filter on frame difference: 98.0 pct of shots passed (431/440), 2.0 too static, 0.0 too dynamic
+lzJZ6U5kkbo - Filter results: 84.0 pct of shots passed tests (431 / 513 )
+lzJZ6U5kkbo - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+lzJZ6U5kkbo - Succesfully extracted 431 shots into 63417 frames. Elapsed time 216.35 sec
+lzJZ6U5kkbo - Wrote command to /home/ts2387/frames/ship/lzJZ6U5kkbo/command.log.
+rPHPqNh1fd0 - Movie is processed or busy, Skipping video
+G-vLgkO4XIc - Movie is processed or busy, Skipping video
+skjA6OfoR2E - Movie is processed or busy, Skipping video
+OMWshXDmQ2M - Movie is processed or busy, Skipping video
+ZWiZocE1zck - Movie is processed or busy, Skipping video
+qrZBxlN62DU - Movie is processed or busy, Skipping video
+NGoV5S3BVcg - Movie is processed or busy, Skipping video
+Uup7jVqEIss - Movie is processed or busy, Skipping video
+8CCFjMRQTYI - Movie is processed or busy, Skipping video
+Za9xgu9H8-s - Movie is processed or busy, Skipping video
+HNtBphqE_LA - Movie is processed or busy, Skipping video
+EQZjNBPfNNA - subj: frog START FILTERING
+EQZjNBPfNNA - Opening selector for EQZjNBPfNNA
+EQZjNBPfNNA - Frames are 32x57
+EQZjNBPfNNA - Apply filters
+EQZjNBPfNNA - Filter on shotlength: 96.6 pct of shots passed (281/291, nogo=0)
+EQZjNBPfNNA - Load all shots
+EQZjNBPfNNA - Filter on brightness: 64.8 pct of shots passed (182/281), 0.0 too bright, 35.2 too dark
+EQZjNBPfNNA - Filter on frame difference: 88.5 pct of shots passed (161/182), 11.5 too static, 0.0 too dynamic
+EQZjNBPfNNA - Filter results: 55.3 pct of shots passed tests (161 / 291 )
+EQZjNBPfNNA - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+EQZjNBPfNNA - Succesfully extracted 161 shots into 38370 frames. Elapsed time 161.75 sec
+EQZjNBPfNNA - Wrote command to /home/ts2387/frames/frog/EQZjNBPfNNA/command.log.
+fF8uJWufF8c - Movie is processed or busy, Skipping video
+zgv00lndzQ0 - Movie is processed or busy, Skipping video
+Sw0POFsgzFk - Movie is processed or busy, Skipping video
+HKYdy-xPpVU - No infofile found, skipping video
+v_lyOfZXKDU - Movie is processed or busy, Skipping video
+0GN0rNzojTY - Movie is processed or busy, Skipping video
+SLWM75yA-Ko - No infofile found, skipping video
+fMaY3jrzRkQ - Movie is processed or busy, Skipping video
+WBVhY_d4lv4 - Movie is processed or busy, Skipping video
+mtEUPyf5UC8 - Movie is processed or busy, Skipping video
+XX5h0a9YiOo - Movie is processed or busy, Skipping video
+omUIhrCcGqI - Movie is processed or busy, Skipping video
+xo_jxJPjKzw - subj: ship START FILTERING
+xo_jxJPjKzw - Opening selector for xo_jxJPjKzw
+xo_jxJPjKzw - Frames are 32x57
+xo_jxJPjKzw - Apply filters
+xo_jxJPjKzw - Filter on shotlength: 78.8 pct of shots passed (441/560, nogo=0)
+xo_jxJPjKzw - Load all shots
+xo_jxJPjKzw - Filter on brightness: 86.8 pct of shots passed (383/441), 0.0 too bright, 13.2 too dark
+xo_jxJPjKzw - Filter on frame difference: 100.0 pct of shots passed (383/383), 0.0 too static, 0.0 too dynamic
+xo_jxJPjKzw - Filter results: 68.4 pct of shots passed tests (383 / 560 )
+xo_jxJPjKzw - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+xo_jxJPjKzw - Succesfully extracted 383 shots into 69332 frames. Elapsed time 96.93 sec
+xo_jxJPjKzw - Wrote command to /home/ts2387/frames/ship/xo_jxJPjKzw/command.log.
+x_yHtfGH0nI - Movie is processed or busy, Skipping video
+ulSS4K2xc8M - Movie is processed or busy, Skipping video
+pnHjYqIvtbY - Movie is processed or busy, Skipping video
+yDyvRayFvJw - Movie is processed or busy, Skipping video
+81IAMEZshrU - Movie is processed or busy, Skipping video
+84-SSASmOoI - Movie is processed or busy, Skipping video
+eX54klzOJpY - Movie is processed or busy, Skipping video
+zdl6M4JWcyA - Movie is processed or busy, Skipping video
+TQUMAJCh1fA - Movie is processed or busy, Skipping video
+VGdTKjWQnAo - Movie is processed or busy, Skipping video
+N913VOemqt8 - subj: dog START FILTERING
+N913VOemqt8 - Opening selector for N913VOemqt8
+N913VOemqt8 - Frames are 32x43
+N913VOemqt8 - Apply filters
+N913VOemqt8 - Filter on shotlength: 89.7 pct of shots passed (201/224, nogo=0)
+N913VOemqt8 - Load all shots
+N913VOemqt8 - Filter on brightness: 91.0 pct of shots passed (183/201), 0.0 too bright, 9.0 too dark
+N913VOemqt8 - Filter on frame difference: 100.0 pct of shots passed (183/183), 0.0 too static, 0.0 too dynamic
+N913VOemqt8 - Filter results: 81.7 pct of shots passed tests (183 / 224 )
+N913VOemqt8 - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+N913VOemqt8 - Succesfully extracted 183 shots into 69074 frames. Elapsed time 75.05 sec
+N913VOemqt8 - Wrote command to /home/ts2387/frames/dog/N913VOemqt8/command.log.
+qQbSUO6HGEQ - Movie is processed or busy, Skipping video
+gkWuLoHdF2s - Movie is processed or busy, Skipping video
+6Z706ccqrx4 - Movie is processed or busy, Skipping video
+GOv4H6N-PV0 - Movie is processed or busy, Skipping video
+bAC4eAA2u5M - Movie is processed or busy, Skipping video
+Sb102PUYf84 - Movie is processed or busy, Skipping video
+bHwAguHqYnU - Movie is processed or busy, Skipping video
+3lYwP0hzCXg - Movie is processed or busy, Skipping video
+oJquuyK4s2E - subj: horse START FILTERING
+oJquuyK4s2E - Opening selector for oJquuyK4s2E
+oJquuyK4s2E - Frames are 32x43
+oJquuyK4s2E - Apply filters
+oJquuyK4s2E - Filter on shotlength: 85.2 pct of shots passed (265/311, nogo=0)
+oJquuyK4s2E - Load all shots
+oJquuyK4s2E - Filter on brightness: 91.7 pct of shots passed (243/265), 0.8 too bright, 7.5 too dark
+oJquuyK4s2E - Filter on frame difference: 95.9 pct of shots passed (233/243), 4.1 too static, 0.0 too dynamic
+oJquuyK4s2E - Filter results: 74.9 pct of shots passed tests (233 / 311 )
+oJquuyK4s2E - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+oJquuyK4s2E - Succesfully extracted 233 shots into 34759 frames. Elapsed time 41.06 sec
+oJquuyK4s2E - Wrote command to /home/ts2387/frames/horse/oJquuyK4s2E/command.log.
+7HwEp3dTnfE - Movie is processed or busy, Skipping video
+0oyWZjdXxlw - Movie is processed or busy, Skipping video
+d20_kMOFR2E - Movie is processed or busy, Skipping video
+bQKSn4-fZwk - Movie is processed or busy, Skipping video
+gAUsvm_jcJU - Movie is processed or busy, Skipping video
+lJ45iaQgJjk - Movie is processed or busy, Skipping video
+y2dlHNOJkpA - subj: dog START FILTERING
+y2dlHNOJkpA - Opening selector for y2dlHNOJkpA
+y2dlHNOJkpA - Frames are 32x57
+y2dlHNOJkpA - Apply filters
+y2dlHNOJkpA - Filter on shotlength: 64.7 pct of shots passed (392/606, nogo=0)
+y2dlHNOJkpA - Load all shots
+y2dlHNOJkpA - Filter on brightness: 92.6 pct of shots passed (363/392), 0.0 too bright, 7.4 too dark
+y2dlHNOJkpA - Filter on frame difference: 98.9 pct of shots passed (359/363), 1.1 too static, 0.0 too dynamic
+y2dlHNOJkpA - Filter results: 59.2 pct of shots passed tests (359 / 606 )
+y2dlHNOJkpA - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+y2dlHNOJkpA - Succesfully extracted 359 shots into 52029 frames. Elapsed time 69.85 sec
+y2dlHNOJkpA - Wrote command to /home/ts2387/frames/dog/y2dlHNOJkpA/command.log.
+ZT5nLjM6FcU - Movie is processed or busy, Skipping video
+10OVZHEpaDc - Movie is processed or busy, Skipping video
+Nj5aK3wPk28 - Movie is processed or busy, Skipping video
+CG6n7ZO7MAY - subj: airplane START FILTERING
+CG6n7ZO7MAY - Opening selector for CG6n7ZO7MAY
+CG6n7ZO7MAY - Frames are 32x51
+CG6n7ZO7MAY - Apply filters
+CG6n7ZO7MAY - Filter on shotlength: 92.5 pct of shots passed (590/638, nogo=0)
+CG6n7ZO7MAY - Load all shots
+CG6n7ZO7MAY - Filter on brightness: 94.1 pct of shots passed (555/590), 0.7 too bright, 5.3 too dark
+CG6n7ZO7MAY - Filter on frame difference: 92.6 pct of shots passed (514/555), 7.4 too static, 0.0 too dynamic
+CG6n7ZO7MAY - Filter results: 80.6 pct of shots passed tests (514 / 638 )
+CG6n7ZO7MAY - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+CG6n7ZO7MAY - Succesfully extracted 514 shots into 58590 frames. Elapsed time 74.06 sec
+CG6n7ZO7MAY - Wrote command to /home/ts2387/frames/airplane/CG6n7ZO7MAY/command.log.
+jMNoQSdOMNM - Movie is processed or busy, Skipping video
+HFWj0jEaJ5w - Movie is processed or busy, Skipping video
+DR3hJ1kKi4Q - Movie is processed or busy, Skipping video
+I_zWYPr7pBI - Movie is processed or busy, Skipping video
+vWjOEINtX_8 - Movie is processed or busy, Skipping video
+52RvhMI0TXo - Movie is processed or busy, Skipping video
+zvLCgv2jPAk - Movie is processed or busy, Skipping video
+WrIVYELyl7I - Movie is processed or busy, Skipping video
+zm_k3TlbCVM - Movie is processed or busy, Skipping video
+GR4sHcRThWs - Movie is processed or busy, Skipping video
+ZtDXyn3sV8U - Movie is processed or busy, Skipping video
+qtBloRAxFK8 - Movie is processed or busy, Skipping video
+0ATzWE688bI - Movie is processed or busy, Skipping video
+7KftVUFVSMM - No infofile found, skipping video
+gAnVS27WODg - Movie is processed or busy, Skipping video
+TH6dTSbmTt0 - Movie is processed or busy, Skipping video
+5K_LVkcVq-g - Movie is processed or busy, Skipping video
+TuQe4-I9FW4 - Movie is processed or busy, Skipping video
+m1ZSNHqpeYI - subj: ship START FILTERING
+m1ZSNHqpeYI - Opening selector for m1ZSNHqpeYI
+m1ZSNHqpeYI - Frames are 32x57
+m1ZSNHqpeYI - Apply filters
+m1ZSNHqpeYI - Filter on shotlength: 96.5 pct of shots passed (468/485, nogo=0)
+m1ZSNHqpeYI - Load all shots
+m1ZSNHqpeYI - Filter on brightness: 96.2 pct of shots passed (450/468), 0.0 too bright, 3.8 too dark
+m1ZSNHqpeYI - Filter on frame difference: 98.2 pct of shots passed (442/450), 1.8 too static, 0.0 too dynamic
+m1ZSNHqpeYI - Filter results: 91.1 pct of shots passed tests (442 / 485 )
+m1ZSNHqpeYI - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+m1ZSNHqpeYI - Succesfully extracted 442 shots into 66746 frames. Elapsed time 98.01 sec
+m1ZSNHqpeYI - Wrote command to /home/ts2387/frames/ship/m1ZSNHqpeYI/command.log.
+DE7hNdkNmsI - Movie is processed or busy, Skipping video
+quMCX3MkcTM - Movie is processed or busy, Skipping video
+6hFXotBz-mQ - Movie is processed or busy, Skipping video
+hiVmGBD6udQ - Movie is processed or busy, Skipping video
+NADWGNRYOLU - Movie is processed or busy, Skipping video
+GGx-iqYjeLs - Movie is processed or busy, Skipping video
+osBfZOItcZU - No infofile found, skipping video
+AlcocVRQAaI - Movie is processed or busy, Skipping video
+8Y6VyrGITG4 - Movie is processed or busy, Skipping video
+1aRcw6yOObg - Movie is processed or busy, Skipping video
+oL-xDhEvD30 - Movie is processed or busy, Skipping video
+gt1k3BLN7pw - Movie is processed or busy, Skipping video
+ONw9pafpr7U - Movie is processed or busy, Skipping video
+-LFzHhU-Rro - Movie is processed or busy, Skipping video
+Kdgt1ZHkvnM - Movie is processed or busy, Skipping video
+hQcBV6k_27I - subj: frog START FILTERING
+hQcBV6k_27I - Opening selector for hQcBV6k_27I
+hQcBV6k_27I - Frames are 32x57
+hQcBV6k_27I - Apply filters
+hQcBV6k_27I - Filter on shotlength: 100.0 pct of shots passed (2/2, nogo=0)
+hQcBV6k_27I - Load all shots
+hQcBV6k_27I - Filter on brightness: 50.0 pct of shots passed (1/2), 0.0 too bright, 50.0 too dark
+hQcBV6k_27I - Filter on frame difference: 0.0 pct of shots passed (0/1), 100.0 too static, 0.0 too dynamic
+hQcBV6k_27I - Filter results: 0.0 pct of shots passed tests (0 / 2 )
+hQcBV6k_27I - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+hQcBV6k_27I - Succesfully extracted 0 shots into 0 frames. Elapsed time 280.94 sec
+hQcBV6k_27I - Wrote command to /home/ts2387/frames/frog/hQcBV6k_27I/command.log.
+2etrT025NiY - Movie is processed or busy, Skipping video
+LzQtPH7jOlc - Movie is processed or busy, Skipping video
+DE1nQwUvhGg - Movie is processed or busy, Skipping video
+A42U5njyx6c - Movie is processed or busy, Skipping video
+JSIsoj1QPAc - Movie is processed or busy, Skipping video
+iW1wWE6Ughk - subj: cat START FILTERING
+iW1wWE6Ughk - Opening selector for iW1wWE6Ughk
+iW1wWE6Ughk - Frames are 32x57
+iW1wWE6Ughk - Apply filters
+iW1wWE6Ughk - Filter on shotlength: 76.3 pct of shots passed (71/93, nogo=0)
+iW1wWE6Ughk - Load all shots
+iW1wWE6Ughk - Filter on brightness: 95.8 pct of shots passed (68/71), 1.4 too bright, 2.8 too dark
+iW1wWE6Ughk - Filter on frame difference: 98.5 pct of shots passed (67/68), 1.5 too static, 0.0 too dynamic
+iW1wWE6Ughk - Filter results: 72.0 pct of shots passed tests (67 / 93 )
+iW1wWE6Ughk - Dump filters overviews:  unnatural,  dynamic,  dark,  bright,  static,  pass,  
+iW1wWE6Ughk - Succesfully extracted 67 shots into 34263 frames. Elapsed time 98.95 sec
+iW1wWE6Ughk - Wrote command to /home/ts2387/frames/cat/iW1wWE6Ughk/command.log.
+0l_6vJzq21Y - Movie is processed or busy, Skipping video
+4CZkmgxuahQ - Movie is processed or busy, Skipping video
+16IxqJ7_M8Q - Movie is processed or busy, Skipping video
+XbzcJ0NGNSI - Movie is processed or busy, Skipping video
