@@ -23,7 +23,7 @@ class fn:
 class down:
     Npersubj = 50 # number of downloads per subject
     maxpages = 5  # number of pages per query
-    queryfile = 'cifar10.json'
+    queryfile = 'queries_ross.json'
     ytstring = 'http://www.youtube.com/results?filters=video%2C+long&'
     ids_fn = join(path.video, 'down_ids_%s.json' % datetime.datetime.now().strftime('%Y-%m-%d_%Hh%M'))
     min_len = 600

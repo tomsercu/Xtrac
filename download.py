@@ -49,7 +49,7 @@ def get_video_ids(write = True):
             down_ids[subj][query]=[]
             enough=False
             for p in range(1, Npages+1):
-                print "Subject %s, query:  %s page %d, found %d movies"%(subj,query,p, Nperquery)
+                print "Subject %s, query:  %s page %d/%d"%(subj,query,p,Npages)
                 url = conf.down.ytstring+'search_query=%s&page=%d' % (query.replace(' ','+'), p)
                 response = urllib2.urlopen(url)
         #         response = urllib2.urlopen('http://www.youtube.com/results?search_query=discovery%20channel&page=' + str(i))
@@ -93,9 +93,9 @@ def download(down_ids):
                 updatemovielist() # account for parallel execution
                 if (vidid not in movielist):
                     movielist.add(vidid)
-                    out=join(conf.path.video, subj, vidid+'.mp4')
+                    out=join(conf.path.video, subj, vidid)
                     # DOWNLOAD INFO
-                    cli = 'youtube-dl -o %s --all-subs --write-info-json --skip-download http://www.youtube.com/watch?v=%s'%(out, vidid)
+                    cli = 'youtube-dl -o %s --all-subs --write-info-json --skip-download http://www.youtube.com/watch?v=%s'%(out+'.mp4', vidid)
                     print '%s -- download:  %s ' % (vidid, cli)
                     subprocess.call(cli, shell=True)
                     # do checks
@@ -103,14 +103,14 @@ def download(down_ids):
                     if int(info['duration'] < conf.down.min_len):
                         print "%s -- SKIP Movie  is shorter than %d sec" % (vidid, conf.down.min_len)
                         continue
-                    if 'interview' in str(info['stitle']).lower():
+                    if 'interview' in info['stitle'].lower():
                         print "%s -- SKIP Movie probably contains interview" % vidid
                         continue
                     if int(info['view_count']) < conf.down.min_views:
                         print "%s -- SKIP Movie, only %d views" % ( vidid, int(info['view_count']))
                         continue
                     # download movie itself
-                    cli = 'youtube-dl -o %s --all-subs --write-info-json http://www.youtube.com/watch?v=%s'%(out, vidid)
+                    cli = 'youtube-dl -o %s --all-subs --write-info-json http://www.youtube.com/watch?v=%s'%(out+'.mp4', vidid)
                     print '%s -- download:  %s ' % (vidid, cli)
                     subprocess.call(cli, shell=True)
                 else:
