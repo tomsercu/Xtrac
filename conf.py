@@ -26,6 +26,8 @@ class down:
     queryfile = 'cifar10.json'
     ytstring = 'http://www.youtube.com/results?filters=video%2C+long&'
     ids_fn = join(path.video, 'down_ids_%s.json' % datetime.datetime.now().strftime('%Y-%m-%d_%Hh%M'))
+    min_len = 600
+    min_views = 1000
 
 ### FFMPEG PROCESSING AND SHOT DETECTION
 class shotdetect:

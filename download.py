@@ -24,8 +24,8 @@ def updatemovielist():
         if isdir(spath):
             for f in listdir(spath):
                 if isfile(join(spath, f)):
-                    if f[-4:]=='.mp4' or f[-4:]=='.flv':
-                        vidid = f[0:-4]
+                    if '.mp4.info.json' in f or '.flv.info.json' in f:
+                        vidid = f[0:-14]
                         movielist.add(vidid)
 
 def get_video_ids(write = True):
@@ -42,15 +42,13 @@ def get_video_ids(write = True):
     #===============================================================================
     down_ids={}
     for subj in subjects:
-        Nperquery=conf.down.Npersubj/len(queries[subj])
         down_ids[subj]={}
         print "Looking for subject %s"%subj
         for query in queries[subj]:
+            Npages = int(queries[subj][query]) # get number from dict
             down_ids[subj][query]=[]
             enough=False
-            p=0
-            while (not enough and p < conf.down.maxpages): # open new pages
-                p+=1
+            for p in range(1, Npages+1):
                 print "Subject %s, query:  %s page %d, found %d movies"%(subj,query,p, Nperquery)
                 url = conf.down.ytstring+'search_query=%s&page=%d' % (query.replace(' ','+'), p)
                 response = urllib2.urlopen(url)
@@ -63,9 +61,6 @@ def get_video_ids(write = True):
                         continue
                     vidid= tmp[1:endidx]
                     down_ids[subj][query].append(vidid)
-                    if (len(down_ids[subj][query]) == Nperquery):
-                        enough=True
-                        break
     if write:
         # Write video id download list
         json.dump(down_ids, open(conf.down.ids_fn, 'w'), indent = 2, sort_keys = True)
@@ -99,11 +94,27 @@ def download(down_ids):
                 if (vidid not in movielist):
                     movielist.add(vidid)
                     out=join(conf.path.video, subj, vidid+'.mp4')
-                    cli = 'youtube-dl -o %s --write-description --all-subs --write-info-json http://www.youtube.com/watch?v=%s'%(out, vidid)
+                    # DOWNLOAD INFO
+                    cli = 'youtube-dl -o %s --all-subs --write-info-json --skip-download http://www.youtube.com/watch?v=%s'%(out, vidid)
+                    print '%s -- download:  %s ' % (vidid, cli)
+                    subprocess.call(cli, shell=True)
+                    # do checks
+                    info = json.load(open(out+'.info.json','r'))
+                    if int(info['duration'] < conf.down.min_len):
+                        print "%s -- SKIP Movie  is shorter than %d sec" % (vidid, conf.down.min_len)
+                        continue
+                    if 'interview' in str(info['stitle']).lower():
+                        print "%s -- SKIP Movie probably contains interview" % vidid
+                        continue
+                    if int(info['view_count']) < conf.down.min_views:
+                        print "%s -- SKIP Movie, only %d views" % ( vidid, int(info['view_count']))
+                        continue
+                    # download movie itself
+                    cli = 'youtube-dl -o %s --all-subs --write-info-json http://www.youtube.com/watch?v=%s'%(out, vidid)
                     print '%s -- download:  %s ' % (vidid, cli)
                     subprocess.call(cli, shell=True)
                 else:
-                    print "%s -- Movie  is already downloaded, skip" % vidid
+                    print "%s -- SKIP Movie  is already downloaded" % vidid
 
 
 if __name__ == "__main__":

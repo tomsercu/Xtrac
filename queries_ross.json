@@ -1,0 +1,81 @@
+{
+    "airplane": {
+        "airplane documentary": 5,
+        "airplane national geographic": 5,
+        "airbus documentary": 3,
+        "boeing documentary": 3
+    },
+    "national_geographic": {
+        "national geographic documentary": 40,
+        "national geographic nature documentary": 20
+    },
+    "bbc": {
+        "david attenborough": 6,
+        "life on earth": 2,
+        "the living planet": 2,
+        "the trials of life":2,
+        "life in the freezer":2,
+        "the private life of plants":2,
+        "life of birds": "http://www.youtube.com/channel/SWS3vPSi1o5nM/videos",
+        "the life of mammals": 10,
+        "life in the undergrowth": 2,
+        "planet earth": 3,
+        "life in cold blood":2
+    },
+    "automobile": {
+        "automobile documentary": 10,
+        "automobile national geographic": 5,
+        "car documentary": 10,
+        "car national geographic": 5,
+        "racing": 3,
+        "bmw": 3,
+        "audi": 3,
+        "chevrolet": 3,
+        "mercedes": 3,
+    {,
+    "bird": {
+        "bird documentary": 5,
+        "bird national geographic": 5,
+        "birds documentary": 5,
+        "birds national geographic": 5,
+    },
+    "cat": {
+        "cats": 30,
+        "cats documentary": 5,
+        "cats national geographic": 5,
+        "cat video compilation": 5,
+    },
+    "deer": {
+        "deer documentary": 2,
+        "deer national geographic": 2,
+    },
+    "dog": {
+        "dog documentary": 2,
+        "dog national geographic": 2,
+        "dog video compilation": 2,
+        "the secret life of dogs": 2,
+        "funny dog": 2,
+        "cute dog": 2,
+        "ugly dog": 2
+    },
+    "frog": {
+        "frog documentary": 3,
+        "frog national geographic": 3,
+    },
+    "horse": {
+        "horse documentary": 5,
+        "horse national geographic": 5,
+        "horses wildlife": 5
+    },
+    "ship": {
+        "ship documentary": 5,
+        "ship national geographic": 5,
+        "sea ships": 5
+    },
+    "truck": {
+        "truck documentary": 5,
+        "truck national geographic": 5,
+        "trucks": 5,
+        "road trucks": 5
+    }
+}
