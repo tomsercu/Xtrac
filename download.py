@@ -24,7 +24,7 @@ def updatemovielist():
         if isdir(spath):
             for f in listdir(spath):
                 if isfile(join(spath, f)):
-                    if '.mp4.info.json' in f or '.flv.info.json' in f:
+                    if '.info.json' in f:
                         vidid = f[0:-14]
                         movielist.add(vidid)
 
@@ -61,6 +61,7 @@ def get_video_ids(write = True):
                         continue
                     vidid= tmp[1:endidx]
                     down_ids[subj][query].append(vidid)
+            down_ids[subj][query] = list(set(down_ids[subj][query]))
     if write:
         # Write video id download list
         json.dump(down_ids, open(conf.down.ids_fn, 'w'), indent = 2, sort_keys = True)
@@ -99,7 +100,14 @@ def download(down_ids):
                     print '%s -- download:  %s ' % (vidid, cli)
                     subprocess.call(cli, shell=True)
                     # do checks
-                    info = json.load(open(out+'.info.json','r'))
+                    try:
+                        info = json.load(open(out+'.info.json','r'))
+                    except Exception as e:
+                        ## json file is not there
+                        print e
+                        print '%s -- Json file could not be loaded, skip' % (vidid)
+                        open(out+'.info.json','w').close() # mark
+                        continue
                     if int(info['duration'] < conf.down.min_len):
                         print "%s -- SKIP Movie  is shorter than %d sec" % (vidid, conf.down.min_len)
                         continue

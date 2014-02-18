@@ -31,7 +31,7 @@ class down:
 
 ### FFMPEG PROCESSING AND SHOT DETECTION
 class shotdetect:
-    threshold = 0.3 # see ffmpeg scene selectio
+    threshold = 0.25 # see ffmpeg scene selectio
 
 class thumbs:
     w = -1
