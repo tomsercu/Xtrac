@@ -67,7 +67,7 @@ class Selector:
         self.load_shots_info()
         # determine framesize
         img=mpimg.imread(self.thumb_fn % self.shots_info[0][0]['thumb_n'])
-        x,y,c=img.shape
+        y,x,c=img.shape
         assert(c==3)
         self.x=x
         self.y=y
@@ -98,7 +98,7 @@ class Selector:
                 self.shots.append(None)
                 continue
             nframes=len(shot)
-            self.shots.append(np.zeros((nframes,self.x,self.y,3),dtype='uint8')) # allocate for speed
+            self.shots.append(np.zeros((nframes,self.y,self.x,3),dtype='uint8')) # allocate for speed
             for fi,frame in enumerate(shot):
                 img=plt.imread(self.thumb_fn % frame['thumb_n'])
                 self.shots[si][fi,:,:,:]=img
@@ -258,6 +258,13 @@ class Selector:
             plt.show()
         plt.close(fig)
 
+    def showgrid2(self, frames, tile=(20,30), fn = None, title = None, colors=None):
+        w = self.x
+        h = self.y
+        W = w*tile[0]
+        H = h*tile[1]
+
+
     def show_filter_sample(self,filt='pass', fn = None, tile=(16,20),frames_per_shot=5 ):
         """Show a grid of shots with frames that have been filtered out
         by filter."""
@@ -350,10 +357,28 @@ class Selector:
                 (self.vidid, 100.0*passed/Nproc, passed,Nproc, 100.0*toostatic/Nproc, 100.0*toodynamic/Nproc)
 
     def filter_unnatural(self):
+        nfilt = 0
+        nogo = 0
         for shotid in xrange(self.Nshots):
             if not self.shots_pass[shotid]==1:
+                nogo +=1
                 continue
-        pass #TODO
+            # make some kernels
+            k_sizes = [(8,1), (1,8), (4,4), (2,5),(5,2)]
+            kernels = [np.ones((1,s[0],s[1],1)) for s in k_sizes] # go through each frame, each channel
+            shot = self.shots[shotid]
+            delta = shot[:,1:,:,:] - shot[:,:-1,:,:] # one-shift in xdirection
+            for k in kernels:
+                delta_conv = np.abs(sps.convolve(delta,k, 'valid')).sum(axis=-1)
+                #print delta_conv.shape
+                if (delta_conv==0).sum() > 0:
+                    nfilt +=1
+                    self.shots_pass[shotid]=filter_ids['unnatural']
+                    break
+        Nproc=self.Nshots-nogo
+        passed = Nproc - nfilt
+        print "%s - Filter on unnatural: %.1f pct of shots passed (%d/%d), %.1f pct unnnatural"%\
+                (self.vidid, 100.0*passed/Nproc, passed,Nproc, 100.0*nfilt/Nproc)
 
     def filter_faces(self):
         pass
