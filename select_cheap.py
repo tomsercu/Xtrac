@@ -453,6 +453,7 @@ if __name__=="__main__" and len(sys.argv)==1:
             Voutpath= join(conf.path.frames, subj, vidid)
             stack.append((subj, vidid, Vinpath, Voutpath))
     random.shuffle(stack)
+    fails = 0
     for subj,vidid,Vinpath,Voutpath in stack:
         if not isfile(join(Vinpath, conf.fn.shots)):
             print "%s - No infofile found, skipping video"%vidid
@@ -474,9 +475,11 @@ if __name__=="__main__" and len(sys.argv)==1:
             os.remove(join(Voutpath,'started_filtering')) # Will only be removed if ended nicely
         except Exception as e:
             traceback.print_exc()
-            pdb.set_trace()
+            #pdb.set_trace()
             print "%s - filtering failed with error:" % vidid
             print e
+            fails += 1
+    print "Job finished - total fails = %d" % fails
 
 
 if __name__=="__main__" and len(sys.argv)==2:
