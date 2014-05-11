@@ -12,3 +12,4 @@ opencv_samples
 *.png
 *test*
 launcher.m
+log*
